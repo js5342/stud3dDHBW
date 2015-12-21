@@ -4,6 +4,7 @@
 
 \usepackage{acronym} %Abkürzungen
 \usepackage{array}
+\usepackage{cite} % Zitate
 \usepackage[a4paper]{geometry} %Papiergroesse
 \geometry{verbose,tmargin=2.5cm,bmargin=4.5cm,lmargin=2.5cm,rmargin=2.5cm}
 \usepackage{fancyhdr}
@@ -15,6 +16,7 @@
 \usepackage[latin1]{inputenc}
 \usepackage{setspace}
 \usepackage{lastpage}
+\usepackage[plainpages=false]{hyperref}
 
 \usepackage{color}
 \definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
@@ -35,6 +37,16 @@
 \setcounter{tocdepth}{3}
 \fontsize{12}{0}
 
+
+
+\makeatletter 
+\renewcommand\chapter{\@startsection
+	{chapter}{1}{0mm}%         % name, ebene, einzug
+	{.5\baselineskip}%            % vor-abstand
+	{1.5\baselineskip}%            % nach-abstand
+	{\bfseries\sffamily\huge}%      % layout
+} 
+\makeatother
 
 \makeatletter 
 \renewcommand\section{\@startsection
@@ -117,7 +129,7 @@
 	\pagenumbering{arabic}
 
 	\tableofcontents{}
-	\newpage{}
+	\newpage
 	
 	
 	\chapter*{Abkürzungsverzeichnis}
@@ -136,6 +148,45 @@
 	\setlength{\parskip}{1.5ex}
 	
 	
+	
+	
+	%--------------CHAPTER----------------
+	
+	\chapter{Einleitung}
+	\include{kapitel/misc/einleitung}
+
+	\chapter{Stand der Technik}
+	%mögliche Techniken
+	\chapter{ultimaker}
+		\include{kapitel/ultimaker/ulti}
+	\chapter{Entwicklung eines technischen Objekts}
+		\include{kapitel/techObj/techObj}
+	\chapter{Entwicklung eines organischen Objekts}
+		\include{kapitel/orgObj/orgObj}
+	öoijfdvöidfvöldfjv	\cite{Hompel2011}.
+	
+	\chapter{Website}
+	
+	
+	
+	\chapter{Zusammenfassung und Ausblick}
+	\include{kapitel/misc/zusammenfassung}
+	
+	
+	
+	
+	
+	
+	
+	\singlespacing
+	\renewcommand{\refname}{Literaturverzeichnis}
+	\chapter{\refname}
+	\begingroup
+	\raggedright
+	\bibliography{literature/quellen}{}
+	\bibliographystyle{abbrvdin} %Stil, der die Richtlinien der DHBW erfüllt
+	\endgroup
+	\onehalfspace
 	
 	
 \end{document}}
