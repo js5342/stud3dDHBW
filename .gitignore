@@ -3,3 +3,5 @@
 *.nlo
 *.gz
 *.toc
+*.out
+*.synctex.gz
