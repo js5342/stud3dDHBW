@@ -14,23 +14,54 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 \section{Ist-Analyse}
 	Zu entwerfen ist eine Verwahrung für einen Heimserver auf einem Raspberry Pi mit angeschlossener externer Festplatte. Der Raspberry selbst liefert an seinen \ac{USB}-Ports nicht genug Leistung zum Betreiben der Festplatte, weshalb ein zusätzlicher powered \ac{USB}-Hub nötig ist. 
 	
-	\piccaption{Ursprüngliches Stapelsystem}
+	\piccaption{Ursprüngliches Stapelsystem\label{grafik:techObj:ursprStapelsystem}}
 	\parpic{\includegraphics[width=.5\textwidth]{images/techObj/urspruenglicheHalterung02.jpg}}
 	
-	Zu Beginn der Entwicklung wurde das System durch zu einem Käfig verschraubten Lochblechen zusammengehalten, die Festplatte und Hub umfassten. Insbesondere der Raspberry war im alten System nur unzureichend fixiert, da er nur auf den Käfig aufgesetzt war. Ein Hauptmerkmal des neuen Systems soll das sichere Lagern aller Komponenten sein. 
+	Zu Beginn der Entwicklung wurde das System durch zu einem Käfig verschraubten Lochblechen zusammengehalten, die Festplatte und Hub umfassten. Abbildung \ref{grafik:techObj:ursprStapelsystem} Insbesondere der Raspberry war im alten System nur unzureichend fixiert, da er nur auf den Käfig aufgesetzt war. Ein Hauptmerkmal des neuen Systems soll das sichere Lagern aller Komponenten sein. 
 	
 	\picskip{0}
 	\vspace*{3em}
 	
 	Nächste Anforderung ist die Portabilität des Systems. Um den Server sicher und einfach bewegen zu können, soll das System als ganzes stabil zu einer Einheit verbindbar sein. Das bisherige System sollte die Portabilität ermöglichen, war jedoch aufgrund der oben genannten Instabilität nicht dazu in der Lage.  
 	
-	
+	Die Ausmaße der zu verstauenden Objekte ist folgend aufgeführt.
 	
 	%TODO Messung Dimensionen
-
+%	\begin{tabular}{c|c|c|c}
+%		\label{}
+%		\caption{Übersicht der Dimensionen der einzubauenden Objekte}
+%				Bauteil 			& Länge [mm] 	& Breite [mm]	& Höhe [mm] \\ 
+%		\hline 	Raspberry Pi 		& Länge 	& Breite 	& Höhe  \\ 
+%				externe Festplatte 	& Länge 	& Breite 	& Höhe  \\ 
+%				\ac{USB}-Hub 		& Länge 	& Breite 	& Höhe  \\ 
+%		 
+%	\end{tabular} 
 
 	
-	
+	\begin{figure}
+		
+		
+		\begin{minipage}[b]{.3\textwidth}
+			
+			\includegraphics[width=\textwidth]{images/techObj/raspberry_bemasst}
+			\subcaption{Bemaßung des Raspberry Pis}
+			
+		\end{minipage}
+		\begin{minipage}[b]{.3\textwidth}
+			
+			
+			\subcaption{Bemaßung des \ac{USB}-Hubs}
+			
+		\end{minipage}
+		\begin{minipage}[b]{.3\textwidth}
+			
+			
+			\subcaption{Bemaßung der externen Festplatte}
+			
+		\end{minipage}
+		\label{Inhalt...}
+		\caption{text}
+	\end{figure}
 	
 %TODO 
 \section{Konzept: Modulare Boxen}
