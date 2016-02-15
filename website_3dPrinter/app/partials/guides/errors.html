@@ -1,0 +1,89 @@
+﻿<h2>Behandlung von Fehlern<h2>
+
+<h3>Probleme mit Cura</h3>
+<h4>Cura stockt/hängt</h4>
+Wenn eine fordernde Berechnung (z.B. G Code Erstellung für ein großes Objekt) ausgeführt wird, kommt oft auch die Oberfläche von Cura ins Stocken.
+Da Cura mit Python geschrieben ist, können fordernde Operationen auch bei schnellen Computern etwas Zeit in Anspruch nehmen.
+
+<h4>Cura zeigt einzelne Elemente des Objektes nicht in der Layers view.</h4>
+Die Elemente sind zu klein (kleiner als die Schichtdicke) um gedruckt werden zu können, das slicing Tool hat sich daher entschieden diese zu entfernen.
+
+<b>Behebung</b>
+Skalierung des Objektes in Cura (nicht immer erfolgreich) oder größeres Exportieren durch die Erstellungssoftware (CAD Programm, Blender...).
+
+<h4>Objekte lassen sich nicht nebeneinander platzieren</h4>
+Cura lässt einen gewissen Raum zwischen den Objekten frei, um zu vermeiden, dass der Druckkopf andere Objekte beim Druck beschädigt.
+Der Boden um die Objekte hat einen dunklen Rahmen um das Objekt, dieser Rahmen zeigt diesen Sicherheitsbereich an.
+
+<b>Behebung</b>
+Position der Objekte so wählen, dass sich diese Sicherheitsbereiche nicht überschneiden.
+
+<h3>Fehler des Druckers<h3>
+<h4>TEMP ERROR STOPPED</h4>
+Dieser Fehler tritt durch eine falsche Messung des Temperatursensors am Druckkopf auf.
+Erfahrungsgemäß tritt der Fehler nur beim Aufwärmen oder Abkühlen des Druckkopfes auf.
+Falls der Fehler beim Aufwärmen auftritt:
+  <ul>
+    <li>Drucker mit dem Schalter an der Rückseite abschalten</li>
+	<li>Ca. 1 Minute warten, bis der Druckkopf etwas abgekühlt ist und alle Fehlerdaten gelöscht sind</li>
+	<li>Den Drucker wieder anschalten und den Druck erneut starten</li>
+  </ul>
+Falls der Fehler beim Abkühlen nach dem Druckvorgang auftritt, kann der Fehler ignoriert und der Drucker ausgeschaltet werden.
+
+<h4>Filament steckt fest/Filament grinding</h4>
+Das Filament wird durch den Feeder zum Druckkopf transportiert. Da der Feeder dafür eine Walze benutzt die sich stark in das Filament dr&uuml;ckt kann es passieren, dass eine Kuhle aus dem Filament herausgefräst wird. Der Feeder schafft es dann nicht mehr das Filament zu transportieren und der Druck misslingt.
+<br><br>
+Das Filament sollte aus dem Drucker entfernt werden und der Drucker gereinigt. Im Maintenance Menü den Materialwechsel aktivieren und mit etwas manueller Mithilfe das Filament aus dem Drucker entfernen.
+Danach das Filament per Zange kurz vor der gegrindeten Stelle abknipsen und Filament und Drucker von kleinen Plastiksplittern befreien. Das unversehrte Filament kann dann wieder in den Drucker eingeführt werden.
+
+
+TODO: Bild, backlink retraction als mögliche Ursache
+
+
+<h3>Fehler am gedruckten Objekt</h3>
+
+<h4>Details werden nicht gedruckt</h3>
+TODO: Link auf cura -> Cura zeigt einzelne Elemente des Objektes nicht in der Layers view.
+
+<h4>Herunterhängende Fäden</h4>
+An steilen Überhängen ist die Oberfläche nicht geschlossen, sondern einzelne Plastikfäden hängen herunter.
+<h5>Behebung</h5>
+Ganz vermeiden lässt sich der Effekt nicht, er kann jedoch durch folgende Einstellungen minimiert werden:
+<ul>
+  <li>Heruntersetzen der Schichtdicke<li>
+  <li>Erhöhung der Lüftergeschwindigkeit</li>
+  <li>Veringern der Drucktemperatur</li>
+  <li>Veringern der Druckgeschwindigkeit</li>
+</ul>
+
+<h4>Löcher in den Wänden des Objektes</h4>
+Die einzelnen Schichten des Objektes sind nicht vollständig miteinander verbunden, oder innerhalb der Schichten treten Löcher auf.
+<h5>Behebung</h5>
+<ul>
+  <li>Verringern der Druckgeschwindigkeit</li>
+  <li>Veringern der Schichtdicke</li>
+</ul>
+
+<h4>Dünne Fäden zwischen Teilen des Objektes</h4>
+Verschiedene Teile des Objektes sind durch dünne unregelmäßige Fäden verbunden
+<h5>Behebung</h5>
+<ul>
+  <li>Entfernen der Fäden mit Sandpapier oder Schere</li>
+  <li>Erhöhen der "filament retraction"</li>
+  <li>Verringern der Druckgeschwindigkeit</li>
+</ul>
+
+<h4>Unebene Oberfläche</h4>
+Die Oberfläche des Objektes ist rau und klare Stufen sind zu erkennen.
+<h5>Behebung</h5>
+<ul>
+  <li>Heruntersetzen der Schichdicke</li>
+</ul>
+
+<h4>Objekt schief / Objekt unterschiedlich hoch</h4>
+Objekt ist ungleichmäßig hoch bzw. schief.
+<h5>Behebung</h5>
+<ul>
+  <li>Kalibrierung des Druckers</li>
+</ul>
+

@@ -1,0 +1,141 @@
+﻿<div class="auto-indent">
+  <h2>Behandlung von Fehlern</h2>
+
+  <ul>
+    <li><a href="#/guide/error#error-cura">Probleme mit Cura</a></li>
+    <ul>
+      <li><a href="#/guide/error#error-cura-freeze">Cura stockt/hängt</a></li>
+      <li><a href="#/guide/error#error-cura-layerview">Cura zeigt einzelne Elemente des Objektes nicht in der Layers view</a></li>
+      <li><a href="#/guide/error#error-cura-objects-proximity">Objekte lassen sich nicht nebeneinander platzieren</a></li>
+    </ul>
+    <li><a href="#/guide/error#error-printer">Fehler des Druckers</a></li>
+    <ul>
+      <li><a href="#/guide/error#error-printer-temp-sensor">ERROR - STOPPED Temp sensor</a></li>
+      <li><a href="#/guide/error#error-printer-grinding">Filament steckt fest/Filament grinding</a></li>
+    </ul>
+    <li><a href="#/guide/error#error-object">Fehler am gedruckten Objekt</a></li>
+    <ul>
+      <li><a href="#/guide/error#error-object-no-details">Details werden nicht gedruckt</a></li>
+      <li><a href="#/guide/error#error-object-hanging-threads">Herunterhängende Fäden</a></li>
+      <li><a href="#/guide/error#error-object-combing">Dünne Fäden zwischen Teilen des Objektes</a></li>
+      <li><a href="#/guide/error#error-object-rough">Unebene Oberfläche</a></li>
+      <li><a href="#/guide/error#error-object-skewed">Objekt schief / Objekt unterschiedlich hoch</a></li>
+      <li><a href="#/guide/error#error-other">Sonstige Fehler</a></li>
+    </ul>
+  </ul>
+  <hr>
+
+  <h3 id="error-cura">Probleme mit Cura</h3>
+  <div>
+    <h4 id="error-cura-freeze">Cura stockt/hängt</h4>
+    <div>
+      Wenn eine fordernde Berechnung (z.B. G-Code Erstellung für ein großes Objekt) ausgeführt wird, kommt oft auch die Oberfläche von Cura ins Stocken.
+      Da Cura in Python geschrieben ist, können fordernde Operationen auch bei schnellen Computern etwas Zeit in Anspruch nehmen.
+    </div>
+    <h4 id="error-cura-layerview">Cura zeigt einzelne Elemente des Objektes nicht im Layers View</h4>
+    <div>
+      Die Elemente sind zu klein (kleiner als die Schichtdicke) um gedruckt werden zu können, das slicing Tool hat sich daher entschieden diese zu entfernen.
+      <h5>Behebung</h5>
+      Skalierung des Objektes in Cura (nicht immer erfolgreich) oder größeres Exportieren durch die Erstellungssoftware (CAD Programm, Blender...).
+    </div>
+    <h4 id="error-cura-objects-proximity">Objekte lassen sich nicht nebeneinander platzieren</h4>
+    <div>
+      Cura lässt einen gewissen Raum zwischen den Objekten frei, um zu vermeiden, dass der Druckkopf andere Objekte beim Druck beschädigt.
+      Der Boden um die Objekte hat einen dunklen Rahmen um das Objekt, dieser Rahmen zeigt diesen Sicherheitsbereich an.
+      <h5>Behebung</h5>
+      Position der Objekte so wählen, dass sich diese Sicherheitsbereiche nicht überschneiden.
+    </div>
+  </div>
+
+  <h3 id="error-printer">Fehler des Druckers</h3>
+  <div>
+    <h4 id="error-printer-temp-sensor">ERROR - STOPPED Temp sensor</h4>
+    <div>
+      Dieser Fehler tritt durch eine falsche Messung des Temperatursensors am Druckkopf auf.
+      Erfahrungsgemäß tritt der Fehler nur beim Aufwärmen oder Abkühlen des Druckkopfes auf.
+      Falls der Fehler beim Aufwärmen auftritt:
+      <ul>
+        <li>Drucker mit dem Schalter an der Rückseite abschalten</li>
+        <li>Ca. 1 Minute warten, bis der Druckkopf etwas abgekühlt ist und alle Fehlerdaten gelöscht sind</li>
+        <li>Den Drucker wieder anschalten und den Druck erneut starten</li>
+      </ul>
+      Falls der Fehler beim Abkühlen nach dem Druckvorgang auftritt, kann der Fehler ignoriert und der Drucker ausgeschaltet werden.
+    </div>
+
+    <h4 id="error-printer-grinding">Filament steckt fest/Filament grinding</h4>
+    <div>
+      Das Filament wird durch den Feeder zum Druckkopf transportiert. Da der Feeder dafür eine Walze benutzt die sich stark in das Filament drückt kann es passieren, dass eine Kuhle aus dem Filament herausgefräst wird. Der Feeder schafft es dann nicht mehr das Filament zu transportieren und der Druck misslingt.
+      <h5>Behebung</h5>
+      Das Filament sollte aus dem Drucker entfernt werden und der Drucker gereinigt. Im <a href="#/guide/usage">Maintenance Menü</a> den Materialwechsel aktivieren und mit etwas manueller Mithilfe das Filament aus dem Drucker entfernen.
+      Danach das Filament per Zange kurz vor der gegrindeten Stelle abknipsen und Filament und Drucker von kleinen Plastiksplittern befreien. Das unversehrte Filament kann dann wieder in den Drucker eingeführt werden.
+      Siehe <a href="#/guide/druckparameter#parameter-retraction"> Retraction</a>
+    </div>
+  </div>
+
+  <h3 id="error-object">Fehler am gedruckten Objekt</h3>
+  <div>
+    <h4 id="error-object-no-details">Details werden nicht gedruckt</h4>
+    <div>
+      Siehe <a href="#/guide/error#error-cura-layerview">hier.</a>
+    </div>
+
+    <h4 id="error-object-hanging-threads">Herunterhängende Fäden</h4>
+    <div>
+      An steilen Überhängen ist die Oberfläche nicht geschlossen, sondern einzelne Plastikfäden hängen herunter.
+      <h5>Behebung</h5>
+      Ganz vermeiden lässt sich der Effekt nicht, er kann jedoch durch folgende Einstellungen minimiert werden:
+      <ul>
+        <li>Heruntersetzen der <a href="#/guide/druckparameter#parameter-schichtdicke">Schichtdicke</a></li>
+        <li>Erhöhung der <a href="#/guide/druckparameter#parameter-cool">Lüftergeschwindigkeit</a></li>
+        <li>Veringern der Drucktemperatur</li>
+        <li>Veringern der <a href="#/guide/druckparameter#parameter-speed">Druckgeschwindigkeit</a></li>
+      </ul>
+      <br>
+      Siehe auch <a href="#/guide/supports">Supports</a>
+    </div>
+
+    <h4 id="error-object-holes">Löcher in den Wänden des Objektes</h4>
+    <div>
+      Die einzelnen Schichten des Objektes sind nicht vollständig miteinander verbunden, oder innerhalb der Schichten treten Löcher auf.
+      <h5>Behebung</h5>
+      <ul>
+        <li>Verringern der <a href="#/guide/druckparameter#parameter-speed">Druckgeschwindigkeit</a></li>
+        <li>Veringern der <a href="#/guide/druckparameter#parameter-schichtdicke">Schichtdicke</a></li>
+      </ul>
+    </div>
+
+    <h4 id="error-object-combing">Dünne Fäden zwischen Teilen des Objektes</h4>
+    <div>
+      Verschiedene Teile des Objektes sind durch dünne unregelmäßige Fäden verbunden
+      <h5>Behebung</h5>
+      <ul>
+        <li>Entfernen der Fäden mit Sandpapier oder Schere</li>
+        <li>Erhöhen der <a href="#/guide/druckparameter#parameter-retraction">Filament Retraction</a></li>
+        <li>Verringern der <a href="#/guide/druckparameter#parameter-speed">Druckgeschwindigkeit</a></li>
+      </ul>
+    </div>
+
+    <h4 id="error-object-rough">Unebene Oberfläche</h4>
+    <div>
+      Die Oberfläche des Objektes ist rau und klare Stufen sind zu erkennen.
+      <h5>Behebung</h5>
+      <ul>
+        <li>Heruntersetzen der <a href="#/guide/druckparameter#parameter-schichtdicke">Schichtdicke</a></li>
+      </ul>
+    </div>
+
+    <h4 id="error-object-skewed">Objekt schief / Objekt unterschiedlich hoch</h4>
+    <div>
+      Objekt ist ungleichmäßig hoch bzw. schief.
+      <h5>Behebung</h5>
+      <ul>
+        <li><a href="#/guide/usage#kalibrierung">Kalibrierung des Druckers</a></li>
+      </ul>
+    </div>
+
+    <h4 id="error-other">Sonstige Fehler</h4>
+    <div>
+      Für Fehler die hier nicht beschrieben sind, siehe <a href="http://support.3dverkstan.se/article/23-a-visual-ultimaker-troubleshooting-guide">hier</a>.
+    </div>
+  </div>
+</div>

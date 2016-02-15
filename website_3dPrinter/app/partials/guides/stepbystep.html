@@ -1,0 +1,49 @@
+﻿<div class="auto-indent">
+  <h2>Schritt für Schritt Anleitung</h2>
+
+  <h3>Zweck</h3>
+  <div>
+    Dieser Guide soll einen groben Überblick über einen normalen Druckprozess mit dem Ultimaker II und Cura geben. Er dient gleichzeitig als Checkliste für die Durchführung von eigenen Drucken.</p>
+  </div>
+  <h3>Vorbereitung des Modells</h3>
+  <div>
+    Zunächst muss ein Modell ausgesucht werden, das gedruckt werden soll. Modelle für den 3D-Druck sind üblicherweise im <a href="#/guide/begriffe#stl">STL-Format</a> gespeichert. Modelle können mit kostenlosen Tools wie <a href="https://www.blender.org/">Blender</a> selbst erstellt, oder aus großen Modelldatenbanken wie <a href="https://www.thingiverse.com/">Thingiverse</a> heruntergeladen werden. Weitere Details gibt es im Abschnitt <a href="#/guide/selection">Auswahl des Objektes</a>.<br><br>
+    Nachdem ein passendes Modell ausgesucht wurde, muss es für den Druck vorbereiter werden, dazu empfehlen wir das Tool <a href="#/guide/meshmixer">MeshMixer</a>.
+    Hier sollte das Objekte auf <a href="#/guide/meshmixer#error-analysis">Wasserdichtheit/Löcher</a>, <a href="#/guide/meshmixer#stability-analysis">Stabilität</a> und <a href="#/guide/meshmixer#overhang-analysis">Überhänge</a> überprüft werden.
+    Für eventuell dadurch erkannte Überhänge sollte abgewägt werden ob sie der Drucker ohne Supports bewältigen kann, von Cura generierte <a href="#/guide/supports">Supports</a> ausreichen oder ob Stützen per Hand erstellt werden müssen, näheres im Kapitel  <a href="#/guide/meshmixer">MeshMixer</a>.
+  </div>
+
+  <h3>Generierung des G-Codes</h3>
+  <div>
+    Nach der Überprüfung kann die STL-Datei des Modells in <a href="#/guide/cura">Cura</a> geladen werden um das Modell zu <a href="#/guide/begriffe#slicen">slicen</a> und den für den Drucker notwendigen <a href="#/guide/begriffe#g-code">G-Code</a> zu generieren.
+    Nach dem Laden erscheint das Objekt auf der virtuellen Druckplattform und kann beliebig gedreht, gespiegelt und skaliert werden um es an den Anwendungsfall anzupassen.
+    Zusätzlich sollte nun die gewünschte Qualität gewählt werden, entweder durch Auswahl der Voreinstellungen oder durch Verändern der Druckparameter, die zusammen mit ihren Auswirkungen auf den Druck <a href="#/guide/druckparameter">hier</a> beschrieben sind.
+    Wenn man einen schnellen Druck bei einer bestimmten Qualität haben will, beschreibt das Kapitel <a href="#/guide/speedvsquality">Druckgeschwindigkeit vs. Qualität</a> die Parameter, die am meisten ausschlaggebend dafür sind.
+  Wenn Cura die Berechnungen für den Druck beendet hat kann man die G-Code Datei auf der SD-Karte speichern und dann in den Drucker schieben.
+  </div>
+  
+  <h3>Vorbereiten des Druckers</h3>
+  <div>
+    Vor dem Druck sollte man sicherstellen, dass der Drucker in einem Zustand ist in dem er den Druck einwandfrei vollenden kann.
+    Es sollten keine Plastikreste im Drucker, sowie die Druckplatte sauber sein.
+    Für den Druck ist eine ausreichende Menge <a href="#/guide/begriffe#filament">Filament</a> notwendig, die noch auf der Filamentspule vorhanden sein muss. Cura gibt einen geschätzten Wert für die Länge an benötigtem Filament nach dem Slicing an.
+    Zur Vorsicht sollte der Drucker kalibriert werden, wenn andere Studenten in der Zwischenzeit gedruckt haben oder der Drucker länger stand.
+    Für weitere Details siehe <a href="#/guide/usage">Bedienung des Druckers</a>.
+  </div>
+
+  <h3>Durchführung des Drucks</h3>
+  <div>
+    Wie im Kapitel <a href="#/guide/usage">Bedienung des Druckers</a> beschrieben kann der Druck des Objektes gestartet werden.
+    Der Aufheizvorgang des Extruders sollte unbedingt überwacht werden, da der Drucker öfter einen falschen Fehler wegen des Temperaturfühlers anzeigt, zur Behebung siehe <a href="#/guide/errors">Fehler beheben</a>.
+    Wenn der Drucker mit dem Druck begonnen hat kann man ihn normalerweise ohne Aufsicht drucken lassen, da er verschiedene Fehlerschutzschaltungen besitzt.
+    Bei längeren Drucken sollte aber pro Tag einmal der Status des Drucks überprüft werden, da bei Fehlern im Objekt der Drucker diese nicht erkennen kann und unbeirrt weiter teures Filament druckt.
+  </div>
+
+  <h3>Nachbereitung</h3>
+  <div>
+    Nach dem Druck sollte man das gedruckte Objekt fünf Minuten abkühlen lassen, damit es eine gute Festigkeit besitzt bevor man es mit etwas Kraft vom Druckbett entfernt.
+    Sollte das Objekt sehr fest am Druckbett kleben, kann man das Objekt vorsichtig mit einem Spatel unten lösen, die Glasplatte sollte dabei nicht verkratzt werden.
+    Etwaige Plastikreste gehören in den Mülleimer und der Drucker sollte erst nach dem Kühlvorgang abgeschaltet werden.
+    Veränderte Einstellungen am Drucker sind wieder auf die Ursprungswerte zu stellen.
+  </div>
+</div>

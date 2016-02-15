@@ -1,0 +1,44 @@
+﻿<div class="auto-indent">
+  <h2>Supports</h2>
+  <h3>Information</h3>
+  <div>
+    Der Standard 3D Druck von Consumergeräten basiert auf der Aufschichtung von geschmolzenem Filament auf bereits abgekühltem oder der Glasplatte des Druckers.
+    Vom Objekt abstehende Strukturen die "in der Luft schweben" können daher nur gedruckt werden, wenn sie durch Stützstrukturen (<b>Supports</b>) abgestützt werden.
+    Die Supports sind mit dem Objekt fest verbunden und müssen nach dem Druck per Schere oder Feile abgetrennt werden.
+    Im folgendem Bild wurden die Hände des Roboters mit einfachen Supports an seinen Beinen abgestützt.
+
+    <img class="text-image" style="width:30%" src="res/supportsonrobot.png">
+    <div>
+      Dabei brauchen nicht alle Objekte immer Supports für Überhänge. Der Drucker schafft es, kleinere Überhänge mit geringem Winkel auch ohne großen Qualitätsverlust zu drucken.
+      Die Bilder der Überhangtests unterhalb sollten einen ersten Eindruck von den Druckresultaten bei verschiedenen Winkeln vermitteln. Jedoch ist die Qualität auch von der Länge und Größe des Überhanges abhängig.<br>
+      Die ersten drei Bilder zeigen Drucke <a href="http://www.thingiverse.com/thing:419860">dieses Modells</a> skaliert auf 20cm Breite in verschiedenen Qualitätsstufen. Die Winkel beginnen links bei 5° und erhöhen sich dann in 5°-Schritten.
+      <img class="text-image" src="res/angle-test/angle-test-large-ultra-bot.jpg">
+      Das Modell in der Qualitätseinstellung "Ultra"
+      <img class="text-image" src="res/angle-test/angle-test-large-high-bot.jpg">
+      Das Modell in der Qualitätseinstellung "High"
+      <img class="text-image" src="res/angle-test/angle-test-large-medium-bot.jpg">
+      Das Modell in der Qualitätseinstellung "Medium"<br><br>
+
+      Die nächsten drei Bilder sind vom gleichen Modells, skaliert auf 10cm. Es lässt sich ein deutlicher Qualitätsverlust erkennen.
+      <img class="text-image" src="res/angle-test/angle-test-small-ultra-bot.jpg">
+      Das Modell in der Qualitätseinstellung "Ultra"
+      <img class="text-image" src="res/angle-test/angle-test-small-high-bot.jpg">
+      Das Modell in der Qualitätseinstellung "High"
+      <img class="text-image" src="res/angle-test/angle-test-small-low-bot.jpg">
+      Das Modell in der Qualitätseinstellung "Low"
+    </div>
+  </div>
+
+  <h3>Support Generierung</h3>
+  <div>
+    <h4>Cura</h4>
+    <div>
+      Cura hat eine automatische Support Generierung die für kleinere Überhänge gut funktioniert. In der Experten Sicht können alle Parameter für dieses Feature eingestellt werden. Die Supports die durch Cura generiert werden sind allerdings nicht sehr komplex und verbrauchen mehr Druckmaterial als nötig. Für komplexere Stützkonstruktionen empfiehlt sich das Tool <a href="#/guide/meshmixer">MeshMixer</a>.
+    </div>
+
+    <h4>Meshmixer</h4>
+    <div>
+      Mit MeshMixer können komplexere Supportstrukturen erstellt werden. Siehe hierzu <a href="#/guide/meshmixer#overhang-analysis">MeshMixer</a>.
+    </div>
+  </div>
+</div>

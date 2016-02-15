@@ -1,0 +1,79 @@
+﻿<div class="auto-indent">
+  <h2>Meshmixer</h2>
+  <b>Dieser Artikel bezieht sich auf die MeshMixer in der Version 10.9.246</b>
+  <h3>Allgemein</h3>
+  <div>
+    <a href="http://www.meshmixer.com/">Meshmixer</a> ist eine kostenlose Software zum Bearbeiten von 3D-Modellen. Die Software hat einen großen Fundus an nützlichen Funktionen, besonders für den 3D-Druck. Im folgenden werden die wichtigsten Werkzeuge vorgestellt um ein Modell auf den Druck vorzubereiten.
+  </div>
+  <h3>Die wichtigsten Tools</h3>
+  <div>
+    <h4 id="error-analysis">Fehleranalyse</h4>
+    <div>
+      Ein 3D-Modell kann verschiedene Fehler haben, die unter Umständen optisch nicht sichtbar sind, aber dennoch zu Fehlern in den Algorithmen des Slicers führen können. <br>
+      Viele diese Probleme lassen sich mit dem Inspector Werkzeug in MeshMixer überprüfen und teilweise automatisch lösen.
+      Das Werkzeug erkennt die folgenden Probleme und markiert sie mit farbigen Kugeln:
+      <ul>
+        <li>
+          <span style="color: blue;"><b>Blau</b></span>: Löcher in der Oberfläche des Objektes<br>
+          Löcher können entweder offensichtliche offene Stellen im Modell sein, oder entstehen, wenn zwei Kanten exakt übereinander liegen, aber nicht verbunden sind.
+        </li>
+        <li>
+          <span style="color: red;"><b>Rot</b></span>: Nicht-Manigfaltiger Abschnitt<br>
+          Dies sind Teile des Objektes die so in der Realität nicht existieren könnten. z.B. Abschnitte ohne Dicke, Flächen im inneren eines Objektes, überlappende Flächen, etc. Siehe auch <a href="http://3dprintingninja.blogspot.de/2014/07/non-manifolds-your-worst-nightmare.html">hier</a>
+        </li>
+        <li>
+          <span style="color: magenta;"><b>Magenta</b></span>: Kleine, nicht mit dem Hauptobjekt verbundene Teile<br>
+          Besonders beim Scannen mit der Kinect kann es vorkommen, das kleine Artefakte entstehen, die losgelöst vom Hauptobjekt und im Vergleich dazu sehr klein sind. Diese Objekte sind meistens nicht gewünscht, erhöhen die Druckzeit und sorgen im schlimmsten Fall für Probleme beim Druck.
+        </li>
+      </ul>
+      Durch einen Klick auf "<b>Auto Repair All</b>" versucht MeshMixer alle gefundenen Probleme automatisch zu beheben. Sollte das nicht gewünscht sein, kann durch einen <b>Linksklick</b> auf eine der Kugeln eine Reperatur nur auf eine Problemstelle angewendet werden. Ein <b>Rechtsklick</b> auf eine Kugel seleketiert die problematische Stelle, sodass eine manuelle Lösung gefunden werden kann.
+        Das Werkzeug befindet sich unter <b>Analysis -> Inspector</b>.
+      <img class="text-image" src="res/meshmixer/inspectortool.png">
+    </div>
+
+    <h4 id="overhang-analysis">Überhanganalyse & Supports</h4>
+    <div>
+      Eines der wichtigsten Analysetools. Es untersucht das Modell auf Überhänge deren Neigung über einem bestimmten Winkel liegt, was im Druckprozess unschöne oder fehlerhafte Ergebnisse erzeugen können. Die in rot markierten Bereiche sind solche kritischen Stellen, an denen Stützen angebracht werden sollten um das Objekt zu tragen.
+      <img class="text-image" src="res/meshmixer/overhangtool.png">
+      Integriert in dieses Tool ist die Möglichkeit Stützen automatisch zu generieren.<br>
+      <b>WICHTIG: Bevor die Stützen generiert werden, muss das Modell auf die finale Größe skaliert werden!</b><br>
+      Für den Ultimaker 2 ist ein Preset vorhanden, das im Dropdown Menü ausgewählt werden kann. Ein Klick auf <b>[1] Generate Supports</b> berechnet dann die notwendigen Stützen.
+      <img class="text-image" src="res/meshmixer/supporttool.png">
+      Die automatisch generierten Supports können nun nachbearbeitet werden, bis ein außreichendes Gerüst vorhanden ist. Dabei gilt: Mehr Stützen liefern in der Regel bessere Ergebnisse, verlängern aber auch die Druckzeit. Anpassungen können auf folgende Arten vorgenommen werden:
+      <ul>
+        <li>
+          <b>Stützen entfernen</b><br>
+          Ungewünschte Stützen lassen sich durch einen Klick mit gedrückter <b>STRG</b> Taste entfernen.
+        </li>
+        <li>
+          <b>Stützen automatisch hinzufügen</b><br>
+          Ein Klick auf eine Stütze oder einen rot markierten Überhang erzeugt automtisch eine neue Verstrebung zu diesem Punkt. Dabei versucht der Algorithmus intelligent möglichst kurze Stützen zu generieren.
+        </li>
+        <li>
+          <b>Stützen manuell ziehen</b><br>
+          Durch ein Klicken und Ziehen auf rot markierte Überhänge oder andere Stützen, lässt sich eine neue Verbindung erzeugen.
+        </li>
+      </ul>
+      Wenn ausreichend viele Stützen im Modell vorhanden sind, können diese durch einen Klick auf <b>[2] Convert to Solid</b> permanent zum Modell hinzugefügt werden.
+    </div>
+
+    <h4 id="stability-analysis">Stabilitätsanalyse</h4>
+    <div>
+      Dieses Tool gibt schon vor dem Druck einen Eindruck von der Standfestigkeit des fertigen Objekts.<br>
+      Das Stabilitätstool berechnet den Schwerpunkt des Modells und lässt somit Rückschlüsse zu, ob das gedruckte Objekt aufrecht stehen kann. Dabei werden jedoch Faktoren wie <a href="#/guide/druckparameter#parameter-infill">Infill</a> nicht beachtet, die Angabe dient also nur als Orientierung. Das Werkzeug befindet sich unter <b>Analysis -> Stability</b>
+      <img class="text-image" src="res/meshmixer/stabilitytool.png">
+    </div>
+
+    <h4 id="strength-analysis">Stärkeanalyse</h4>
+    <div>
+      Dieses Tool gibt schon vor dem Druck einen Eindruck von potenziellen Schwachstellen am fertigen Objekt.<br>
+      Das Stärketool untersucht das Modell auf potenzielle Schwachstellen, also Stellen die am fertigen Objekt eventuell abbrechen könnten. Grün markierte Bereiche sind unproblematisch, gelbe oder sogar rote Farben geben eine Schwachstelle an. Auch hier gilt: Es wird von einem soliden Objekt ausgegangen, etwaige Füllmuster können das Ergebnis beeinflussen. Das Werkzeug befindet sich unter <b>Analysis -> Strength</b>
+      <img class="text-image" src="res/meshmixer/strengthtool.png">
+    </div>
+
+    <h4 id="export">Export</h4>
+    <div>
+      Um das Modell als <b>STL</b> Datei zu exportieren muss der Punkt <b>File -> Export</b> gewählt werden. Als Dateityp wird <b>STL Binary Format (*.stl)</b> ausgewählt.
+    </div>
+  </div>
+</div>
