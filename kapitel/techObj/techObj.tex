@@ -1,4 +1,5 @@
 \chapter{Entwicklung eines technischen Objekts}
+\label{chapter:techObj}
 %TODO Einleitung: Idee
 % explizite Bezug auf Ultimaker 2, andere Drucker liefern andere Ergebnisse
 
@@ -62,8 +63,8 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 			\subcaption{Bemaßung der externen Festplatte}
 			
 		\end{minipage}
-		\label{Inhalt...}
-		\caption{text}
+		\label{figure:techObj:bemassungIstAnalyse}
+		\caption{Bemaßung der einzufassenden Objekte}
 	\end{figure}
 	
 	Zusätzlich zu diesen Maßen kommen beim Pi noch die Positionen der Schraub-Bohrungen und die Höhe der unter dem Pi herausragenden Lötpunkte und \ac{SMD}-Bauteile hinzu. Die frei zugänglichen Leiterbahnen müssen in der Verwahrung genug Abstand zu anderen Bauteilen haben, da sie sonst beschädigt werden könnten.
@@ -84,6 +85,7 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 	Das Konzept soll für die vorhandenen Komponenten umgesetzt werden. Die zu druckenden Objekte werden mit dem \ac{CAD}-System Solid Edge entworfen. 
 	
 	Als erster Schritt wurden die Maße von Festplatte, \ac{USB}-Hub und Raspberry Pi genommen.
+	
 	%Bild Maße, IST-ANALYSE?
 	Die Maße definieren die Innengestaltung der jeweiligen Box. Die Grundfläche ist durch die größte Box definiert, während die Höhe der einzelnen Boxen pro Komponente festlegbar ist. Folgend werden die Designs der einzelnen Komponenten vorgestellt.
 	
@@ -104,10 +106,14 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 	Die Bodenplatte bietet ein Grundgerüst des Systems. Da die Gewindestangen außerhalb der Boxen durch die Durchführungen der Rahmen verlaufen, ist sie um die Größe der Durchführungen breiter und länger als die Boxen. An selber Position wie diese Durchgänge hat auch die Bodenplatte Durchführungen. Zusätzlich sind auf der Unterseite Einschnitte für M4-Muttern. Dadurch können die Gewindestangen durch die Bodenplatte geführt und an der Unterseite der Bodenplatte festgeschraubt werden.
 	
 \section{Druck des Objekts}
-% Wie wäre es ideal gewesen?, fertiges Objekt 
+
+
 % Welche Parameter? --> spezifisch beim technischen Objekt
+% Veränderungen durch Params?
+
 % Verlinkung zu Fehlern
 
+% Bild vom fertigen Objekt
 Beim Drucken der Komponenten ergab sich, dass manche Maße zu gering gewählt waren. Beispielsweise die Spaltmaße zwischen Deckel und Box mussten angepasst und neu gedruckt werden. Zusätzlich entstanden dank fehlerhaftem Verhalten des Druckers viele Fehldrucke, was wiederum Wartungen erzwang.
 
 An den ersten zwei Schichten ließ sich ein fehlerhafter Druck meist frühzeitig erkennen. Die zu beobachtenden Fehlverhalten sind im Kapitel Fehler %Verlinkung
@@ -123,7 +129,8 @@ aufgeführt.
 Wie bereits eingangs erwähnt, wurde für diese Studienarbeit der Ulitmaker 2 verwendet. Deshalb kann in diesem Fazit auch nur betrachtet werden, inwiefern sich dieser Drucker eignet, um technische Objekte zu erstellen.\\
 
 \subsection{Material}
-Als Plastik wurde PLA verwendet. Bei den Drucken fiel auf, dass die Materialeigenschaften, abhängig von der verwendeten Farbe, teilweise deutlich unterschiedlich waren. Am besten gelangen die Drucke mit rotem Filament. Schwarzes Filament dagegen war sehr spröde. Bei durchsichtigem Filament hielten die verschiedenen Linien nicht so stark zusammen wie beispielsweise bei rotem, was insbesondere bei konzentrischen Mustern zu einer Instabilität führte.\\
+Als Plastik wurde \ac{PLA} verwendet. Bei den Drucken fiel auf, dass die Materialeigenschaften, abhängig von der verwendeten Farbe, teilweise deutlich unterschiedlich waren. Am besten gelangen die Drucke mit rotem Filament. Schwarzes Filament dagegen war sehr spröde. Bei durchsichtigem Filament hielten die verschiedenen Linien nicht so stark zusammen wie beispielsweise bei rotem, was insbesondere bei konzentrischen Mustern zu einer Instabilität führte.
+
 Für das Aufbewahrungssystem wurde deshalb vor allem rotes Filament genutzt. Allgemein sollte man beim Ultimaker 2 also vor dem Druck eines größeren Objekts testen, welche Farbe die besten Eigenschaften aufweist.\\
 Die Boxen des Aufbewahrungssystems wurden mit Wand- und Bodendicken von 3mm angefertigt, die Bodenplatte des Systems mit einer noch höheren Bodendicke. Dadurch war das System stabil genug, um hochgehalten zu werden. 
 
@@ -131,6 +138,7 @@ Die Boxen des Aufbewahrungssystems wurden mit Wand- und Bodendicken von 3mm ange
 \subsection{Liniendicke} 
 Zu dem Zeitpunkt, zu dem das technische Objekt gedruckt wurde, stand nur eine Nozzle der Größe 0.4mm zur Verfügung. Dadurch ist die minimale Breite einer Linie festgelegt. Für das Aufbewahrungssystems mussten keine Strukturen, die feiner als 0.4mm sind, gedruckt werden. Für dieses Objekt war die Genauigkeit also hoch genug. \\
 Müssen dagegen Objekte mit feineren Strukturen gedruckt werden, kann es sein, dass der Ultimaker 2 nicht die nötige Genauigkeit besitzt.
+
 Eine Abhilfe stellt der Olsson Block dar. Dabei handelt es sich um ein Upgrade des Heizblocks, das für den Ulitmaker 2 erworben werden kann. Dieses Upgrade ermöglicht es, die Druckdüsen relativ einfach auszutauschen. Im Upgrade sind vier verschieden große Düsen enthalten, die zwischen 0.25 und 0.8mm dick sind. 
 Trotz allem bleibt die minimale Dicke einer Linie also auf 0.25mm begrenzt.
 
