@@ -2,38 +2,41 @@
 %TODO Einleitung: Idee
 % explizite Bezug auf Ultimaker 2, andere Drucker liefern andere Ergebnisse
 
-Dieses Kapitel handelt vom Entwerfen und Drucken eines technischen Objekts. Als Objekt wird hier exemplarisch ein Aufbewahrungssystem für einen Raspberry Pi gekoppelt mit einem \ac{USB}- Hub und einer  externen Festplatte entworfen. Dieses System soll möglichst kompakt sein und als ein Block transportierbar sein.
+Dieses Kapitel handelt vom Entwurf und Druck eines technischen Objekts. Ein technisches Objekt wird dabei als ein Objekt definiert, das entwickelt wurde, um einen bestimmten technischen Zweck zu erfüllen und in erster Linie funktional sein soll. Eine ansprechende oder dekorative Optik des Objekts ist deshalb unwichtig oder zumindest zweitrangig. Wichtig ist es hingegen, dass ein solches Objekt möglichst einfach zu produzieren ist. Solche Objekte besitzen beispielsweise meist glatte Oberflächen, da diese wesentlich einfacher und genauer zu produzieren sind als gewölbte Oberflächen. Zudem muss das Objekt fest definierte Maße haben. \\
+Bei der Produktion eines technischen Objekts ist es wichtig, dass diese Maße mit möglichst geringen Toleranzen eingehalten werden. Wird mehrfach dasselbe Objekt mit denselben Werkzeugen und Prozessen hergestellt, sollten die Ergebnisse vergleichbar sein.  \\
 
-Diese Arbeit bezieht sich häufig auf den ultimaker 2, der im vorhergehenden Kapitel \ref{chapter:techGr:ultimaker2} vorgestellt wird. In der Arbeit mit einem anderen Drucker können sich Vorgehensweise und Ergebnis deutlich unterscheiden.
+Für die Studienarbeit wird als technisches Objekt exemplarisch ein Aufbewahrungssystem für einen Raspberry Pi gekoppelt mit einem \ac{USB}- Hub und einer  externen Festplatte entworfen. Dieses System soll möglichst kompakt und als ein Block transportierbar sein.
 
-Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend folgt eine Beschreibung des umzusetzenden Konzepts. Folgend wird ein Entwurf des Systems mit einem \ac{CAD}-Programm  und der Druck des Objekts beschrieben. Der darauffolgende Abschnitt beschäftigt sich mit während dem Druck aufgetretenen Fehlern. Zuletzt folgt ein Fazit über die Eignung des ultimaker 2 zum Drucken von technischen Objekten.
+Diese Arbeit bezieht sich häufig auf den Ultimaker 2, der im vorhergehenden Kapitel \ref{chapter:techGr:ultimaker2} vorgestellt wird. In der Arbeit mit einem anderen Drucker können sich Vorgehensweise und Ergebnis deutlich unterscheiden.
+
+Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend folgt eine Beschreibung des umzusetzenden Konzepts für das neue Aufbewahrungssystem, das während der Studienarbeit gedruckt werden soll. Folgend wird ein Entwurf des Systems mit einem \ac{CAD}-Programm  und der Druck des Objekts beschrieben. Der darauffolgende Abschnitt beschäftigt sich mit während dem Druck aufgetretenen Fehlern. Zuletzt folgt ein Fazit über die Eignung des Ultimaker 2 zum Drucken von technischen Objekten.
 
 
 %TODO Ist-Analyse
 \newpage
 \section{Ist-Analyse}
-	Zu entwerfen ist eine Verwahrung für einen Heimserver auf einem Raspberry Pi( folgend als Pi bezeichnet) mit angeschlossener externer Festplatte. Der Pi selbst liefert an seinen \ac{USB}-Ports nicht genug Leistung zum Betreiben der Festplatte, weshalb ein zusätzlicher powered \ac{USB}-Hub nötig ist. 
+	Zu entwerfen ist eine Verwahrung für einen Heimserver auf einem Raspberry Pi(folgend als Pi bezeichnet) mit angeschlossener externer Festplatte. Der Pi selbst liefert an seinen \ac{USB}-Ports nicht genug Leistung zum Betreiben der Festplatte, weshalb ein zusätzlicher powered \ac{USB}-Hub nötig ist. 
 	
 	\piccaption{Ursprüngliches Stapelsystem\label{grafik:techObj:ursprStapelsystem}}
 	\parpic{\includegraphics[width=.5\textwidth]{images/techObj/urspruenglicheHalterung02.jpg}}
 	
-	Zu Beginn der Entwicklung wurde das System durch zu einem Käfig verschraubten Lochblechen zusammengehalten, die Festplatte und Hub umfassten. Abbildung \ref{grafik:techObj:ursprStapelsystem} Insbesondere der Pi war im alten System nur unzureichend fixiert, da er nur auf den Käfig aufgesetzt war. Ein Hauptmerkmal des neuen Systems soll das sichere Lagern aller Komponenten sein. 
+	Zu Beginn der Entwicklung wurde das System durch zu einem Käfig verschraubten Lochblechen zusammengehalten, die Festplatte und Hub umfassten. Abbildung \ref{grafik:techObj:ursprStapelsystem} Insbesondere der Pi war im alten System nur unzureichend fixiert, da er nur auf den Käfig aufgesetzt war. Eine Hauptanforderung an das neue System soll das sichere Lagern aller Komponenten sein. 
 	
 	\picskip{0}
 	\vspace*{3em}
 	
-	Nächste Anforderung ist die Portabilität des Systems. Um den Server sicher und einfach bewegen zu können, soll das System als ganzes stabil zu einer Einheit verbindbar sein. Das bisherige System sollte die Portabilität ermöglichen, war jedoch aufgrund der oben genannten Instabilität nicht dazu in der Lage.  
+	Die zweite Anforderung ist die Portabilität des Systems. Um den Server sicher und einfach bewegen zu können, soll das System als Ganzes stabil zu einer Einheit verbindbar sein. Das bisherige System sollte die Portabilität ermöglichen, war jedoch aufgrund der oben genannten Instabilität nicht dazu in der Lage.  
 	
-	Die Ausmaße der zu verstauenden Objekte ist folgend aufgeführt.
+	Die Ausmaße der zu verstauenden Objekte sind folgend aufgeführt.
 	
 	%TODO Messung Dimensionen
 %	\begin{tabular}{c|c|c|c}
 %		\label{}
 %		\caption{Übersicht der Dimensionen der einzubauenden Objekte}
 %				Bauteil 			& Länge [mm] 	& Breite [mm]	& Höhe [mm] \\ 
-%		\hline 	Raspberry Pi 		& Länge 	& Breite 	& Höhe  \\ 
-%				externe Festplatte 	& Länge 	& Breite 	& Höhe  \\ 
-%				\ac{USB}-Hub 		& Länge 	& Breite 	& Höhe  \\ 
+%		\hline 	Raspberry Pi 		& 85 	& 56 	& 17  \\ 
+%				externe Festplatte 	& 111 	& 83,5 	& 21  \\ 
+%				\ac{USB}-Hub 		& 42,2 	& 77,6 	& 11,7  \\ 
 %		 
 %	\end{tabular} 
 
@@ -43,19 +46,19 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 		
 		\begin{minipage}[b]{.3\textwidth}
 			
-			\includegraphics[width=\textwidth]{images/techObj/raspberry_bemasst}
+			\includegraphics[width=\textwidth]{images/techObj/pi/raspberry_bemasst}
 			\subcaption{Bemaßung des Raspberry Pis}
 			
 		\end{minipage}
 		\begin{minipage}[b]{.3\textwidth}
 			
-			
+			\includegraphics[width=\textwidth]{images/techObj/Hub/Hub_bemasst.jpg}
 			\subcaption{Bemaßung des \ac{USB}-Hubs}
 			
 		\end{minipage}
 		\begin{minipage}[b]{.3\textwidth}
 			
-			
+			\includegraphics[width=\textwidth]{images/techObj/FP/FP_bemasst.jpg}
 			\subcaption{Bemaßung der externen Festplatte}
 			
 		\end{minipage}
@@ -63,9 +66,9 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 		\caption{text}
 	\end{figure}
 	
-	Zusätzlich zu diesen Maßen sind bei Pi noch die Positionen der Schraub-Bohrungen und die Höhe der unter dem Pi herausragenden Lötpunkte und \ac{SMD}-Bauteile. Die frei zugänglichen Leiterbahnen müssen in der Verwahrung Abstand zu anderen Bauteilen haben, da sie sonst beschädigt werden könnten.
+	Zusätzlich zu diesen Maßen kommen beim Pi noch die Positionen der Schraub-Bohrungen und die Höhe der unter dem Pi herausragenden Lötpunkte und \ac{SMD}-Bauteile hinzu. Die frei zugänglichen Leiterbahnen müssen in der Verwahrung genug Abstand zu anderen Bauteilen haben, da sie sonst beschädigt werden könnten.
 	
-	Für das neue Verwahrungs-System soll eine Eigenschaft der alten übernommen werden. Die Platzierung der Komponenten übereinander ist sehr platzsparend und kann gut transportiert werden.
+	Eine Eigenschaft des bisherigen Systems mit den Lochblechen soll für das neue Verwahrungs-System soll übernommen werden. Die Platzierung der Komponenten übereinander ist sehr platzsparend. Zudem kann das System dadurch gut transportiert werden.
 
 	
 %TODO 
