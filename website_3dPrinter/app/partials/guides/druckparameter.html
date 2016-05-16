@@ -1,0 +1,181 @@
+﻿<div class="auto-indent">
+  <h2>Druckparameter</h2>
+  Beschreibung der Druckparameter die in Cura eingestellt werden können wenn unter dem Menüpunkt "Expert" der Switch zu den "Full Settings" vollzogen wurde.
+
+  <h3 id="parameter-infill">Infill</h3>
+  <div>
+    Als Infill wird bei Ultimaker Druckern eine Gitterstruktur bezeichnet, die das Innere des gedruckten Objektes ausfüllt. Die Struktur dient dazu eine höhere Festigkeit des Objektes zu erreichen um ein Kollabieren bei Belastung zu vermeiden. Je kleiner die angegebene Fill density, desto größer sind die gedruckten Waben. Bei 100% wird das Objekt komplett gefüllt und bei 0% wird kein Infill gedruckt, Standardwert ist 20%. Der Infill erhöht den Materialverbrauch und die Druckzeit.<br>
+    Die Menge an benötigtem Infill ist abhängig von der Größe, der Beschaffenheit, sowie dem Einsatzzweckes des Objektes. Kleinere Objekte brauchen kaum bis keinen Infill wenn sie wenig bis mittel belastet werden bei der Benutztung. Größere Objekte mit großen, geraden Flächen profitieren von der Stabilität die ein Infill hinzufügt dagegen sehr. Falls das Objekt selbst schon Stützen besitzt und/oder sehr wenig glatte Flächen hat, wird weniger Infill benötigt. Zu einem gewissen Grad kann der Infill durch ein Erhöhen der <a href="#/guide/druckparameter#parameter-wandstaerke">Wandstärke</a> ersetzt werden, dabei wird die Druckzeit weniger stark erhöht.
+    <br><br>
+    Es lassen sich zusätzlich noch weitere Parameter zum Infill einstellen:
+
+    <ul>
+      <li>
+        <b>Solid infill top</b><br>
+        Erstellt eine solide Decke wenn gesetzt, wenn nicht wird die Decke des Objekts auch mit der Angabe des Infills gefüllt.
+      </li>
+      <li>
+        <b>Solid infill bottom</b><br>
+        Erstellt einen soliden Boden wenn gesetzt, wenn nicht wird der Boden des Objekts auch mit der Angabe des Infills gefüllt.
+      </li>
+      <li>
+        <b>Bottom/Top thickness</b><br>
+        Dicke der soliden Decke bzw. des soliden Bodens, wenn die vorherigen Parameter gesetzt sind. Dieser Wert sollte ein vielfaches der Schichtdicke sein und ungefähr den Wert der Shell-thickness haben.
+      </li>
+      <li>
+        <b>Infill overlap</b><br>
+        Menge der Überlappung zwischen den äußeren Wänden und dem Infill um den Infill mit den Wänden zu verbinden.
+        Der Standardwert von 15% sollte für fast alle Szenarien ausreichend sein.
+      </li>
+    </ul>
+  </div>
+
+  <h3 id="parameter-schichtdicke">Schichtdicke</h3>
+  <div>
+    Die Schichtdicke gibt die Dicke der Schichten an die gedruckt werden, sie ist maßgeblich für die <a href="#/guide/speedvsquality">Qualität und Druckzeit</a> des gedruckten Objektes verantwortlich. Standardeinstellung für den Druck in normaler Qualität ist 0,1mm, bei hoher Qualität liegt er bei 0.06. Je dünner die Schichten, desto besser die Qualität, da die einzelnen Schichten sich besser Verbinden und die Oberfläche des Objektes homogener wirkt. Bei kleiner Schichtdicke muss der Drucker aber auch mehr Schichten drucken um das Objekt zu vervollständigen, was mehr Zeit in Anspruch nimt.
+  </div>
+
+  <h3 id="parameter-wandstaerke">Wandstärke</h3>
+  <div>
+  Die Wandstärke gibt die Dicke der äußeren Wände des Objektes an. Mit steigender Wandstärke steigt auch die Stabilität der Ausenwände des Objekts, sowie die Gesamtstabilität. Daher kann die Wandstärke zu einem gewissen Grad einen <a href="#/guide/druckparameter#parameter-infill">Infill</a> ersetzen.
+  </div>
+
+  <h3 id="parameter-retraction">Retraction</h3>
+  <div>
+    Retraction ist eine Bezeichnung für das Zurückziehen des Filaments wenn der Drucker größere Abstände überbrücken muss. Durch das Zurückziehen kann man vermeiden, dass Fäden von geschmolzenem Filament mit zum nächsten Druckort gezogen werden und das Objekt verkleben.
+    <br>
+    Generell gilt bei diesen Parametern, dass die Standardwerte nur verändert werden sollten wenn andere Maßnahmen insufizient waren.
+    Da bei der Retraction das Filament wieder zurückgezogen wird, kann es zu <a href="#/guide/error#error-printer-grinding">"Filament grinding"</a> kommen.
+    <br><br>
+    Einstellbare Parameter:
+    <ul>
+      <li>
+        <b>Minimum travel</b><br>
+        Die Distanz die der Druckkopf mindestens zurücklegen muss bis er wieder Retraction benutzen darf.
+        Ist dieser Wert zu klein, kommt es zu viel Retraction an einer kleinen Stelle, was Grinding hervorrufen kann.
+        Wenn der Wert dagegen zu groß ist, wendet der Drucker keine Retraction an bei Stellen an denen er eigentlich welche bräuchte.
+      </li>
+      <li>
+        <b>Enable Combing</b><br>
+        Wenn Combing aktiviert ist, fährt der Druckkopf nach der Retraction nicht den direktesten Weg zur neuen Druckstelle, sondern wählt den Weg so, dass er innerhalb des Objektes fährt. Fäden innerhalb des Objektes sind oft weniger schlimm als außerhalb, da viele Objekte geschlossen sind und die Fäden dann unsichtbar sind.
+      </li>
+      <li>
+        <b>Minimal extrusion before retracting</b><br>
+        Dieser Wert gibt an, wie viel Filament vor einer erneuten Retraction gedruckt werden müssen. Ist der Wert zu klein wird der Feeder eine Stelle am Filament durch viel Vor- und Zurückfahren stark belasten, sodass es zu Grinding kommen kann.
+      </li>
+      <li>
+        <b>Z hop wenn retracting</b><br>
+        Wenn der Drucker Retracted kann er zusätzlich die Druckplatte vom Druckkopf entfernen um einen Abriss eines möglichen Fadens zu erzwingen.
+      </li>
+    </ul>
+  </div>
+
+  <h3 id="parameter-geschwindigkeit">Geschwindigkeit</h3>
+  <div>
+    Generelle Druckgeschwindigkeit, eine erweiterte Einstellung kann im Advanced Tab erfolgen.
+  </div>
+
+  <h3>Support</h3>
+  <div>
+    Cura kann Supports generieren, die Einstellungen in der Kategorie Support Stellen Parameter für die Beeinflussung der Generierung zur Verfügung. Wir raten jedoch davon ab von Cura generierte Support Strukturen zu  benutzen, daher gibt es hier keine Beschreibung der Parameter und der Auswirkungen.
+    Informationen zu Supports und ihrer Generierung gibt es <a href="#/guide/supports">hier</a>.
+  </div>
+
+  <h3 id="parameter-machine">Machine</h3>
+  <div>
+    Die Nozzle size gibt die Größe der Extrusionsdüße an und darf nicht geändert werden.
+  </div>
+
+  <h3 id="parameter-quality">Quality</h3>
+  <div>
+    Die Einstellungen in dieser Kategorie helfen ein besseres Haften des Objektes an der Bodenplatte des Druckers zu erreichen. So kann ein Verrutschen des Objektes beim Drucken vermieden werden. Sie verändern aber auch die Struktur und das Aussehen des Objektes.
+    <br><br>
+    Einstellbare Parameter:
+    <ul>
+      <li>
+        <b>Initial layer thickness</b>
+      Dicke der ersten gedruckten Schicht. Je größer die Dicke, desto besser die Haftung des Objektes und die Stabilität des Bodens des Objektes. Gleichzeitig wird aber auch die Druckzeit erhöht, vor allem wenn ein solides Infill für den Boden gewählt wurde. Dieser Parameter sollte erhöht werden wenn das zu druckende Objekt wenig Kontakt mit der Glasplatte hat.
+      </li>
+      <li>
+        <b>Initial layer line width</b><br>
+        Ermöglicht die Verbreiterung der Linien die in der ersten Schicht gedruckt werden um eine bessere Haftung zu erreichen. Verändert aber das Aussehen des Objektes dabei, durch Verbreiterung der ersten Schicht.
+      </li>
+      <li>
+        <b>Cut off object bottom</b><br>
+        Die ersten n mm des Objektes werden nicht gedruckt, das Objekt wird am Boden abgeschnitten. Das ist hilfreich wenn das Objekt erst nach einigen mm an Höhe eine ausreichende Bodenhaftung hat, generell sollte man aber ein Objekt wählen das auch ohne diesen Parameter druckbar ist oder das Objekt so drehen, dass es genügend Haftung aufweist.
+      </li>
+      <li>
+        <b>Dual extrusion overlap</b><br>
+        Überlappung der Linien bei Drucken mit zwei Farben um die Linien und Farben besser miteinander zu verbinden.
+      </li>
+    </ul>
+  </div>
+
+  <h3 id="parameter-speed">Speed</h3>
+  <div>
+    Neben der Einstellung zur generellen Druckgeschwindigkeit kann man hier die Geschwindigkeit für spezielle Situationen einstellen. Siehe auch <a href="#/guide/speedvsquality">hier</a>.
+    <h4>Travelspeed</h4>
+    <div>
+      Geschwindigkeit des Druckkopfes wenn er von einer Druckstelle zur nächsten fährt.
+      Der Drucker kann zwar 250mm/s erreichen, der Wert sollte aber trotzdem unter dem Maximalwert bleiben.
+    </div>
+
+    <h4>Bottom layer speed</h4>
+    <div>
+      Geschwindigkeit beim Drucken der untersten Schicht. Langsamere Geschwindigkeit verbessert die Klebewirkung auf der Glasplatte.
+    </div>
+
+    <h4>Infill speed</h4>
+    <div>
+      Geschwindigkeit in der die innere Stützstruktur gedruckt wird.
+    </div>
+
+    <h4>Top/bottom speed</h4>
+    <div>
+      Geschwindigkeit in der die oberen und unteren Teile des Objektes gedruckt werden.
+      Erhöhen der Geschwindigkeit kann zu großen Reduzierungen der Druckzeit führen, beinflusst aber gleichzeitig auch die Qualität.
+    </div>
+
+    <h4>Outer shell speed</h4>
+    <div>
+      Geschwindigkeit mit der die äußere Schale gedruckt wird.
+      Je geringer die Geschwindigkeit, desto besser ist die sichtbare Qualität des Objekts.
+      Große Differenzen der Geschwindigkeit zwischen der inneren und äußeren Schale beinflusst die Qualität aber negativ.
+    </div>
+
+    <h4>Inner shell speed</h4>
+    <div>
+      Geschwindigkeit in der die innere Schale gedruckt wird.
+    </div>
+  </div>
+
+  <h3 id="parameter-cool">Cool</h3>
+  <div>
+    Der Ultimaker 2 hat insgesamt drei Lüfter, von denen zwei für die Kühlung des bereits gedruckten Objekts zuständig sind.
+    Mit einer aktiven Kühlung verfestigen sich bereits gedruckte Teile schneller und es kann früher eine neue Schicht Plastik aufgebracht werden<br>
+    Für die untersten Schichten ist ein Verkleben miteinander und mit der Bodenplatte aber gewünscht.<br><br>
+
+    Die Minimal layer time sollte daher immer mindestens fünf Sekunden betragen und die Lüfter aktiviert sein.
+    In den erweiterten Einstellungen gibt es außerdem folgende Parameter:<br><br>
+
+    <ul>
+      <li>
+        <b>Fan full on at height</b><br>
+        Höhe ab der die Lüfter auf der maximalen Geschwindigkeit laufen. Zwischen der ersten Schicht und diesem Wert skaliert die Geschwindigkeit der Lüfter linear nach oben.
+        Ist der Wert zu niedrig gesetzt gibt es Probleme mit der Haftung der ersten paar Schichten an der Bodenplatte.
+      </li>
+      <li>
+        <b>Fan speed max/min</b><br>
+        Maximale/minimale Geschwindigkeit der Lüfter.
+      </li>
+      <li>
+        <b>Minimum speed</b><br>
+        Da die Minimal layer time den Druck stark ausbremsen kann, legt dieser Wert die minimal akzeptierte Druckgeschwindigkeit fest.
+      </li>
+      <li>
+        <b>Cool head lift</b><br>
+        Zur Umgehung des minimum speed Problems kann der Drucker den Druckkopf bei erreichen der minimalen Geschwindigkeit auch einfach anheben um die minimal layer time zu erreichen.
+      </li>
+    </ul>
+  </div>
+</div>

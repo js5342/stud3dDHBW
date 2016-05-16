@@ -1,0 +1,144 @@
+﻿<div class="auto-indent">
+	<img class="text-image" src="res/ultimaker-display.jpg">
+	<h2>Drucker</h2>
+	<div>
+		<h3>Bedienung</h3>
+		<div>
+			Der Ultimaker 2 wird über das LCD und den Drehencoder an der Front gesteuert.
+			Das LCD hat dabei, wie auf dem Bild oben zu sehen, drei Untermenüs die per Druck auf den Drehencoder ausgewählt werden können: 
+			<ul>
+				<li>Print</li>
+				<li>Material</li>
+				<li>Maintenance</li>
+			</ul>
+
+			<h4>Druck</h4>
+			<div>
+				<b>Druck durchführen</b><br>
+				Bei Auswahl des Print Untermenüs im Hauptmenü erscheint eine Liste von Dateien die auf der SD-Karte gespeichert sind.
+				Per Drehencoder kann man die zu druckende Datei auswählen und den Druck starten.
+				Der Drucker wird dann ein neues Menü anzeigen und den Extruder sowie die Glasplatte beheizen.
+				<br><br>
+				<b>Einstellungen während des Drucks</b><br>
+				Während des Drucks zeigt der Ultimaker 2 im oberen Teil des Displays Informationen zum Status des Aufheizvorgangs, bzw. der restlichen Druckzeit.
+				Im unteren Teil gibt es den Menüpunkt "Pause" und "Tune".
+				Währen Pause den Druck pausiert, kann man im Tune Menü Einstellungen für den Druck verändern, wie z.B. die Druckgeschwindigkeit oder Temperaturen.
+			</div>
+			
+			<h4>Material</h4>
+			<div>
+				<b>Filamenttausch</b>
+				Im Submenü kann die Option "Change" ausgewählt werden.
+				Wenn diese ausgewählt wird, heizt sich der Extruder auf und der Grinder wird nach dem Aufheizen das Filament zurückziehen.
+				Nach dem Wechsel der Filamentspule müssen die Anweisungen auf dem LCD befolgt werden.
+				Generell wird der Grinder das Filament wieder zum Extruder ziehen und dort so lange aufheizen bis eine kleine Menge flüssiges Filament austritt.<br><br>
+
+				<b>Profile</b>
+				Für PLA, ABS und UPET können verschiedene Drucktemperaturen, sowie Lüfteraussteuerung eingestellt werden.
+				Dafür wählt man das Submenü "Settings" aus und wählt eines der aufgelisteten Materialien.
+				Es erscheint eine neue Bildschirmmaske bei der man die Temperatur über den Drehencoder einstellen kann.
+			</div>
+			
+			<h4>Wartung</h4>
+			<div>
+				<h5>Kalibrierung</h5>
+				<div>
+					Wenn Probleme beim Druck auftreten, wie ungleiche Druckhöhen oder Abrisse von der Glasplatte sollte der Drucker kalibriert werden.
+					Dafür benutzt man das Submenü "Buildplate", das den Nutzer durch die Kalibrierungsschritte leitet.
+				</div>
+				<h5>Erweiterte Einstellungen</h5>
+				<div>
+					Das erweiterte Menü enthält folgende Einstellungsmöglichkeiten:<br>
+					<ul>
+						<li>
+							<b>LED settings</b><br>
+							Einstellung der LED Helligkeit der LED Streifen im Drucker und der LEDS hinter dem Drehencoder.
+						</li>
+						<li>
+							<b>Heatup nozzle</b><br>
+							Einstellung der Solltemperatur des Extruder und Anzeige der Isttemperatur.
+						</li>
+						<li>
+							<b>Heatup buildplate</b><br>
+							Einstellung der Solltemperatur der Glasplatte und Anzeige der Isttemperatur.
+						</li>
+						<li>
+							<b>Home head</b><br>
+							Fährt den Extruder in seine Parkposition in der hinteren linken Ecke des Druckers.
+						</li>
+						<li>
+							<b>Lower buildplate</b><br>
+							Fährt die Glasplatte an den tiefsten Punkt (Parkposition).
+						</li>
+						<li>
+							<b>Raise buildplate</b><br>
+							Fährt die Glasplatte an den höchsten Punkt.
+						</li>
+						<li>
+							<b>Insert material</b><br>
+              Eine manuelle Version des Change Material Dialogs.
+						</li>
+						<li>
+							<b>Move material</b><br>
+              Heizt den Extruder auf und erlaubt es durch Betätigung des Drehencoders manuell Material auszugeben. Diese Option kann genutzt werden um Verstopfungen in der Düse des Druckers zu beseitigen.
+						</li>
+						<li>
+							<b>Set fan speed</b><br>
+							Einstellung der Drehgeschwindigkeit beider Lüftergruppen in Prozent.
+						</li>
+						<li>
+							<b>Retraction settings</b><br>
+							Einstellung der <a href="#/guide/druckparameter#parameter-retraction">Retraction</a>.
+						</li>
+						<li>
+							<b>Motion settings</b><br>
+							Einstellungen zu den <a href="#/guide/druckparameter#parameter-speed">Geschwindigkeitseinstellungen</a> des Druckers.
+						</li>
+						<li>
+							<b>Version</b><br>
+							Versionsangabe der Firmware des Druckers.
+						</li>
+						<li>
+							<b>Runtime stats</b><br>
+							Statistiken über die Laufzeit des Druckers.
+						</li>
+						<li>
+							<b>Factory reset</b><br>
+							Zurücksetzen auf Werkseinstellungen.
+						</li>
+					</ul>				
+				</div>
+			</div>
+		</div>
+		
+		<h3>Firmware Update</h3>
+		<div>
+			Alle 2-3 Monate gibt es ein neues Firmware Update für den Drucker, meist zusammen mit der Veröffentlichung einer neuen Version von Cura.
+			Wenn Cura dies meldet muss der Drucker per USB-Kabel mit dem Rechner verbunden und die weiteren Anweisungen von Cura befolgt werden.
+			Das Update sollte weder per Hardware noch durch Software unterbrochen werden um zu vermeiden, dass die Firmware auf dem Gerät korrupiert wird.<br>
+			Alternativ kann das Update auch über die Menüpunkte: Machine -> Install default firmware geschehen.
+		</div>
+		
+		<h4>Reinigung der Glasplatte</h4>
+		<div>
+			Das Plastik, welches beim Druck die Druckplatte berührt, hinterlässt klebrige Rückstände.
+			Dies ist normalerweise kein Problem, sondern gewünscht, da es für bessere Adhesion von Gegenständen an der Platte sorgt.
+			Falls die Platte doch einmal gereinigt werden muss, wegen einem fehlgeschlagenem Druck oder ähnlichen, sollte man diese für eine leichtere Reinigung entfernen.
+			<br>
+			Dafür drückt man die zwei Klammern die die Platte halten vorsichtig mit einem Schraubenzieher nach außen und entfernt die Platte.
+			Die Platte kann dann per Hand im Waschbecken gewaschen werden, grober Schmutz sollte per Spachtel oder Schaber entfernt werden.
+			Nach der Reinigung legt man die Glasplatte wieder an ihren Platz und arretiert die Klammern an der Platte, bis sie fest sitzt.
+			Dann kalibriert man den Drucker wie im Eintrag zum erweiterten Menü beschrieben.
+		</div>
+		
+		<h4>Wartung der Mechanik</h4>
+		<div>
+			Wenn es zu verschobenen Schichten beim Druck kommt, kann es sein, dass die Mechanik gewartet werden muss.
+			Für die X und Y Achse des Extruders benutzt man einen Tropfen Nähmaschinenöl pro Stange an der der Extruder geführt wird.
+			Bei der Schraube, an der die Druckplatte hochgeschoben wird, verteilt man 10 Tropfen des mitgelieferten Magnalube Schmierstoffes.
+			Der Drucker schmiert sich beim nächsten Druck dann selbstständig durch seine Bewegungen.
+			<br><br>
+			Wichtig: Die Schmiermittel sollen mit keiner anderen Oberfläche des Druckers in Berührung kommen.
+		</div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+<div class="auto-indent">
+  <h2>Scannen mit der Kinect Kamera</h2>
+  <p>
+    <b>Dieser Artikel bezieht sich auf die Kinect v1 und ReconstructMe in der Version 2.1.348</b>
+  </p>
+  <h3>Einleitung</h3>
+  <div>
+    Ein einfacher Weg Modelle für den Drucker zu erstellen ist das Einscannen mithilfe einer Kinect Kamera. Dieser Prozess
+    eignet sich vor allem für organische Objekte, die kaum gerade Flächen haben.<br>
+    Einige Punkte die man vor dem Scannprozess beachten sollte:
+    <ul>
+      <li>Feine Details gehen beim Scannen verloren, da die Auflösung der Kinect nur 320*240 Pixel beträgt.</li>
+      <li>Diese Methode eigent sich nicht um exakte Dimensionen einzuhalten, da die Größen durch Perspektiven verzerrt werden können.</li>
+    </ul>
+  </div>
+
+  <h3>Der Scannprozess</h3>
+  <div>
+    Zum Scannen kann ein Vielzahl von Programmen verwendet werden, diese Anleitung bezieht sich auf "ReconstructMe".<br><br>
+    <h4>Voreinstellungen</h4>
+    <div>
+      <img src="res/reconstructme2.png" class="text-image">
+      Wenn "ReconstructMe" gestartet ist muss zunächst das vorraussichtliche Volumen des Objektes eingestellt werden. Für gute Ergebnisse sollte der Bereich so klein wie möglich gewählt werden. In der Vorschau sollte aber darauf geachtet werden, dass das Objekt genug Platz im Scannvolumen hat. Um das zu scannende Objekt sollte ausreichend Platz frei geräumt werden um alle Seiten umlaufen zu können. Wenn die Vorbereitungen erfolgt sind, kann der Scann gestartet werden.<br>
+      </div>
+
+    <h4>Scannen</h4>
+    <div>
+      <img src="res/reconstructme1.png" class="text-image">
+      Um das Objekt zu erfassen müssen nun alle Seiten mit der Kinect Kamera umlaufen werden. Damit die Software gut arbeiten kann, müssen alle Bewegungen langsam und vorsichtig erfolgen. Die Kamera muss dabei immer auf das Objekt gerichtet sein, damit die Software die Bewegung der Kamera berechnen kann.<br>
+      Um Köpfe zu scannen hat es sich als Bewegungsmuster bewährt, frontal zu beginnen und zunächst die Kamera nach oben und unten zu bewegen um Kinn und Oberseite des Kopfes zu erfassen. Dann kann durch eine Kreisbewegung um den Kopf herum, der Rest des Modells erfasst werden.
+      Bereiche die auf dem Vorschaumodell texturiert angezeigt werden sind bereits vollständig erfasst. Grüne Bereiche weißen auf offene Löcher hin. Durch Bewegen der Kamera können diese Löcher geschlossen werden.<br>
+      Sollte das Vorschaumodell während des Scannens einfrieren und nicht mehr die Bewegung der Kamera reflektieren, ist die Bewegungserkennung fehlgeschlagen, weil die Bewegung der Kamera zu schnell war, oder das Objekt aus einem zu extremen Blickwinkel betrachtet wird. Um Fortzufahren muss die Kamera wieder zu dem Blickwinkel zurück bewegt werden, der aktuell in der Vorschau gezeigt wird.<br>
+      Sobald alle relevanten Bereiche des Objektes in Farbe angezeigt werden, kann der Scann beendet werden.<br>
+      Das Programm errechnet nun aus den gesammelten Daten ein Modell das danach als .stl-Datei abgespeichert werden kann. Um das Modell für den Druck vorzubereiten kann es nun in <a href="#/guide/meshmixer">MeshMixer</a> weiter bearbeitet werden.
+    </div>
+
+    <h4>Nachbearbeiten</h4>
+    <div>
+      Die kostenlose Version von ReconstructMe erzeugt in der Modelldatei Wasserzeichen in Form eines Textes und mehrerer verschieden großer Kugeln. Mit etwas Bearbeitung lassen sich diese jedoch aus dem Modell entfernen.<br>
+      Dazu wird die Datei zunächst in Meshmixer geöffnet. Mit dem "Select" Tool können dann vorsichtig alle Elemente ausgewählt und durch einen Druck auf "Entf" aus dem Modell entfernt werden.<br>
+      Im nächsten Schritt sollte mit Hilfe des <a href="'/guide/meshmixer#error-analysis">"Inspector Tool"</a> offensichtliche Fehler entfernt werden. Falls Löcher oder nicht korrekt gescannte Stellen im Modell zu sehen sind, können diese mit den Werkzeugen aus den Bereichen "Edit" und "Sculpt" bearbeitet werden, bis ein zufriedenstellendes Ergebnis erreicht ist.
+    </div>
+  </div>
+</div>
