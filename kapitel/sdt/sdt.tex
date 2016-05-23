@@ -38,22 +38,41 @@
 			
 		
 		\subsection{Slicing}
+			
 			Das Slicing ist der Prozess zur Umwandlung eines 3D-Objekts in für den Drucker eindeutige Befehle. Da jeder Drucker unterschiedliche Randbedingungen bietet, empfielt der jeweilige Hersteller ein für den Drucker geeignetes Programm zum Slicen.
 			
 			Der 3D-Drucker Ultimaker 2 erhält seine Dateien vom Ultimaker eigenen Programm Cura. Alternativ kann das Programm Repertierhost verwendet werden.
 			
-		\section{Cura}
+		\subsubsection{Cura}
+			% TODO Screenshot Cura
 			
-			
+			Mit Cura kann man aus Objektdateien im \ac{STL}-Format G-code für den Ultimaker erstellen. Das Programm erlaubt die Variation zahlreicher Parameter, die den Druck beeinflussen. Die verwendete Programmversion beeinflusst die Ergebnisse des Slicens deutlich. Viele Druckoptionen sind erst mit neueren Versionen möglich. Eine wichtige fehlende Funktion von Cura ist eine Einstellmöglichkeit der Drucktemperatur. Der Befehl ist im G-code vorgesehen, allerdings nicht beeinflussbar.
 			
 		\subsubsection{Repetierhost}
-		.
+			
+			%TODO Bild Repetierhost
+			
+			Repetierhost ist ein alternatives Programm zur Fernsteuerung von 3D-Druckern. Es visualisiert Druckdateien im \ac{STL}- und im G-code-Format. Zudem enthält es einen Slicer, mit dem man selbigen erzeugen kann. 
+			
+			Cura liefert mitunter fehlerhaften G-code, in dem Löcher klaffen oder Schichten fehlen. Mithilfe des Repetierhosts können diese Fehler entdeckt werden.
+			
 	\subsection{Dateiformate}
 		
-		\subsubsection{STL}
+		Für die Darstellung von 3D-Objekten können verschiedene Datentypen verwendet werden. Essenziell für den 3D-Druck mit dem Ultimaker sind die Dateitypen \ac{STL} und der G-code.
 		
-		\subsubsection{GCODE}
-		
+		\subsubsection{\acf{STL}}
+			
+			Eine \ac{STL}-Datei ist eine Oberflächendefinition für ein 3D-Objekt. Hierfür werden die dreieckigen orientierten Facetten über ihre Eckpunkte in einem kartesischen Koordinatensystem abgespeichert. Die Dimensionierung(z.B. Zentimeter oder Inch) wird nicht mit abgespeichert und muss vom lesenden Programm eingestellt werden.
+			
+			Da das STL-Format eine einfache Objektbeschreibung ist, kann es als universelle Schnittstelle zwischen \ac{CAD}-Designprogrammen und Slicern verwendet werden. Allerdings gehen Zusatzinformationen wie unterschiedlich eingestellte Drucktemperaturen oder Druckfarben verloren. Daher eignet sich das Format nur zur Übergabe von  einfachen Formeigenschaften.			
+			
+		\subsubsection{G-code}
+			
+			Aus der Welt der Fräsen kommend ist der G-code eine Sprache, mit der Maschinen Positionierungs- und Arbeitsanweisungen erhalten können. 
+			
+			Derivate dieser Sprache wurden um die Funktionen zur Steuerung eines 3D-Druckers erweitert. Mithilfe der neuen Befehle können zum Beispiel die Drucktemperatur oder die Lüfter angesteuert werden.
+			
+			
 	
 \section{ZTemperaturtestdrcuk}
 	
