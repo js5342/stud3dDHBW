@@ -13,20 +13,77 @@
 \section{\acf{CAD}}
 	
 	%TODO Einleitung CAD
-	
-	\subsection{Programme}
-	
-	\subsection{Dateiformate}
-	
-	\subsection{Slicing}
-	
+	Der 3D-Druck basiert zum großen Teil auf dem computergestützten Design von Objekten. \ac{CAD}-Tools helfen beim Entwerfen. Anschließend werden die Objektdateien mithilfe von Slicern in 	maschinenlesbaren Code umgewandelt. Die Unterkapitel stellen die verwendeten Programme vor.
 		
-		\section{solid edge}
-		.
-		\section{blender}
-		.
-		\section{cura}
-	.
+	\subsection{CAD-Programme}
+		
+		Für das Design von 3D-Dateien gibt es vielerlei Programme. Auf kostenloser Basis wurden in dieser Arbeit Solid Edge und blender verwendet. 
+		
+		\subsubsection{Solid Edge}
+			
+
+			\piccaption{Screenshot des Programms blender\label{fig:sdt:solidEdge}}
+			\parpic{\includegraphics[width=.5\textwidth]{images/SdT/solidEdge}}
+			
+			Solid Edge von Siemens eignet sich für das Entwerfen von technischen Objekten. Hierbei bietet das Programm eine Vielzahl von Funktionen für die Erstellung von 2D- und 3D-Formen. Für einfache Objekte kann eine 2D-Grundform gezeichnet und anschließend zu einem 3D-Objekt extrahiert werden. Zusätzliche Funktionen von Solid Edge unterstützen bei der Stabilitätsanalyse der entwickelten Objekte.
+			
+			Die Entwicklung der Objekte kann entweder auf sequenzieller Basis oder auf paralleler Basis geschehen. Die sequenzielle Entwicklung erfordert ein hohes Maß an Programmkenntnis, da die einzelnen Schritte der Objekterstellung nur in einem definierten Ablauf stattfinden kann. Der parallele Entwicklungsstack erleichtert die nachträgliche Veränderung von Arbeitsschritten wie zum Beispiel die Maße, die während einer Extraktion angegeben wurden. Zusätzlich können bei paralleler Entwicklung die Renderzeiten bei Maßänderungen deutlich reduziert werden. Das zahlt sich bei umfangreichen Objekten aus.
+			
+			Für die Arbeit wurde die akademische Lizenz verwendet. Objekte, die mit dieser Lizenz erstellt wurden, können nicht mit einer anderen Lizenz geöffnet werden.
+			
+			
+		\subsubsection{blender}
+			
+			\piccaption{Screenshot des Programms blender\label{fig:sdt:blender}}
+			\parpic{\includegraphics[width=.5\textwidth]{images/SdT/blender}}
+			
+			Blender ist ein Open Source Programm, das eine Vielzahl von Computergrafik-Anwendungen bietet. Diese reichen von der Erstellung von Objekten bis hin zum Filmschnitt.
+			
+			Die CAD-Funktionen zielen vor allem auf die Animation einzelner Objekte ab. Zum Beispiel kann die Beweglichkeit der Finger mit Regeln definiert werden. Das Objekt-Design unterliegt der Manipulation von Basis-Objekten, die dann anschließend zu einem Objekt vereinigt werden.
+			
+		
+		\subsection{Slicing}
+			
+			Das Slicing ist der Prozess zur Umwandlung eines 3D-Objekts in für den Drucker eindeutige Befehle. Da jeder Drucker unterschiedliche Randbedingungen bietet, empfielt der jeweilige Hersteller ein für den Drucker geeignetes Programm zum Slicen.
+			
+			Der 3D-Drucker Ultimaker 2 erhält seine Dateien vom Ultimaker eigenen Programm Cura. Alternativ kann das Programm Repertierhost verwendet werden.
+			
+		\subsubsection{Cura}
+
+			
+			\piccaption{Screenshot des Programms blender\label{fig:sdt:cura}}
+			\parpic{\includegraphics[width=.5\textwidth]{images/SdT/cura}}
+			
+			Mit Cura kann man aus Objektdateien im \ac{STL}-Format G-code für den Ultimaker erstellen. Das Programm erlaubt die Variation zahlreicher Parameter, die den Druck beeinflussen. Die verwendete Programmversion beeinflusst die Ergebnisse des Slicens deutlich. Viele Druckoptionen sind erst mit neueren Versionen möglich. Eine wichtige fehlende Funktion von Cura ist eine Einstellmöglichkeit der Drucktemperatur. Der Befehl ist im G-code vorgesehen, allerdings nicht beeinflussbar.
+			
+		\subsubsection{Repetierhost}
+			
+			
+			\piccaption{Screenshot des Programms blender\label{fig:sdt:repetierhost}}
+			\parpic{\includegraphics[width=.5\textwidth]{images/SdT/repetierhost}}
+			
+			Repetierhost ist ein alternatives Programm zur Fernsteuerung von 3D-Druckern. Es visualisiert Druckdateien im \ac{STL}- und im G-code-Format. Zudem enthält es einen Slicer, mit dem man selbigen erzeugen kann. 
+			
+			Cura liefert mitunter fehlerhaften G-code, in dem Löcher klaffen oder Schichten fehlen. Mithilfe des Repetierhosts können diese Fehler entdeckt werden.
+			
+	\subsection{Dateiformate}
+		
+		Für die Darstellung von 3D-Objekten können verschiedene Datentypen verwendet werden. Essenziell für den 3D-Druck mit dem Ultimaker sind die Dateitypen \ac{STL} und der G-code.
+		
+		\subsubsection{\acf{STL}}
+			
+			Eine \ac{STL}-Datei ist eine Oberflächendefinition für ein 3D-Objekt. Hierfür werden die dreieckigen orientierten Facetten über ihre Eckpunkte in einem kartesischen Koordinatensystem abgespeichert. Die Dimensionierung(z.B. Zentimeter oder Inch) wird nicht mit abgespeichert und muss vom lesenden Programm eingestellt werden.
+			
+			Da das STL-Format eine einfache Objektbeschreibung ist, kann es als universelle Schnittstelle zwischen \ac{CAD}-Designprogrammen und Slicern verwendet werden. Allerdings gehen Zusatzinformationen wie unterschiedlich eingestellte Drucktemperaturen oder Druckfarben verloren. Daher eignet sich das Format nur zur Übergabe von  einfachen Formeigenschaften.			
+			
+		\subsubsection{G-code}
+			
+			Aus der Welt der Fräsen kommend ist der G-code eine Sprache, mit der Maschinen Positionierungs- und Arbeitsanweisungen erhalten können. 
+			
+			Derivate dieser Sprache wurden um die Funktionen zur Steuerung eines 3D-Druckers erweitert. Mithilfe der neuen Befehle können zum Beispiel die Drucktemperatur oder die Lüfter angesteuert werden.
+			
+			
+	
 \section{ZTemperaturtestdrcuk}
 	
 	\begin{figure}[h!]
