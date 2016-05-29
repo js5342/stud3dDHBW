@@ -1,17 +1,35 @@
 \chapter{Fehler beim Drucken mit dem Ultimaker 2}
 	%TODO Unterkap. umbennen
 	%TODO Strukturierung
-	
-	.
+	%Fehlersuche zt schwer/Fehler hängen zusammen
+	Dieses Kapitel gibt einen Überblick über Fehler, die beim Drucken mit dem Ultimaker 2 auftreten können. Zudem werden die Fehlerursachen und mögliche Gegenmaßnahmen erläutert. 
+
 	\section{Olsson}
 	.
 	\section{Druckplatte nicht haftend}
-	.
+	\label{chapter:fehler:NichtHaftend}
+	Im Idealfall haftet die unterste Schicht des Filaments fest auf der beheizten Druckplatte, um den höheren Schichten einen guten Halt zu geben. Um das zu erreichen, wird die unterste Schicht meistens langsamer gedruckt als höhere Schichten. 
+	
+	Manchmal haftet die untere Schicht jedoch nicht richtig auf der Druckplatte. Das kann einerseits dazu führen, dass der Druck komplett misslingt, da der Druckkopf die nicht haftenden Fäden hinter sich herzieht. Andererseits kann es passieren, dass das Objekt zwar gedruckt wird, sich die Schichten aber mit zunehmender Höhe immer weiter gegeneinander verschieben. Wenn die untere Schicht nicht fest auf der Druckplatte haftet, kann es beim folgenden Druck passieren, dass das Objekt vom Druckkopf leicht verschoben wird. Dadurch sitzen die Schichten nicht exakt aufeinander und das Objekt wird schräg gedruckt.
+	
+	Dieser Fehler tritt wegen mangelnder Haftung der untersten Filamentschicht auf der Druckplatte auf. 
+	
+	Als Gegenmaßnahme kann die gläserne Druckplatte mit einer dünnen Schicht Klebstoff bestrichen werden. Dadurch haftet die erste Filamentschicht wieder besser. 
+	Zudem bietet Ultimaker inzwischen eine neue Druckplatte an, die speziell beschichtet ist und dadurch eine bessere Haftung ermöglichen soll. 
+	
 	\section{Stringing}	
+	%Retraction tut nicht richtig
 	.
 	\section{PTFE}
-	.
+	%TODO: Bilder
+	In \ref{chapter:techGr:ultimaker2} wird der Aufbau des Extruders genauer beschrieben. Die Düse ist zwar aus Metall gefertigt, aber das Filament gelangt durch eine \ac{PTFE}-Kopplung in die Düse. Dadurch, dass die Kopplung in der Nähe des Heizblocks sitzt, wird sie beim Drucken ebenfalls erhitzt. Das führt einerseits dazu, dass die Kopplung sich relativ schnell verformt und andererseits "verbrennt".
+	
+	Die Verformung führt dazu, dass das Filament nicht mehr ungehindert durch die Kopplung in die Düse gelangen kann. Dadurch wird teilweise zu wenig Filament gefördert und der Druck misslingt. 
+	
+	Deshalb sollte die \ac{PTFE}-Kopplung regelmäßig ausgetauscht werden.
+	
 	\section{zu wenig Material}
+	\label{chapter:fehler:zuWenigMaterial}
 	.
 	\section{grinding}
 	.
@@ -20,32 +38,55 @@
 	% der Scheiß mit dem Zugriff auf die Platine
 	
 	\section{Reibung in Bowdenzug}
+	\label{chapter:fehler:ReibungBowden}
 	.
 	\section{untersch Druckergebnisse je nach Druckposition}
-	.
+	Abhängig von der Position auf der Druckplatte, an der dasselbe Objekt zum Drucken platziert wird, ergeben sich teilweise stark unterschiedliche Ergebnisse. An manchen Positionen gelingt der Druck gut, während an anderen Fehler auftreten. Je nach Position haftet das Objekt unterschiedlich stark an der Druckplatte. Auch die Menge an Filament, die gefördert werden kann, hängt von der Position ab.
+	
+	Die unterschiedlich starke Haftung kann mehrere Ursachen haben: Da die Glasplatte nicht perfekt auf der Heizplatte aufliegt \ref{chapter:fehler:gebogeneHeizplatte}, kann es sein, dass verschiedene Positionen unterschiedlich gut erhitzt werden. An manchen Positionen haftet das Objekt somit schlechter, da diese nicht so gut beheizt werden.
+	Eine weitere Ursache kann sein, dass der Klebstoff, der die Haftung des Filaments auf der Druckplatte verbessern soll \ref{chapter:fehler:NichtHaftend}, nicht gleichmäßig aufgetragen wurde.
+	
+	Dass an manchen Positionen zu wenig Filament gefördert wird \ref{chapter:fehler:zuWenigMaterial} kann daran liegen, dass der Widerstand im Bowdenzug variiert, je nachdem, wie stark der Bowdenzug gekrümmt ist \ref{chapter:fehler:ReibungBowden}.
+	
 	\section{gebogene Heizplatte}
-	.
+	\label{chapter:fehler:gebogeneHeizplatte}
+	%TODO: überarbeiten
+	Die Glasplatte, auf der die Objekt gedruckt werden, liegt auf einer metallenen Platte auf, über die sie erhitzt wird. Die Glasplatte ist jedoch nicht perfekt gerade gefertigt, sondern ist stellenweise relativ stark durchgebogen. Dadurch liegt sie nicht gleichmäßig auf der Metallplatte auf. 
+	
+	Auffällig ist, dass eine Seite der Glasplatte besser aufliegt als die andere. Wird die Glasplatte mit der schlechter aufliegenden Seite auf die Metallplatte gelegt, wird sie durch den mangelnden Kontakt zur Metallplatte stellenweise deutlich schlechter erhitzt. Dadurch haftet das Objekt an diesen Stellen nicht an der Glasplatte.
+	
 	\section{keine Haftung der Linien auf anderen Linien}
+	% zu großer Abstand (in Luft drucken), Temperatur zu niedrig --> kein Verschmelzen, zu wenig Material
 	.
 	\section{schlechte Kalibrierung}
 	.
 	\section{untersch. Filamente, untersch. Eigenschaften }
 	.
 	\section{Spannung Feeder}
+	% Volt
 	.
 	\section{Anpressdruck im Feeder}
+	% mechanische Einstellung (Schraube)
 	.
 	\section{Knoten im Filament}
 	.
 	\section{verschmutzte Düse(außen und innen)}
-	.
+	Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 
+	
+	Die Rückstände in der Düse behindern den Materialfluss und können dazu führen, dass zu wenig Filament durch die Düse gelangt. Als Gegenmaßnahme kann man mit einer dünnen Nadel in die aufgeheizte Düse stechen.
+	
+	An den äußeren Rückständen kann sich das Filament des nächsten Drucks verfangen. Dadurch wird es nicht mehr ordentlich auf der Druckplatte ausgebracht und der Druck misslingt.
+	
 	\section{Bollen an Heizblock(total destruction)}
 	.
 	\section{Falsche Parameter, falsche Supportstruktur}
+	%temperatur, support, geschwindigkeit, wanddicke
 	.
 	\section{Drcuktemperatur}
+	%zu falschen Parametern (subsection)
 	.
 	\section{Verbranntes Material in Düse}
+	%in verschmutzte Düse integrieren
 	.
 	\section{mutwillige Zerstörung durch andere Leute}
 	.
