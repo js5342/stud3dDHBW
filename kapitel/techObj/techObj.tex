@@ -82,7 +82,44 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 
 \section{Entwurf}
 
+	
+	\begin{figure}[h!]
+		\begin{minipage}{.3\textwidth}
+			\includegraphics[width=\textwidth]{images/techObj/entwurf/FPBox}
+			\subcaption{Festplattenbox}
+			\label{figure:techObj:entwurf:fpbox}
+		\end{minipage}
+		\begin{minipage}{.3\textwidth}
+			\includegraphics[width=\textwidth]{images/techObj/entwurf/PiBox}
+			\subcaption{Pi-Box}
+			\label{figure:techObj:entwurf:pibox}
+		\end{minipage}
+		\begin{minipage}{.3\textwidth}
+			\includegraphics[width=\textwidth]{images/techObj/entwurf/HubBox}
+			\subcaption{Hub-Box}
+			\label{figure:techObj:entwurf:hubbox}
+		\end{minipage}
+%		\caption{Entwurf der Objekte}
+		
+%	\end{figure}
+%
+%	\begin{figure}[h!]
+		\begin{minipage}{.5\textwidth}
+			\includegraphics[width=\textwidth]{images/techObj/entwurf/rahmen}
+			\subcaption{Rahmen}
+			\label{figure:techObj:entwurf:rahmen}
+		\end{minipage}
+		\begin{minipage}{.5\textwidth}
+			\includegraphics[width=\textwidth]{images/techObj/entwurf/bodenplatte}
+			\subcaption{Bodenplatte}
+			\label{figure:techObj:entwurf:bodenplatte}
+		\end{minipage}
+		\caption{Entwurf der Objekte}
+		
+	\end{figure}
 	Das Konzept soll für die vorhandenen Komponenten umgesetzt werden. Die zu druckenden Objekte werden mit dem \ac{CAD}-System Solid Edge entworfen. 
+	
+	
 	
 	Als erster Schritt wurden die Maße von Festplatte, \ac{USB}-Hub und Raspberry Pi genommen.
 	
@@ -91,19 +128,22 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 	
 	%Bild FP-Box
 	%TODO: Was für eine Schnittstelle?
-	Die Festplatten-Box als einfachste und größte Komponente des Systems definiert die Außenmaße und Form der quaderförmigen Boxen. An der Position der Schnittstelle ist ein Ausschnitt in Größe der Steckverbindung aus der Wand geschnitten. Da die Box einem großen Gewicht standhalten muss, wurde eine Wandstärke von 3mm gewählt.
+	Die Festplatten-Box als einfachste und größte Komponente des Systems definiert die Außenmaße und Form der quaderförmigen Boxen. An der Position der Schnittstelle ist ein Ausschnitt in Größe der Steckverbindung aus der Wand geschnitten. Da die Box einem großen Gewicht standhalten muss, wurde eine Wandstärke von 3mm gewählt. Abbildung \ref{figure:techObj:entwurf:fpbox} zeigt den Entwurf der Box.
 	
 	%Bild Hub-Box
 	Da der \ac{USB}-Hub kleiner ist als die Festplatte, muss er auf der Grundfläche der Box in Breite und Tiefe fixiert werden. Hierfür werden seitlich und hinter den Hub Blöcke gesetzt, die den Hub an der gewünschten Position fixieren. Die Wand der Box ist wie bei der Festplattenbox auf Höhe der Schnittstellen eingeschnitten. Zusätzlich hat die Box einen Ausschnitt auf der Rückseite der Box, durch die Stromzufuhr und Anschlusskabel für den Raspberry Pi hinausgeführt werden können.
+	Die Box ist in Abbildung \ref{figure:techObj:entwurf:hubbox} dargestellt.
 	
 	%Bild Raspberry
 	Eine Box für den Raspberry Pi fordert einen größeren Design-Aufwand als die vorhergehenden. Auf der Unterseite benötigt der Pi Abstand zum Boden aufgrund seiner Lötpunkte und \ac{SMD}-Bauteile. Daher wird er auf Säulen gesetzt, die den Pi in seinen Schraub-Bohrungen fixieren. Die zusätzliche Höhe, die hierbei entsteht, muss bei den Ausschnitten der Schnittstellen miteinbezogen werden. Damit alle Schnittstellen erreichbar sind, ist der Pi in die Ecke der Box platziert.
+	In Abbildung \ref{figure:techObj:entwurf:pibox} ist die Pi-Box dargestellt.
 	
 	%Bild Rahmen
 	Um die Boxen gegen Verrutschen zu sichern, sind zwischen ihnen Rahmen platziert, die Einschnitte in Größe der Box-Grundfläche haben. Zusätzlich sind an jedem Rahmen vier runde Durchführungen angebracht, mit denen sie auf einer Gewindestange eingefädelt werden können. Das vollständige System kann dann durch vier M4-Muttern fixiert werden. Die Rahmen sind in der Fläche nicht gefüllt; die Stabilität ist schon durch die eingeschossenen Boxen gegeben. 
+	Abbildung \ref{figure:techObj:entwurf:rahmen} zeigt den Entwurf des Rahmens.
 	
 	%Bild Bodenplatte
-	Die Bodenplatte bietet ein Grundgerüst des Systems. Da die Gewindestangen außerhalb der Boxen durch die Durchführungen der Rahmen verlaufen, ist sie um die Größe der Durchführungen breiter und länger als die Boxen. An selber Position wie diese Durchgänge hat auch die Bodenplatte Durchführungen. Zusätzlich sind auf der Unterseite Einschnitte für M4-Muttern. Dadurch können die Gewindestangen durch die Bodenplatte geführt und an der Unterseite der Bodenplatte festgeschraubt werden.
+	Die Bodenplatte bietet ein Grundgerüst des Systems. Da die Gewindestangen außerhalb der Boxen durch die Durchführungen der Rahmen verlaufen, ist sie um die Größe der Durchführungen breiter und länger als die Boxen. An selber Position wie diese Durchgänge hat auch die Bodenplatte Durchführungen. Zusätzlich sind auf der Unterseite Einschnitte für M4-Muttern. Dadurch können die Gewindestangen durch die Bodenplatte geführt und an der Unterseite der Bodenplatte festgeschraubt werden. Der Entwurf der Bodenplatte ist in Abbildung \ref{figure:techObj:entwurf:bodenplatte} dargestellt.
 	
 \section{Druck des Objekts}
 
