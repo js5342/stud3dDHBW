@@ -1,32 +1,123 @@
 \chapter{Entwicklung eines technischen Objekts}
+\label{chapter:techObj}
 %TODO Einleitung: Idee
 % explizite Bezug auf Ultimaker 2, andere Drucker liefern andere Ergebnisse
 
-Dieses Kapitel handelt vom Entwerfen und Drucken eines technischen Objekts. Als Objekt wird hier exemplarisch ein Aufbewahrungssystem für einen Raspberry Pi gekoppelt mit einem \ac{USB}- Hub und einer  externen Festplatte entworfen. Dieses System soll möglichst kompakt sein und als ein Block transportierbar sein.
+Dieses Kapitel handelt vom Entwurf und Druck eines technischen Objekts. Ein technisches Objekt wird dabei als ein Objekt definiert, das entwickelt wurde, um einen bestimmten technischen Zweck zu erfüllen und in erster Linie funktional sein soll. Eine ansprechende oder dekorative Optik des Objekts ist deshalb unwichtig oder zumindest zweitrangig. Wichtig ist es hingegen, dass ein solches Objekt möglichst einfach zu produzieren ist. Solche Objekte besitzen beispielsweise meist glatte Oberflächen, da diese wesentlich einfacher und genauer zu produzieren sind als gewölbte Oberflächen. Zudem muss das Objekt fest definierte Maße haben. \\
+Bei der Produktion eines technischen Objekts ist es wichtig, dass diese Maße mit möglichst geringen Toleranzen eingehalten werden. Wird mehrfach dasselbe Objekt mit denselben Werkzeugen und Prozessen hergestellt, sollten die Ergebnisse vergleichbar sein.  \\
 
-Diese Arbeit bezieht sich häufig auf den ultimaker 2, der im vorhergehenden Kapitel \ref{chapter:techGr:ultimaker2} vorgestellt wird. In der Arbeit mit einem anderen Drucker können sich Vorgehensweise und Ergebnis deutlich unterscheiden.
+Für die Studienarbeit wird als technisches Objekt exemplarisch ein Aufbewahrungssystem für einen Raspberry Pi gekoppelt mit einem \ac{USB}- Hub und einer  externen Festplatte entworfen. Dieses System soll möglichst kompakt und als ein Block transportierbar sein.
 
-Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend folgt eine Beschreibung des umzusetzenden Konzepts. Folgend wird ein Entwurf des Systems mit einem \ac{CAD}-Programm  und der Druck des Objekts beschrieben. Der darauffolgende Abschnitt beschäftigt sich mit während dem Druck aufgetretenen Fehlern. Zuletzt folgt ein Fazit über die Eignung des ultimaker 2 zum Drucken von technischen Objekten.
+Diese Arbeit bezieht sich häufig auf den Ultimaker 2, der im vorhergehenden Kapitel \ref{chapter:techGr:ultimaker2} vorgestellt wird. In der Arbeit mit einem anderen Drucker können sich Vorgehensweise und Ergebnis deutlich unterscheiden.
+
+Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend folgt eine Beschreibung des umzusetzenden Konzepts für das neue Aufbewahrungssystem, das während der Studienarbeit gedruckt werden soll. Folgend wird ein Entwurf des Systems mit einem \ac{CAD}-Programm  und der Druck des Objekts beschrieben. Der darauffolgende Abschnitt beschäftigt sich mit während dem Druck aufgetretenen Fehlern. Zuletzt folgt ein Fazit über die Eignung des Ultimaker 2 zum Drucken von technischen Objekten.
 
 
 %TODO Ist-Analyse
 \newpage
 \section{Ist-Analyse}
-	\piccaption{Ursprüngliches Stapelsystem}
+	Zu entwerfen ist eine Verwahrung für einen Heimserver auf einem Raspberry Pi(folgend als Pi bezeichnet) mit angeschlossener externer Festplatte. Der Pi selbst liefert an seinen \ac{USB}-Ports nicht genug Leistung zum Betreiben der Festplatte, weshalb ein zusätzlicher powered \ac{USB}-Hub nötig ist. 
+	
+	\piccaption{Ursprüngliches Stapelsystem\label{grafik:techObj:ursprStapelsystem}}
 	\parpic{\includegraphics[width=.5\textwidth]{images/techObj/urspruenglicheHalterung02.jpg}}
 	
+	Zu Beginn der Entwicklung wurde das System durch zu einem Käfig verschraubten Lochblechen zusammengehalten, die Festplatte und Hub umfassten. Abbildung \ref{grafik:techObj:ursprStapelsystem} Insbesondere der Pi war im alten System nur unzureichend fixiert, da er nur auf den Käfig aufgesetzt war. Eine Hauptanforderung an das neue System soll das sichere Lagern aller Komponenten sein. 
+	
 	\picskip{0}
+	\vspace*{3em}
+	
+	Die zweite Anforderung ist die Portabilität des Systems. Um den Server sicher und einfach bewegen zu können, soll das System als Ganzes stabil zu einer Einheit verbindbar sein. Das bisherige System sollte die Portabilität ermöglichen, war jedoch aufgrund der oben genannten Instabilität nicht dazu in der Lage.  
+	
+	Die Ausmaße der zu verstauenden Objekte sind folgend aufgeführt.
+	
+	%TODO Messung Dimensionen
+%	\begin{tabular}{c|c|c|c}
+%		\label{}
+%		\caption{Übersicht der Dimensionen der einzubauenden Objekte}
+%				Bauteil 			& Länge [mm] 	& Breite [mm]	& Höhe [mm] \\ 
+%		\hline 	Raspberry Pi 		& 85 	& 56 	& 17  \\ 
+%				externe Festplatte 	& 111 	& 83,5 	& 21  \\ 
+%				\ac{USB}-Hub 		& 42,2 	& 77,6 	& 11,7  \\ 
+%		 
+%	\end{tabular} 
+
+	
+	\begin{figure}
+		
+		
+		\begin{minipage}[b]{.3\textwidth}
+			
+			\includegraphics[width=\textwidth]{images/techObj/pi/raspberry_bemasst}
+			\subcaption{Bemaßung des Raspberry Pis}
+			
+		\end{minipage}
+		\begin{minipage}[b]{.3\textwidth}
+			
+			\includegraphics[width=\textwidth]{images/techObj/Hub/Hub_bemasst.jpg}
+			\subcaption{Bemaßung des \ac{USB}-Hubs}
+			
+		\end{minipage}
+		\begin{minipage}[b]{.3\textwidth}
+			
+			\includegraphics[width=\textwidth]{images/techObj/FP/FP_bemasst.jpg}
+			\subcaption{Bemaßung der externen Festplatte}
+			
+		\end{minipage}
+		\label{figure:techObj:bemassungIstAnalyse}
+		\caption{Bemaßung der einzufassenden Objekte}
+	\end{figure}
+	
+	Zusätzlich zu diesen Maßen kommen beim Pi noch die Positionen der Schraub-Bohrungen und die Höhe der unter dem Pi herausragenden Lötpunkte und \ac{SMD}-Bauteile hinzu. Die frei zugänglichen Leiterbahnen müssen in der Verwahrung genug Abstand zu anderen Bauteilen haben, da sie sonst beschädigt werden könnten.
+	
+	Eine Eigenschaft des bisherigen Systems mit den Lochblechen soll für das neue Verwahrungs-System soll übernommen werden. Die Platzierung der Komponenten übereinander ist sehr platzsparend. Zudem kann das System dadurch gut transportiert werden.
+
 	
 %TODO 
 \section{Konzept: Modulare Boxen}
+	Als Ersatz für den oben beschriebenen Rahmen soll ein modulares Stapelsystem dienen. Auf einer massiven Grundplatte werden Boxen gestapelt. Jede Box beinhaltet eine Komponente (Box, Hub oder Festplatte). Die Außenmaße der Grundflächen der Boxen sind in Breite und Länge immer gleich. Die Grundfläche wird durch die größte zu befestigende Komponente, hier also die Festplatte, bestimmt. Der Innenraum einer Box ist an die jeweilige Komponente angepasst. Abhängig von der Komponente sind verschiedene Aussparungen in den Seitenwänden der Boxen, durch die Kabel geführt werden können. Im Aufbewahrungssystem werden die Boxen auf der Grundplatte gestapelt.\\
+	Zwischen die Boxen werden Rahmen gelegt, die die Box zwischen Gewindestangen fixieren. Diese sind in der Grundplatte festgeschraubt. Dadurch ist das Stapelsystem im Ganzen stabilisiert und kann problemlos transportiert werden. \\
+	Das System ist zudem einfach um neue Komponenten erweiterbar, sofern diese von der Grundfläche her nicht größer sind als die Grundfläche der Boxen. Für neue Komponenten kann eine eigene Box mit den passenden Außenmaßen und angepasstem Innenraum und Höhe entwickelt werden. Diese Box kann dann wie beschrieben mit Rahmen am System befestigt werden.
+
+
 
 \section{Entwurf}
-%Erwähnen, dass Solid Edge verwendet
 
+	Das Konzept soll für die vorhandenen Komponenten umgesetzt werden. Die zu druckenden Objekte werden mit dem \ac{CAD}-System Solid Edge entworfen. 
+	
+	Als erster Schritt wurden die Maße von Festplatte, \ac{USB}-Hub und Raspberry Pi genommen.
+	
+	%Bild Maße, IST-ANALYSE?
+	Die Maße definieren die Innengestaltung der jeweiligen Box. Die Grundfläche ist durch die größte Box definiert, während die Höhe der einzelnen Boxen pro Komponente festlegbar ist. Folgend werden die Designs der einzelnen Komponenten vorgestellt.
+	
+	%Bild FP-Box
+	%TODO: Was für eine Schnittstelle?
+	Die Festplatten-Box als einfachste und größte Komponente des Systems definiert die Außenmaße und Form der quaderförmigen Boxen. An der Position der Schnittstelle ist ein Ausschnitt in Größe der Steckverbindung aus der Wand geschnitten. Da die Box einem großen Gewicht standhalten muss, wurde eine Wandstärke von 3mm gewählt.
+	
+	%Bild Hub-Box
+	Da der \ac{USB}-Hub kleiner ist als die Festplatte, muss er auf der Grundfläche der Box in Breite und Tiefe fixiert werden. Hierfür werden seitlich und hinter den Hub Blöcke gesetzt, die den Hub an der gewünschten Position fixieren. Die Wand der Box ist wie bei der Festplattenbox auf Höhe der Schnittstellen eingeschnitten. Zusätzlich hat die Box einen Ausschnitt auf der Rückseite der Box, durch die Stromzufuhr und Anschlusskabel für den Raspberry Pi hinausgeführt werden können.
+	
+	%Bild Raspberry
+	Eine Box für den Raspberry Pi fordert einen größeren Design-Aufwand als die vorhergehenden. Auf der Unterseite benötigt der Pi Abstand zum Boden aufgrund seiner Lötpunkte und \ac{SMD}-Bauteile. Daher wird er auf Säulen gesetzt, die den Pi in seinen Schraub-Bohrungen fixieren. Die zusätzliche Höhe, die hierbei entsteht, muss bei den Ausschnitten der Schnittstellen miteinbezogen werden. Damit alle Schnittstellen erreichbar sind, ist der Pi in die Ecke der Box platziert.
+	
+	%Bild Rahmen
+	Um die Boxen gegen Verrutschen zu sichern, sind zwischen ihnen Rahmen platziert, die Einschnitte in Größe der Box-Grundfläche haben. Zusätzlich sind an jedem Rahmen vier runde Durchführungen angebracht, mit denen sie auf einer Gewindestange eingefädelt werden können. Das vollständige System kann dann durch vier M4-Muttern fixiert werden. Die Rahmen sind in der Fläche nicht gefüllt; die Stabilität ist schon durch die eingeschossenen Boxen gegeben. 
+	
+	%Bild Bodenplatte
+	Die Bodenplatte bietet ein Grundgerüst des Systems. Da die Gewindestangen außerhalb der Boxen durch die Durchführungen der Rahmen verlaufen, ist sie um die Größe der Durchführungen breiter und länger als die Boxen. An selber Position wie diese Durchgänge hat auch die Bodenplatte Durchführungen. Zusätzlich sind auf der Unterseite Einschnitte für M4-Muttern. Dadurch können die Gewindestangen durch die Bodenplatte geführt und an der Unterseite der Bodenplatte festgeschraubt werden.
+	
 \section{Druck des Objekts}
-% Wie wäre es ideal gewesen?, fertiges Objekt 
+
+
 % Welche Parameter? --> spezifisch beim technischen Objekt
+% Veränderungen durch Params?
+
 % Verlinkung zu Fehlern
+
+% Bild vom fertigen Objekt
+Beim Drucken der Komponenten ergab sich, dass manche Maße zu gering gewählt waren. Beispielsweise die Spaltmaße zwischen Deckel und Box mussten angepasst und neu gedruckt werden. Zusätzlich entstanden dank fehlerhaftem Verhalten des Druckers viele Fehldrucke, was wiederum Wartungen erzwang.
+
+An den ersten zwei Schichten ließ sich ein fehlerhafter Druck meist frühzeitig erkennen. Die zu beobachtenden Fehlverhalten sind im Kapitel Fehler %Verlinkung
+aufgeführt.
 
 %\section{Aufgetretene Fehler}
 % sollte ein eigenes Kapitel bekommen, dann ist das Ganze unabhängig vom Objekt und man kann die Maßnahmen besser beschreiben
@@ -35,3 +126,23 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 
 \section{Fazit: Eignung für technische Objekte}
 % bezogen auf Ultimaker
+Wie bereits eingangs erwähnt, wurde für diese Studienarbeit der Ulitmaker 2 verwendet. Deshalb kann in diesem Fazit auch nur betrachtet werden, inwiefern sich dieser Drucker eignet, um technische Objekte zu erstellen.\\
+
+\subsection{Material}
+Als Plastik wurde \ac{PLA} verwendet. Bei den Drucken fiel auf, dass die Materialeigenschaften, abhängig von der verwendeten Farbe, teilweise deutlich unterschiedlich waren. Am besten gelangen die Drucke mit rotem Filament. Schwarzes Filament dagegen war sehr spröde. Bei durchsichtigem Filament hielten die verschiedenen Linien nicht so stark zusammen wie beispielsweise bei rotem, was insbesondere bei konzentrischen Mustern zu einer Instabilität führte.
+
+Für das Aufbewahrungssystem wurde deshalb vor allem rotes Filament genutzt. Allgemein sollte man beim Ultimaker 2 also vor dem Druck eines größeren Objekts testen, welche Farbe die besten Eigenschaften aufweist.\\
+Die Boxen des Aufbewahrungssystems wurden mit Wand- und Bodendicken von 3mm angefertigt, die Bodenplatte des Systems mit einer noch höheren Bodendicke. Dadurch war das System stabil genug, um hochgehalten zu werden. 
+
+
+\subsection{Liniendicke} 
+Zu dem Zeitpunkt, zu dem das technische Objekt gedruckt wurde, stand nur eine Nozzle der Größe 0.4mm zur Verfügung. Dadurch ist die minimale Breite einer Linie festgelegt. Für das Aufbewahrungssystems mussten keine Strukturen, die feiner als 0.4mm sind, gedruckt werden. Für dieses Objekt war die Genauigkeit also hoch genug. \\
+Müssen dagegen Objekte mit feineren Strukturen gedruckt werden, kann es sein, dass der Ultimaker 2 nicht die nötige Genauigkeit besitzt.
+
+Eine Abhilfe stellt der Olsson Block dar. Dabei handelt es sich um ein Upgrade des Heizblocks, das für den Ulitmaker 2 erworben werden kann. Dieses Upgrade ermöglicht es, die Druckdüsen relativ einfach auszutauschen. Im Upgrade sind vier verschieden große Düsen enthalten, die zwischen 0.25 und 0.8mm dick sind. 
+Trotz allem bleibt die minimale Dicke einer Linie also auf 0.25mm begrenzt.
+
+% TODO: mögliche Erklärung, warum Höhenunterschied ()?)
+\subsection{Höhe}
+Um zu testen, wie präzise der Ultimaker 2 die gewünschte Höhe von Objekten drucken kann, wurde ein einfaches Testobjekt gedruckt. Dieses Testobjekt war ein Quader, dessen Maße 10x10x1mm waren. Nach dem Druck wurde die tatsächliche Höhe des gedruckten Objekts mit einer Schieblehre gemessen. Das gedruckte Objekt war jedoch nur 0.8mm hoch. \\
+Für das Aufbewahrungssystem war diese Genauigkeit ausreichend. Da technische Objekte jedoch mit minimalen Abweichungen angefertigt werden sollten, ist diese Abweichung an sich zu deutlich. Sie zeigt, dass der Ultimaker 2 nicht die notwendige Präzision liefern kann, die für technische Objekte oft notwendig ist.

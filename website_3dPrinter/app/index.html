@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DHBW Ultimaker II Knowledge Portal</title>
+    <meta charset="utf-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/paper/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+  </head>
+  <body ng-controller="MainController as mainCtrl">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/"><img src="res/logo.png" height="35px"></img></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="https://ultimaker.com/en">Ultimaker Website</a></li>
+            <li class="dropdown" dropdown>
+              <a href class="dropdown-toggle" dropdown-toggle data-toggle="dropdown" role="button" aria-expanded="false">Nützliche Links<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="https://ultimaker.com/en">Ultimaker</a></li>
+                <li class="divider"></li>
+                <li><a href="https://www.thingiverse.com/">Thingiverse</a></li>
+                <li><a href="https://www.myminifactory.com/">My Mini Factory</a></li>
+                <li><a href="https://www.youmagine.com/">YouMagine</a></li>
+                <li class="divider"></li>
+                <li><a href="https://www.blender.org/">Blender</a></li>
+                <li><a href="https://software.ultimaker.com/">Cura</a></li>
+                <li><a href="http://www.meshmixer.com/">MeshMixer</a></li>
+                <li><a href="http://reconstructme.net/">ReconstructMe</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <a class="navbar-brand" href="http:\\dhbw-stuttgart.de"><img src="res/dhbw.png" height="40px"></img></a>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container" ng-view="mainView"></div>
+  </body>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</html>

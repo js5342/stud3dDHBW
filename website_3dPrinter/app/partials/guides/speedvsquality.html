@@ -1,0 +1,79 @@
+﻿<div class="auto-indent">
+  <h2>Qualität vs. Druckzeit</h2>
+  Die Abwägung, die bei jeder Einstellung des Druckers gemachte werden muss, ist die zwischen Druckqualität und Druckgeschwindigkeit.
+  Im allgemeinen wird das Erhöhen der Qualität des Druckes immer die Druckzeit, teilweise deutlich, erhöhen.
+
+  Um nicht für jedes größere Objekt mehrere Tage Druckzeit in Anspruch zu nehmen, ist es wichtig die Einstellungen an die eigenen Anforderungen
+  anzupassen. Folgende <a href="#/guide/druckparameter">Parameter</a> haben den größten Einfluss auf die Druckzeit und Qualität:
+
+  <h3><a href="#/guide/druckparameter#parameter-schichtdicke">Schichtdicke</a></h3>
+  <div>
+    <table>
+      <tr>
+        <td>Beste Qualität:</td><td>0,04 mm</td>
+      </tr>
+      <tr>
+        <td>Kompromiss:</td><td>0,1 mm</td>
+      </tr>
+      <tr>
+        <td>Rapid prototyping:&nbsp;</td><td>0,15 mm</td>
+      </tr>
+    </table><br>
+
+    Generell gilt, je geringer die Schichtdicke, desto besser ist die Qualität des Druckergebnisses. Gleichzeitig steigt aber auch die benötigte Zeit stark an und Störfaktoren haben stärkere Auswirkungen.
+    Bei größerer Schichtdicke ist eine Riffelung des Objektes zu erkennen, d.h. die einzelnen Schichten können auch aus Distanz voneinander unterschieden werden und sind tastbar. Für Objekte die zur Schau gestellt werden sollte also eine kleinere Schichtdicke gewählt werden, für cases empfiehlt sich eine Schichtdicke von 0,1 mm als Kompromiss.
+
+    Störfaktoren wie eine schlecht kalibrierte Glasplatte oder Erschütterungen haben bei größeren Schichtdicken auch größere Auswirkungen auf den Druck. Verrutschte Schichten und unregelmäßige Höhen der Objekte kommen häufiger vor als bei kleineren Schichtdicken.<br>
+
+    <canvas model="res/models/bust.stl"></canvas>
+    <div style="text-align: center">Interaktives Renderbild einer Büste, <a href="res/models/bust.zip">Download</a></div>
+    <img style="width:50%; margin-left:25%; margin-top:20px;" src="res/bust.png">
+    <div style="text-align: center">Gedruckt mit Schichtdicke: 0,04mm, Höhe: 5cm, Druckzeit: 5h 13m</div>
+    <img style="width:50%; margin-left:25%; margin-top:20px;" src="res/bust-low.jpg">
+    <div style="text-align: center">Gedruckt mit Schichtdicke: 0,15mm, Höhe: 3,7cm, Druckzeit: 29m</div>
+  </div>
+
+  <h3><a href="#/guide/druckparameter#parameter-speed">Geschwindigkeit</a></h3>
+  <div>
+    <table>
+      <tr>
+        <td>Beste Qualität:</td><td>20 mm/s</td>
+      </tr>
+      <tr>
+        <td>Kompromiss:</td><td>50 mm/s</td>
+      </tr>
+      <tr>
+        <td>Rapid prototyping:&nbsp;</td><td>70 mm/s</td>
+      </tr>
+    </table><br>
+
+    Neben der Schichtdicke ist die Druckgeschwindigkeit die wichtigste Kenngröße für schnelle oder qualitative Drucke. Der Ultimaker 2 unterstützt Geschwindigkeiten bis 300mm/s, von einem Überschreiten von 250mm/s ist aber abzuraten, da die Druckqualität zu sehr leidet. Besonders stark zeigt sich dies an Stellen an denen der Druckkopf kleine Abstände überwinden muss. Diese sind bei hoher Druckgeschwindigkeit oft durch feine Plastikfäden verbunden. Außerdem kann es bei sehr filigranen Objekten vorkommen, dass sie durch den Druckkopf verschoben werden, wenn die Geschwindigkeit zu hoch ist.
+    Die für den Ultimaker II ausgeleget Software Cura unterstüzt das Auswählen verschiedener Druckgeschwindigkeiten für unterschiedliche Teile des Objektes. So ist es zum Beispiel nicht nötig den Infill besonders präzise zu drucken, da er im Objekt eingeschlossen und nicht zu sehen ist. Deshalb kann hier die Druckgeschwindigkeit deutlich höher gesetzt werden als für die sichtbaren Außenschichten.<br>
+
+    <canvas model="res/models/angle-test.stl"></canvas>
+    <div style="text-align: center">Interaktives Renderbild eines Testmodells, <a href="http://www.thingiverse.com/thing:419860">Download</a></div>
+    <img style="width:50%; margin-left:25%; margin-top:20px;" src="res/angle-test/angle-test-small-ultra-bot.jpg">
+    <div style="text-align: center">Gedruckt mit Geschwindigkeit: 30mm/s und Schichtdicke 0,04mm, Breite: 10cm, Druckzeit: 1h 54m</div>
+    <img style="width:50%; margin-left:25%; margin-top:20px;" src="res/angle-test/angle-test-small-low-bot.jpg">
+    <div style="text-align: center">Gedruckt mit Geschwindigketi: 40mm/s und Schichtdicke: 0,15mm, Breite: 10cm, Druckzeit: 18m</div>
+  </div>
+
+  <h3><a href="#/guide/druckparameter#parameter-infill">Infill</a></h3>
+  <div>
+    <table>
+      <tr>
+        <td>Min:</td><td>5-10%</td>
+      </tr>
+      <tr>
+        <td>Standard:&nbsp;</td><td>20%</td>
+      </tr>
+      <tr>
+        <td>Max:</td><td>40%</td>
+      </tr>
+    </table><br>
+
+    Der Infill ist verantwortlich für die Stabilität des Objektes und wird vor allem bei größeren Objekten mit viel glatten Flächen benötigt. Da die innere Struktur, die durch den Infill hinzugefügt wird, auch gedruckt werden muss, erhöht ein höherer Wert die Druckzeit stark. Oft wird aber kein besonders großer Infill gebraucht, da die Struktur des Objektes selbst die äußeren Flächen stark genug stabilisiert.
+
+    Infill kann bis zu einer gewissen Größe auch durch eine höhere Wall thickness kompensiert werden. Generell ist ein hohler Quader mit 5cm Seitenlänge und 1mm Wall thickness stabil genug um einem leichten Druck stand zu halten.<br>
+  </div>
+</div>
