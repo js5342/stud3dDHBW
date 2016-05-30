@@ -3,6 +3,7 @@
 	%TODO Strukturierung
 	%Fehlersuche zt schwer/Fehler hängen zusammen
 	Dieses Kapitel gibt einen Überblick über Fehler, die beim Drucken mit dem Ultimaker 2 auftreten können. Zudem werden die Fehlerursachen und mögliche Gegenmaßnahmen erläutert. 
+	Da es viele mögliche Fehlerquellen gibt, gestaltet sich die Fehlersuche oft schwer. Teilweise beeinflussen sich die Fehler auch gegenseitig oder es gibt mehrere Fehlerquellen, die dasselbe Fehlverhalten verursachen können.
 
 	\section{Olsson}
 	.
@@ -56,6 +57,11 @@
 	Auffällig ist, dass eine Seite der Glasplatte besser aufliegt als die andere. Wird die Glasplatte mit der schlechter aufliegenden Seite auf die Metallplatte gelegt, wird sie durch den mangelnden Kontakt zur Metallplatte stellenweise deutlich schlechter erhitzt. Dadurch haftet das Objekt an diesen Stellen nicht an der Glasplatte.
 	
 	\section{keine Haftung der Linien auf anderen Linien}
+	Ein weiterer Fehler, der auftreten kann, ist, dass das gedruckte Filament sich nicht mit dem Filament der tieferen Schicht verbindet. 
+	
+	Für diesen Fehler sind verschiedene Ursachen denkbar. Entweder ist die Höhe zwischen den Schichten zu groß gewählt, beispielsweise aufgrund schlechter Kalibrierung. Dadurch ist die obere Schicht zu weit von der unteren entfernt und das Filament kann nicht auf den tieferen Schichten haften bleiben.
+	Eine andere Ursache kann sein, dass die Temperatur zu niedrig eingestellt ist. Dadurch schmilzt das Filament nicht so stark und kann sich schlechter mit den unteren Schichten verbinden.
+	Zudem kann dieser Fehler auftreten, wenn zu wenig Material fließt \ref{chapter:fehler:zuWenigMaterial}.
 	% zu großer Abstand (in Luft drucken), Temperatur zu niedrig --> kein Verschmelzen, zu wenig Material
 	.
 	\section{schlechte Kalibrierung}
