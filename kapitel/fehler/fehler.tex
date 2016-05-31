@@ -5,6 +5,49 @@
 	Dieses Kapitel gibt einen Überblick über Fehler, die beim Drucken mit dem Ultimaker 2 auftreten können. Zudem werden die Fehlerursachen und mögliche Gegenmaßnahmen erläutert. 
 	Da es viele mögliche Fehlerquellen gibt, gestaltet sich die Fehlersuche oft schwer. Teilweise beeinflussen sich die Fehler auch gegenseitig oder es gibt mehrere Fehlerquellen, die dasselbe Fehlverhalten verursachen können.
 
+	\section{Hardware-Defekte}
+	
+		\subsection{Verschleiß der PTFE-Kopplung}
+		In \ref{chapter:techGr:ultimaker2} wird der Aufbau des Extruders genauer beschrieben. Die Düse ist zwar aus Metall gefertigt, aber das Filament gelangt durch eine \ac{PTFE}-Kopplung in die Düse. Dadurch, dass die Kopplung in der Nähe des Heizblocks sitzt, wird sie beim Drucken ebenfalls erhitzt. Das führt dazu, dass die Kopplung sich relativ schnell verformt und zudem an den Stellen, wo sie die Düse oder das Filament berührt, verbrennt.
+		
+		\piccaption{Ausgebaute PTFE-Kopplung  \label{fig:fehler:PTFE}}
+		\parpic{\includegraphics[width=.5\textwidth]{images/fehler/PTFE/PTFE}}
+		
+		Die Verformung führt dazu, dass das Filament nicht mehr ungehindert durch die Kopplung in die Düse gelangen kann. Wegen dem erhöhten Widerstand wird teilweise zu wenig Filament gefördert und der Druck misslingt. 
+		
+		Deshalb sollte die \ac{PTFE}-Kopplung regelmäßig ausgetauscht werden.
+		
+		
+		
+		.
+		\subsection{tempsensor}
+		.
+		% der Scheiß mit dem Zugriff auf die Platine
+		.
+		\subsection{Reibung in Bowdenzug}
+		\label{chapter:fehler:ReibungBowden}
+		Der Bowdenzug, über den das Filament vom Feeder zum Druckkopf befördert wird, besitzt eine gewisse Reibung. Wenn diese Reibung zu stark ist, kann es passieren, dass das Filament vom Feeder nicht gut gefördert werden kann, da dieser zu viel Kraft aufbringen muss. Dadurch gelangt zu wenig Filament zum Druckkopf.
+		
+		Die Höhe des Widerstands hängt dabei unter anderem davon ab, an welcher Position das Objekt gedruckt wird. Je nachdem, wo sich der Druckkopf befindet, wird der Bowdenzug unterschiedlich stark gekrümmt. Dadurch herrscht an manchen Positionen eine größere Reibung im Bowdenzug, die das Filament überwinden muss.
+		
+		\subsection{Gebogene Heizplatte}
+		\label{chapter:fehler:gebogeneHeizplatte}
+		
+		Die Glasplatte, auf der die Objekt gedruckt werden, liegt auf einer metallenen Platte auf, über die sie erhitzt wird. Die Glasplatte ist jedoch nicht perfekt gerade gefertigt, sondern ist stellenweise relativ stark durchgebogen. Dadurch liegt sie nicht gleichmäßig auf der Metallplatte auf. 
+		
+		Auffällig ist, dass eine Seite der Glasplatte besser aufliegt als die andere. Wird die Glasplatte mit der schlechter aufliegenden Seite auf die Metallplatte gelegt, wird sie durch den mangelnden Kontakt zur Metallplatte stellenweise deutlich schlechter erhitzt. Dadurch haftet das Objekt an diesen Stellen nicht an der Glasplatte.
+		
+		\subsection{Verschmutzte Düse}
+		Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 
+		
+		In der Düse können beispielsweise Reste von verbranntem Filament verbleiben. Diese Rückstände behindern den Materialfluss und können dazu führen, dass zu wenig Filament durch die Düse gelangt. Als Gegenmaßnahme kann man mit einer dünnen Nadel in die aufgeheizte Düse stechen.
+		
+		An den äußeren Rückständen kann sich das Filament des nächsten Drucks verfangen. Dadurch wird es nicht mehr ordentlich auf der Druckplatte ausgebracht und der Druck misslingt.
+		
+		\subsection{Bollen an Heizblock(total destruction)}
+		
+	
+	
 	\section{Olsson-Block}
 	.
 	\section{Mangelnde Haftung des Objekts auf der Druckplatte}
@@ -40,19 +83,7 @@
 	Die Ursache für das Stringing ist in der Regel, dass die Retraction zu gering eingestellt ist. Wenn der Druckkopf längere Strecken zurücklegen muss, auf denen kein Filament gedruckt werden soll, wird das Filament zurückgezogen. Dieser Vorgang nennt sich Retraction und soll das Stringing verhindern. 
 	
 	Wird das Filament allerdings nicht stark genug zurückgezogen oder ist die Retraction sogar komplett abgeschaltet, bildet das Filament, das noch an der Düse hängt, einen Faden und wird vom Druckkopf mitgezogen. 
-	.
-	\section{PTFE}
-	In \ref{chapter:techGr:ultimaker2} wird der Aufbau des Extruders genauer beschrieben. Die Düse ist zwar aus Metall gefertigt, aber das Filament gelangt durch eine \ac{PTFE}-Kopplung in die Düse. Dadurch, dass die Kopplung in der Nähe des Heizblocks sitzt, wird sie beim Drucken ebenfalls erhitzt. Das führt dazu, dass die Kopplung sich relativ schnell verformt und zudem an den Stellen, wo sie die Düse oder das Filament berührt, verbrennt.
 	
-	\piccaption{Ausgebaute PTFE-Kopplung  \label{fig:fehler:PTFE}}
-	\parpic{\includegraphics[width=.5\textwidth]{images/fehler/PTFE/PTFE}}
-	
-	Die Verformung führt dazu, dass das Filament nicht mehr ungehindert durch die Kopplung in die Düse gelangen kann. Wegen dem erhöhten Widerstand wird teilweise zu wenig Filament gefördert und der Druck misslingt. 
-	
-	Deshalb sollte die \ac{PTFE}-Kopplung regelmäßig ausgetauscht werden.
-	
-	
-	.
 	
 	\section{zu wenig Material}
 	\label{chapter:fehler:zuWenigMaterial}
@@ -60,13 +91,7 @@
 	\section{grinding}
 	Beim Grinding 
 	.
-	\section{tempsensor}
-	.
-	% der Scheiß mit dem Zugriff auf die Platine
-	
-	\section{Reibung in Bowdenzug}
-	\label{chapter:fehler:ReibungBowden}
-	.
+
 	\section{untersch Druckergebnisse je nach Druckposition}
 	Abhängig von der Position auf der Druckplatte, an der dasselbe Objekt zum Drucken platziert wird, ergeben sich teilweise stark unterschiedliche Ergebnisse. An manchen Positionen gelingt der Druck gut, während an anderen Fehler auftreten. Je nach Position haftet das Objekt unterschiedlich stark an der Druckplatte. Auch die Menge an Filament, die gefördert werden kann, hängt von der Position ab.
 	
@@ -75,12 +100,7 @@
 	
 	Dass an manchen Positionen zu wenig Filament gefördert wird \ref{chapter:fehler:zuWenigMaterial} kann daran liegen, dass der Widerstand im Bowdenzug variiert, je nachdem, wie stark der Bowdenzug gekrümmt ist \ref{chapter:fehler:ReibungBowden}.
 	
-	\section{gebogene Heizplatte}
-	\label{chapter:fehler:gebogeneHeizplatte}
-	%TODO: überarbeiten
-	Die Glasplatte, auf der die Objekt gedruckt werden, liegt auf einer metallenen Platte auf, über die sie erhitzt wird. Die Glasplatte ist jedoch nicht perfekt gerade gefertigt, sondern ist stellenweise relativ stark durchgebogen. Dadurch liegt sie nicht gleichmäßig auf der Metallplatte auf. 
-	
-	Auffällig ist, dass eine Seite der Glasplatte besser aufliegt als die andere. Wird die Glasplatte mit der schlechter aufliegenden Seite auf die Metallplatte gelegt, wird sie durch den mangelnden Kontakt zur Metallplatte stellenweise deutlich schlechter erhitzt. Dadurch haftet das Objekt an diesen Stellen nicht an der Glasplatte.
+
 	
 	\section{keine Haftung der Linien auf anderen Linien}
 	Ein weiterer Fehler, der auftreten kann, ist, dass das gedruckte Filament sich nicht mit dem Filament der tieferen Schicht verbindet. 
@@ -102,14 +122,7 @@
 	.
 	\section{Knoten im Filament}
 	.
-	\section{verschmutzte Düse(außen und innen)}
-	Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 
-	
-	In der Düse können beispielsweise Reste von verbranntem Filament verbleiben. Diese Rückstände behindern den Materialfluss und können dazu führen, dass zu wenig Filament durch die Düse gelangt. Als Gegenmaßnahme kann man mit einer dünnen Nadel in die aufgeheizte Düse stechen.
-	
-	An den äußeren Rückständen kann sich das Filament des nächsten Drucks verfangen. Dadurch wird es nicht mehr ordentlich auf der Druckplatte ausgebracht und der Druck misslingt.
-	
-	\section{Bollen an Heizblock(total destruction)}
+
 	.
 	\section{Ungeeignete oder falsche Parameter in Cura gewählt}
 	Die Software Cura, die zum Ultimaker 2 gehört, ermöglicht es, viele Parameter einzustellen. Dabei kann es passieren, dass ungeeignete oder falsche Einstellungen vorgenommen werden, die dazu führen, dass der Druck misslingt.
@@ -143,6 +156,4 @@
 	Ist die Temperatur zu niedrig eingestellt, fließt das Material nicht gut. Zudem verbindet es sich dann schlechter mit dem bereits gedruckten Filament.
 	Bei zu hoher Temperatur kann es passieren, dass das Filament zu flüssig wird und dadurch die 
 
-	.
-	\section{mutwillige Zerstörung durch andere Leute}
-	.
+	
