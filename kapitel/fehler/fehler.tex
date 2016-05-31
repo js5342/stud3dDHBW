@@ -111,11 +111,27 @@
 	
 	\section{Bollen an Heizblock(total destruction)}
 	.
-	\section{Falsche Parameter, falsche Supportstruktur}
-	Innerhalb der Software Cura, die zum Ultimaker 2 gehört, können viele Parameter eingestellt werden. Dabei kann es passieren, dass ungeeignete oder falsche Einstellungen vorgenommen werden, die dazu führen, dass der Druck misslingt.
+	\section{Ungeeignete oder falsche Parameter in Cura gewählt}
+	Die Software Cura, die zum Ultimaker 2 gehört, ermöglicht es, viele Parameter einzustellen. Dabei kann es passieren, dass ungeeignete oder falsche Einstellungen vorgenommen werden, die dazu führen, dass der Druck misslingt.
 	Im Folgenden werden einige dieser Parameter und wie sie zu Fehlern führen können, näher beleuchtet.
 	
-	\subsection{Ungeeignete Supportstruktur}
+	\subsection{Ungeeignete Supportstrukturen}
+	Bei Objekten, die starke Überhänge haben oder keine glatte Standfläche bieten, mit der sie auf der Druckplatte platziert werden können, sind Supportstrukturen nötig. Diese stützen starke Überhänge ab beziehungsweise sorgen dafür, dass das Objekt genügend Auflagefläche auf der Druckplatte hat.
+	Die Supportstruktur sollte nicht zu stark mit dem Objekt verbunden sein und sich nach dem Druck möglichst einfach und ohne Rückstände vom Objekt lösen lassen.
+	
+	Starke Überhänge können beispielsweise mithilfe von Säulen oder dünnen Wänden abgestützt werden. Allerdings lassen sich diese wie bei dem in \ref{fig:fehler:support} gezeigten Objekt teilweise nur schwer vom Objekt trennen. In diesen Fällen muss das Objekt nachbearbeitet werden.
+	
+	Supportstrukturen, die für eine größere Auflagefläche des Objekts sorgen sollen, sind beispielsweise Raft oder Brim. In  \ref{fig:fehler:support} ist eine ungeeignete Supportstruktur dargestellt. Dadurch, dass das Objekt eine abgerundete Unterseite besitzt, wird es komplett von einer Supportstruktur unterstützt. Diese lässt sich jedoch kaum noch vom Objekt trennen.
+	
+	
+	\begin{figure}[h!]
+		
+		\includegraphics[height=8em]{images/fehler/support/ueberhang}
+		\includegraphics[height=8em]{images/fehler/support/auflage}
+		\caption[Beispiel für Stringing zwischen zwei Objekten]{Beispiele für ungeeignete Supportstrukturen}
+		\label{fig:fehler:support}
+	\end{figure}
+	
 	
 	\subsection{Geschwindigkeit}
 	
