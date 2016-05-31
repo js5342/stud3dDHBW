@@ -5,13 +5,19 @@
 	Dieses Kapitel gibt einen Überblick über Fehler, die beim Drucken mit dem Ultimaker 2 auftreten können. Zudem werden die Fehlerursachen und mögliche Gegenmaßnahmen erläutert. 
 	Da es viele mögliche Fehlerquellen gibt, gestaltet sich die Fehlersuche oft schwer. Teilweise beeinflussen sich die Fehler auch gegenseitig oder es gibt mehrere Fehlerquellen, die dasselbe Fehlverhalten verursachen können.
 
-	\section{Olsson}
+	\section{Olsson-Block}
 	.
-	\section{Druckplatte nicht haftend}
+	\section{Mangelnde Haftung des Objekts auf der Druckplatte}
 	\label{chapter:fehler:NichtHaftend}
 	Im Idealfall haftet die unterste Schicht des Filaments fest auf der beheizten Druckplatte, um den höheren Schichten einen guten Halt zu geben. Um das zu erreichen, wird die unterste Schicht meistens langsamer gedruckt als höhere Schichten. 
 	
-	Manchmal haftet die untere Schicht jedoch nicht richtig auf der Druckplatte. Das kann einerseits dazu führen, dass der Druck komplett misslingt, da der Druckkopf die nicht haftenden Fäden hinter sich herzieht. Andererseits kann es passieren, dass das Objekt zwar gedruckt wird, sich die Schichten aber mit zunehmender Höhe immer weiter gegeneinander verschieben. Wenn die untere Schicht nicht fest auf der Druckplatte haftet, kann es beim folgenden Druck passieren, dass das Objekt vom Druckkopf leicht verschoben wird. Dadurch sitzen die Schichten nicht exakt aufeinander und das Objekt wird schräg gedruckt.
+	Manchmal haftet die untere Schicht jedoch nicht richtig auf der Druckplatte. Das kann einerseits dazu führen, dass der Druck komplett misslingt, da der Druckkopf die nicht haftenden Fäden hinter sich herzieht. 
+	
+	\piccaption{Beispiel für mangelnde Haftung: Das Objekt links in der Mitte wurde hinter dem Druckkopf hergezogen  \label{fig:fehler:keineHaftung}}
+	\parpic{\includegraphics[width=.5\textwidth]{images/fehler/keineHaftung/keineHaftung}}
+		
+	
+	Andererseits kann es passieren, dass das Objekt zwar gedruckt wird, sich die Schichten aber mit zunehmender Höhe gegeneinander verschieben. Da die untere Schicht nicht fest auf der Druckplatte haftet, kann es passieren, dass das Objekt vom Druckkopf leicht verschoben wird. Dadurch sitzen die Schichten nicht exakt aufeinander und sind gegeneinander verschoben.
 	
 	Dieser Fehler tritt wegen mangelnder Haftung der untersten Filamentschicht auf der Druckplatte auf. 
 	
@@ -19,18 +25,34 @@
 	Zudem bietet Ultimaker inzwischen eine neue Druckplatte an, die speziell beschichtet ist und dadurch eine bessere Haftung ermöglichen soll. 
 	
 	\section{Stringing}	
-	%Retraction tut nicht richtig
-	Es kann passieren, dass sich Fäden aus Filament zwischen einzelnen Strukturen eines gedruckten Objekts, oder, wenn mehrere Objekte gleichzeitig gedruckt werden, zwischen mehreren Objekten, bilden. Dieser Fehler wird als Stringing bezeichnet.
+	Es kann passieren, dass sich beim Drucken unerwünschte Fäden aus Filament bilden. Diese können entweder zwischen einzelnen Strukturen eines gedruckten Objekte oder zwischen mehreren Objekten auftreten. Dieser Fehler wird als Stringing bezeichnet.
 	
-	Die Ursache für das Stringing liegt in der Regel daran, dass die Retraction zu gering eingestellt ist. Retraction bedeutet, dass das Filament zurückgezogen wird, wenn der Druckkopf längere Strecken zurücklegen muss, auf denen kein Filament aufgebracht werden soll. Dadurch soll das Stringing verhindert werden. Wird das Filament nicht stark genug zurückgezogen, so bildet das Filament, das noch an der Düse hängt, einen Faden und wird vom Druckkopf mitgezogen.
+	\begin{figure}[h!]
+		
+		\includegraphics[height=19em]{images/fehler/stringing/stringingObjekte}
+		\includegraphics[height=19em]{images/fehler/stringing/stringingObjekt}
+		\caption[Beispiel für Stringing zwischen zwei Objekten]{Beispiele für Stringing: Zwischen zwei Objekten (links) und zwischen Strukturen eines Objekts (rechts)}
+		\label{fig:fehler:stringing}
+	\end{figure}
+	
+
+	
+	Die Ursache für das Stringing ist in der Regel, dass die Retraction zu gering eingestellt ist. Wenn der Druckkopf längere Strecken zurücklegen muss, auf denen kein Filament gedruckt werden soll, wird das Filament zurückgezogen. Dieser Vorgang nennt sich Retraction und soll das Stringing verhindern. 
+	
+	Wird das Filament allerdings nicht stark genug zurückgezogen oder ist die Retraction sogar komplett abgeschaltet, bildet das Filament, das noch an der Düse hängt, einen Faden und wird vom Druckkopf mitgezogen. 
 	.
 	\section{PTFE}
-	%TODO: Bilder
-	In \ref{chapter:techGr:ultimaker2} wird der Aufbau des Extruders genauer beschrieben. Die Düse ist zwar aus Metall gefertigt, aber das Filament gelangt durch eine \ac{PTFE}-Kopplung in die Düse. Dadurch, dass die Kopplung in der Nähe des Heizblocks sitzt, wird sie beim Drucken ebenfalls erhitzt. Das führt einerseits dazu, dass die Kopplung sich relativ schnell verformt und andererseits "verbrennt".
+	In \ref{chapter:techGr:ultimaker2} wird der Aufbau des Extruders genauer beschrieben. Die Düse ist zwar aus Metall gefertigt, aber das Filament gelangt durch eine \ac{PTFE}-Kopplung in die Düse. Dadurch, dass die Kopplung in der Nähe des Heizblocks sitzt, wird sie beim Drucken ebenfalls erhitzt. Das führt dazu, dass die Kopplung sich relativ schnell verformt und zudem an den Stellen, wo sie die Düse oder das Filament berührt, verbrennt.
 	
-	Die Verformung führt dazu, dass das Filament nicht mehr ungehindert durch die Kopplung in die Düse gelangen kann. Dadurch wird teilweise zu wenig Filament gefördert und der Druck misslingt. 
+	\piccaption{Ausgebaute PTFE-Kopplung  \label{fig:fehler:PTFE}}
+	\parpic{\includegraphics[width=.5\textwidth]{images/fehler/PTFE/PTFE}}
+	
+	Die Verformung führt dazu, dass das Filament nicht mehr ungehindert durch die Kopplung in die Düse gelangen kann. Wegen dem erhöhten Widerstand wird teilweise zu wenig Filament gefördert und der Druck misslingt. 
 	
 	Deshalb sollte die \ac{PTFE}-Kopplung regelmäßig ausgetauscht werden.
+	
+	
+	.
 	
 	\section{zu wenig Material}
 	\label{chapter:fehler:zuWenigMaterial}
