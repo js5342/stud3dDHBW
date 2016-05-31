@@ -23,7 +23,22 @@
 		\subsection{tempsensor}
 		.
 		% der Scheiß mit dem Zugriff auf die Platine
+		
+		\piccaption{Fehlermeldung des Temperatursensors  \label{fig:fehler:tempsens}}
+		\parpic{\includegraphics[width=.5\textwidth]{images/fehler/tempsens/meldung}}
 		.
+		
+		\subsection{Olsson-Block}
+		
+		\begin{figure}[h!]
+			
+			\includegraphics[height=8em]{images/fehler/olsson/ausgebaut}
+			\includegraphics[height=8em]{images/fehler/olsson/kartusche}
+			\caption[Ausgebauter Olsson-Block]{Ausgebauter Olsson-Block}
+			\label{fig:fehler:olsson}
+		\end{figure}
+		.
+		
 		\subsection{Reibung in Bowdenzug}
 		\label{chapter:fehler:ReibungBowden}
 		Der Bowdenzug, über den das Filament vom Feeder zum Druckkopf befördert wird, besitzt eine gewisse Reibung. Wenn diese Reibung zu stark ist, kann es passieren, dass das Filament vom Feeder nicht gut gefördert werden kann, da dieser zu viel Kraft aufbringen muss. Dadurch gelangt zu wenig Filament zum Druckkopf.
@@ -42,14 +57,24 @@
 		
 		In der Düse können beispielsweise Reste von verbranntem Filament verbleiben. Diese Rückstände behindern den Materialfluss und können dazu führen, dass zu wenig Filament durch die Düse gelangt. Als Gegenmaßnahme kann man mit einer dünnen Nadel in die aufgeheizte Düse stechen.
 		
-		An den äußeren Rückständen kann sich das Filament des nächsten Drucks verfangen. Dadurch wird es nicht mehr ordentlich auf der Druckplatte ausgebracht und der Druck misslingt.
+		An äußeren Rückständen kann sich das Filament des nächsten Drucks verfangen. Dadurch wird es nicht mehr ordentlich auf der Druckplatte ausgebracht und der Druck misslingt. Im schlimmsten Fall kann sich dadurch ein Bollen aus Filament am Heizblock bilden. \ref{chapter:fehler:BollenHeizblock}
 		
-		\subsection{Bollen an Heizblock(total destruction)}
+		\subsection{Bollen an Heizblock}
+		\label{chapter:fehler:BollenHeizblock}
+		Da das Filament sich nicht richtig von der Düse gelöst hat und auf der Druckplatte aufgebracht werden konnte, hat es sich um die Düse gewickelt.
+		Dadurch bildet sich ein Bollen aus Filament um den Druckkopf - sowohl um die Düse als auch oberhalb der Düse, 
 		
+			
+		\begin{figure}[h!]
+			
+			\includegraphics[height=8em]{images/fehler/heizblock/Duese}
+			\includegraphics[height=8em]{images/fehler/heizblock/oberhalb}
+			\caption[Beispiel für Stringing zwischen zwei Objekten]{Filament um Heizblock}
+			\label{fig:fehler:heizblock}
+		\end{figure}
+
 	
-	
-	\section{Olsson-Block}
-	.
+
 	\section{Mangelnde Haftung des Objekts auf der Druckplatte}
 	\label{chapter:fehler:NichtHaftend}
 	Im Idealfall haftet die unterste Schicht des Filaments fest auf der beheizten Druckplatte, um den höheren Schichten einen guten Halt zu geben. Um das zu erreichen, wird die unterste Schicht meistens langsamer gedruckt als höhere Schichten. 
