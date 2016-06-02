@@ -20,14 +20,21 @@
 		
 		
 		.
-		\subsection{tempsensor}
+		\subsection{Fehlfunktion des Temperatursensors}
 		.
 		% der Scheiß mit dem Zugriff auf die Platine
+		Im Heizblock ist ein Temperatursensor verbaut, sodass der Heizblock auf die gewünschte Temperatur aufgeheizt werden kann. 
+		Dieser Temperatursensor kann kaputt gehen. 
+		
+		Diese Fehlfunktion wird durch eine Fehlermeldung im Display des Ultimaker 2 angezeigt. 
 		
 		\piccaption{Fehlermeldung des Temperatursensors  \label{fig:fehler:tempsens}}
 		\parpic{\includegraphics[width=.5\textwidth]{images/fehler/tempsens/meldung}}
-		.
 		
+		Tritt die Fehlermeldung einmalig auf, kann es sein, dass sie versehentlich gesendet wurde. In diesem Fall hilft es, den Drucker aus- und wieder einzuschalten und den Druck neu zu starten. Wenn die Meldung oft hintereinander auftritt, muss jedoch der Temperatursensor ausgetauscht werden.
+		
+		Den Temperatursensor auszutauschen ist relativ aufwändig. Einerseits muss der gesamte Druckkopf auseinander gebaut werden, um an den Heizblock zu gelangen. Die Kapsel mit dem Temperatursensor muss vorsichtig aus dem Heizblock gezogen werden. Zudem muss die Abdeckung der Platine an der Unterseite des Ultimaker entfernt werden, um das Kabel des alten Temperatursensors entfernen zu können und das Kabel des neuen Sensors anzuschließen.
+
 		\subsection{Olsson-Block}
 		
 		\begin{figure}[h!]
@@ -53,6 +60,7 @@
 		Auffällig ist, dass eine Seite der Glasplatte besser aufliegt als die andere. Wird die Glasplatte mit der schlechter aufliegenden Seite auf die Metallplatte gelegt, wird sie durch den mangelnden Kontakt zur Metallplatte stellenweise deutlich schlechter erhitzt. Dadurch haftet das Objekt an diesen Stellen nicht an der Glasplatte.
 		
 		\subsection{Verschmutzte Düse}
+		\label{chapter:fehler:duese}
 		Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 
 		
 		In der Düse können beispielsweise Reste von verbranntem Filament verbleiben. Diese Rückstände behindern den Materialfluss und können dazu führen, dass zu wenig Filament durch die Düse gelangt. Als Gegenmaßnahme kann man mit einer dünnen Nadel in die aufgeheizte Düse stechen.
@@ -61,9 +69,12 @@
 		
 		\subsection{Bollen an Heizblock}
 		\label{chapter:fehler:BollenHeizblock}
-		Da das Filament sich nicht richtig von der Düse gelöst hat und auf der Druckplatte aufgebracht werden konnte, hat es sich um die Düse gewickelt.
-		Dadurch bildet sich ein Bollen aus Filament um den Druckkopf - sowohl um die Düse als auch oberhalb der Düse, 
+		Wenn die Düse außen verschmutzt ist (\ref{chapter:fehler:duese}) kann es in extremen Fällen passieren, dass sich eine dicke Schicht aus Filament um den Heizblock bildet. Dies passiert, wenn das Filament nicht auf der Druckplatte, sondern an Verschmutzungen außen an der Düse haften bleibt. Dadurch wickelt sich das Filament immer weiter in die Düse und kann sogar in den Raum oberhalb der Düse gelangen. 
 		
+		Dadurch, dass eine dicke Schicht aus Kunststoff den Heizblock umgibt, wird bei folgenden Drucken Energie verschwendet, um diese Schicht zu erwärmen. Dadurch kann das Filament an sich nicht mehr genug erhitzt werden, um gut damit drucken zu können.
+		
+		Es ist nahezu unmöglich, die komplette Schicht wieder zu entfernen. Trotz allem bleiben Rückstände am Heizblock zurück, die spätere Drucke beeinträchtigen können.
+	
 			
 		\begin{figure}[h!]
 			
@@ -112,6 +123,12 @@
 	
 	\section{zu wenig Material}
 	\label{chapter:fehler:zuWenigMaterial}
+	Ein Grund, warum der Druck von Objekten misslingen kann, ist, dass zu wenig Filament fließt. Dadurch, dass zu wenig Filament zur Verfügung steht, werden die gedruckten Linien zu dünn oder können gar nicht gedruckt werden. Wenn dieser Fehler auftritt, muss der Druck in aller Regel abgebrochen werden; denn selbst wenn in höheren Schichten wieder genug Material fließt, kann dieses auf den fehlenden Linien nicht gut haften.
+	
+	Es kann verschiedene Gründe dafür geben, dass zu wenig Material fließt. Einerseits kann eine Fehlfunktion des Feeders vorliegen (\ref{chapter:fehler:feeder}) oder die Reibung im Bowdenzug (\ref{chapter:fehler:ReibungBowden}) ist zu hoch. 
+	Möglicherweise ist die Reibung auch wegen einer Verformung der \ac{PTFE}-Kopplung erhöht (\ref{fig:fehler:PTFE}) oder in der Düse befinden sich noch Verschmutzungen, beispielsweise verbrannte Materialreste von früheren Drucken (\ref{chapter:fehler:duese}).
+	
+	Eventuell tritt der Fehler auch wegen schlecht gewählten Parametern (\ref{chapter:fehler:param}) auf. Dabei kann es sein, dass die Temperatur zu gering gewählt wurde, wodurch das Material nicht flüssig genug für den Druck ist. Ein weiterer Grund kann sein, dass die Druckgeschwindigkeit zu hoch eingestellt wurde und der Drucker nicht in der Lage ist, das Filament schnell genug zu fördern.
 	.
 	\section{grinding}
 	Beim Grinding 
@@ -140,6 +157,7 @@
 	\section{untersch. Filamente, untersch. Eigenschaften }
 	.
 	\section{Spannung Feeder}
+	\label{chapter:fehler:feeder}
 	% Volt
 	.
 	\section{Anpressdruck im Feeder}
@@ -150,6 +168,7 @@
 
 	.
 	\section{Ungeeignete oder falsche Parameter in Cura gewählt}
+	\label{chapter:fehler:param}
 	Die Software Cura, die zum Ultimaker 2 gehört, ermöglicht es, viele Parameter einzustellen. Dabei kann es passieren, dass ungeeignete oder falsche Einstellungen vorgenommen werden, die dazu führen, dass der Druck misslingt.
 	Im Folgenden werden einige dieser Parameter und wie sie zu Fehlern führen können, näher beleuchtet.
 	
