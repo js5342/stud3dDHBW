@@ -1,1 +1,44 @@
 \chapter{Zusammenfassung und Ausblick}
+	
+	%TODO Diskussion, was davon drinbleibt
+	%TODO Organisches Objekt noch nicht erwähnt
+	%TODO Fazit mehr auf unsere Arbeit und weniger auf die Tech beziehen?
+	
+	Die Studienarbeit umfasste das Entwerfen und Drucken von Objekten mit dem Ultimaker 2. 
+	Ein Großteil der Arbeitszeit verlor sich in der Fehlersuche -Vermeidung. Ein großer Teil der Drucke scheiterte an sich ähnelnden Fehlern - zu wenig gefördertes Material oder zu geringe Haftung am Druckbett. Beides lässt auf Hardware-/Mechanik-Probleme des Druckers schließen.
+	
+	
+	vermeintlich Design-Problemen des Druckers. Zum Beispiel litt das Werkzeug an notorischer Unterförderung des Materials. Zu untersuchen wäre hierbei die Begründung des Drucker-Herstellers das Upgrade des Ultimakters 2 zum 2+ durchzuführen. In dem Rahmen wurde der Feeder um ein Getriebe erweitert, das das zum Fördern nötige Drehmoment reduziert.
+	
+	% Der pikierte Unterton sollte noch raus...
+	
+
+	
+	
+	% Ergebnis Drucke vs. Erwartung
+		Beim Druck des technischen Objekts war auffallend, dass die in Solid Edge definierten und in Cura noch korrekt dargestellten Maße der Objekte vom Drucker nicht maß-getreu gefertigt wurden. Dies war besonders auffallend bei einem 1cm x 1cm x 1mm - Quader, den wir zum Testen der aktuellen Höhen-Kalibrierung verwendeten. Die Seitenmaße des Quaders maßen anstatt einem Zentimeter nur ca. 8 Millimeter. Bei einer Linienbreite von 0.4mm sind das etwa 4 Linien, die vom Slicer nicht zum Drucken vorgesehen wurden. 
+		
+		Dieses Problem wiederholte sich bei schmalen Strukturen: alle Wände, die nicht über 0.8mm maßen - also eine beidseitige Wand - wurden von Cura ohne Benachrichtigung auf Probleme beseitigt. Mittels Repetierhost kann das Fehlen der Wände aufgezeigt werden. In mancher Situation erzeugte Cura auch Wände, die nicht sein sollten und füllte trotz deaktivierter Funktion klar definierte Hohlräume massiv aus.
+		
+		Ein weiterer Unterschied zwischen Definition und Druckergebnis sind Spaltmaße. Wenn Objekte später zusammengesetzt werden sollen oder Objekte eingesetzt werden sollen wie bei der Serverhülle der Raspberry Pi, müssen relativ große Toleranzen zwischen den zu kombinierenden Objekten eingeplant werden. Durch die Ungenauigkeiten beim Druck und die in den Boden gedruckte und dadurch breitere Bodenschicht kann der Fall eintreten, dass die Objekte ohne Nachbearbeitung  nicht kombinierbar sind. 
+		
+		Beim Erzeugen der \ac{STL}-Datei ist auf die korrekten Maße zu achten. Bei zu geringer Auflösung der Facetten können Rundungen oder Bohrungen zu stark diskretisiert werden und als Vielecke mit wenigen Kanten übersetzt werden. Insbesondere ist hierbei auf die Einstellung der Maß-Einheit zu achten. Im \ac{STL}-Format werden keine Dimensionen abgelegt; diese werden von dem öffnenden Programm gewählt. 
+		
+		
+			
+	% Drucktechnologie im privaten Bereich ausgereift?
+		Für den Privatgebrauch lohnt sich ein \ac{3D}-Drucker des heutigen Entwicklungsstands kaum. Die Drucktechnologie ist nicht ausgereift genug, um wartungsarm betrieben zu werden. Die langen Druckzeiten und die nötigen Vorbereitungen bis zum Druck, ein Objekt zu suchen oder zu designen, die geringen Baugrößen der heutigen kostengünstigen Drucker und die Notwendigkeit von gedruckten Objekten degradieren den Drucker im Heimgebrauch zum Werkzeug für Tüftler, die auch gerne Zeit in die Fehlerbehebung investieren. Falls nicht das Drucken als Hobby im Vordergrund steht, können Drucke in nächster Zukunft auch in den vielzähligen Druck-Shops beauftragt werden. 
+		
+		Da der Ansatz des privaten \ac{3D}-Druckers erst allmählich in die Massentauglichkeit übergeht, werden in naher Zukunft möglicherweise Anwendungsfälle für die private Anschaffung entstehen. Zukünftige Entwicklungen der additiven Fertigung werden diese Möglichkeiten aufzeigen.
+		
+	
+	% Einsatz Professionell, Prototypenbau, moderne Massenfertigung, 3DDrucker für daheim lohnenswert?
+		Für professionelle Entwicklungen sind additive Fertigungsverfahren schon heute schwer wegzudenken. Entwicklungsabteilungen können mit Druckern erste Prototypen entwerfen, die im Verhältnis zu herkömmlichen Fertigungsverfahren deutlich weniger Arbeitszeit erfordern. Mittlerweile können mit Sinter-Verfahren auch belastbare Prototypen aus Metall erstellt werden.
+		
+		Additive Herstellungsverfahren bieten zudem bisher unmögliche Konstruktionen. Beispielsweise wurde ein neuartiger Greifarm entwickelt, der in verschiedene Raumrichtungen geneigt werden kann und in diesen mit seiner Klaue Objekte fixieren kann. Die interne Kammerstruktur, die Neigungen ermöglicht, kann nur in einem additiven Verfahren erzeugt werden.
+		
+		Der Sprung vom Prototypenbau hin zur Serienfertigung mit additiven Verfahren ist vor allem eine Frage der Druckgeschwindigkeit. Momentane Systeme benötigen mehrere Stunden pro Objekt. Kleinserien sind in dieser Geschwindigkeit denkbar, jedoch ist eine Massenproduktion schwer realisierbar. Ein Grund zum Einsatz für Serienproduktionen ist die individuelle Fertigung auf Kundenwunsch. Anstatt mehrere Varianten auf Vorrat zu fertigen, könnten automatisierte Drucksysteme die Individualisierungen direkt im Fertigungsprozess berücksichtigen.
+		
+		
+	% Ausblick final
+		Der \ac{3D}-Druck als additives Fertigungsverfahren steckt momentan noch in den Kinderschuhen. Momentane Systeme benötigen einen hohen Zeit- und Wartungsaufwand. Außerhalb des Entwicklungssektors ist der Einsatz noch fraglich, da nur wenige sinnvolle Anwendungen verfügbar sind. Im Privatgebrauch ist ein \ac{3D}-Drucker im Moment nur als Hobby anzusehen. Aufgaben, für die der Drucker im eigenen Haus undenkbar wäre, gibt es im Moment nicht. In den nächsten Jahren wird die Technologie möglicherweise weit genug entwickelt sein um sinnvolle Anwendungen zu bieten. In diesem Falle wird möglicherweise auch in unseren Kellern bald ein Drucker zu finden sein.
