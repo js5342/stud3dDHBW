@@ -208,12 +208,33 @@
 	
 	Es gibt drei verschiedene Punkte, an denen justiert werden kann: Zunächst wird die allgemeine Höhe der Druckplatte in Bezug zur Düse eingestellt. Im Anschluss werden die beiden vorderen Ecken der Druckplatte mithilfe von Schrauben verstellt, sodass sie jeweils bezogen zur Düse den idealen Abstand haben. 
  
-	\section{Verschiedene Eigenschaften des Filaments je nach Farbe und Lagerung }
-	Als Plastik wurde \ac{PLA} verwendet. Bei den Drucken fiel auf, dass die Materialeigenschaften, abhängig von der verwendeten Farbe, teilweise deutlich unterschiedlich waren. Am besten gelangen die Drucke mit rotem Filament. Schwarzes Filament dagegen war sehr spröde. Bei durchsichtigem Filament hielten die verschiedenen Linien nicht so stark zusammen wie beispielsweise bei rotem, was insbesondere bei konzentrischen Mustern zu einer Instabilität führte.
+	\section{Verschiedene Eigenschaften des Filaments je nach Farbe und Lagerung}
+	Je nachdem, welche Art von Plastik als Filament verwendet wird, weist es verschiedene Eigenschaften auf. Beispielsweise sind die geeigneten Drucktemperaturen für \ac{PLA} und \ac{ABS} unterschiedlich.
 	
-	Für das Aufbewahrungssystem wurde deshalb vor allem rotes Filament genutzt. Allgemein sollte man beim Ultimaker 2 also vor dem Druck eines größeren Objekts testen, welche Farbe die besten Eigenschaften aufweist.\\
-	Die Boxen des Aufbewahrungssystems wurden mit Wand- und Bodendicken von 3mm angefertigt, die Bodenplatte des Systems mit einer noch höheren Bodendicke. Dadurch war das System stabil genug, um hochgehalten zu werden. 
-	.
+	Aber auch bei unterschiedlichen Filamentrollen von \ac{PLA} fallen Unterschiede auf. 
+	
+	Eine Rolle spielt dabei die Lagerung der Filamentrollen. Wenn das Filament längere Zeit an der Luft gelagert wird, wird es zunehmend spröde und bekommt somit schlechtere Druckeigenschaften.
+	
+	Auch die Farbe des Filaments hat Auswirkungen auf die Eigenschaften des \ac{PLA}. Das liegt daran, dass die beigemischten Farbstoffe die Materialeigenschaften zusätzlich beeinflussen.
+	
+	Bei den in dieser Studienarbeit verwendeten Filamenten beispielsweise erwies sich das rote Material als am besten geeignet. Dagegen war das schwarze Filament von Beginn an auffallend spröde - auch ohne lange an der Luft gelagert worden zu sein.
+	Als Plastik wurde \ac{PLA} verwendet. Bei den Drucken fiel auf, dass die Materialeigenschaften, abhängig von der verwendeten Farbe, teilweise deutlich unterschiedlich waren. Am besten gelangen die Drucke mit rotem Filament. Schwarzes Filament dagegen war sehr spröde. 
+	
+	Abbildung \ref{fig:fehler:material} verdeutlicht die verschiedenen Eigenschaften von rotem und durchsichtigem Filament. Beide Male wurde dasselbe Objekt mit denselben Druckparametern gedruckt. Während das rote Objekt stabil und gut gedruckt wurde, halten beim durchsichtigen Filament die Linien nicht gut zusammen. 
+	
+	Die Farbe des Filaments beeinflusst also auch, wie stark die Haftung des Materials an sich selbst ist.
+	
+	\begin{figure}[h!]
+		
+		\includegraphics[height=20em]{images/fehler/material/rot}
+		\hspace*{1em}
+		\includegraphics[height=20em]{images/fehler/material/transparent}
+		\hspace*{15em}
+		\caption[verschiedene Materialeigenschaften]{Dasselbe Objekt mit rotem (links) und durchsichtigem (rechts) Filament}
+		\label{fig:fehler:material}
+	\end{figure}
+			
+	
 	\section{Spannung Feeder}
 	\label{chapter:fehler:feeder}
 	% Volt
