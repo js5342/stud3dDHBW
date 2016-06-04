@@ -17,9 +17,9 @@
 		
 		Deshalb sollte die \ac{PTFE}-Kopplung regelmäßig ausgetauscht werden.
 		
+		\picskip{0}
 		
 		
-		.
 		\subsection{Fehlfunktion des Temperatursensors}
 	
 		Im Heizblock ist ein Temperatursensor verbaut, sodass der Heizblock auf die gewünschte Temperatur aufgeheizt werden kann. 
@@ -133,9 +133,10 @@
 		.
 		%TODO
 		\subsection{Grinding}
+		\label{chapter:fehler:grinding}
 		Das Grinding ist ein Fehler, der im Feeder auftritt. Dabei wird Material aus dem Filamentfaden ausgefräst. 
 		Der Fehler tritt auf, wenn der Feeder nicht genug D
-		.
+		
 
 		\subsection{Druckergebnisse abhängig von Druckposition}
 		Abhängig von der Position auf der Druckplatte, an der dasselbe Objekt zum Drucken platziert wird, ergeben sich teilweise stark unterschiedliche Ergebnisse. An manchen Positionen gelingt der Druck gut, während an anderen Fehler auftreten. Je nach Position haftet das Objekt unterschiedlich stark an der Druckplatte. Auch die Menge an Filament, die gefördert werden kann, hängt von der Position ab.
@@ -235,18 +236,19 @@
 		\end{figure}
 			
 	
-		\subsection{Spannung Feeder}
+		\subsection{Elektrische Spannung am Feeder}
 		\label{chapter:fehler:feeder}
-		Die Spannung, die am Feeder anliegt, kann im Menü des Ultimaker 2 eingestellt werden. Je nach Höhe der Spannung... %TODO
+		Die Spannung, mit der der Feeder-Motor angesteuert wird, kann im Menü des Ultimaker 2 eingestellt werden. Das Drehmoment des Schrittmotors kann dadurch variiert werden. Je nach Einstellung kann das Drehmoment zu gering sein. Die Förderleistung nimmt dadurch ab und kann zu Unterförderung führen.
 		% Volt
-		.
+		
 		%TODO
 		\subsection{Anpressdruck im Feeder}
 		% mechanische Einstellung (Schraube)
 		Mit einer Schraube kann der Anpressdruck im Feeder angepasst werden. Der Druck sollte so gewählt werden, dass der Feeder das Filament gut fördern kann, ohne zu sehr in das Plastik einzudrücken. 
 		
-		Wenn der Druck zu gering gewählt ist, kann der Feeder das Filament nicht fördern. Ist der Druck zu hoch eingestellt, kann es sein, dass zuviel Druck auf das Filament aufgebaut wird. 
-		.
+		Wenn der Druck zu gering gewählt ist, kann der Feeder das Filament nicht fördern. Ist der Druck zu hoch eingestellt, kann es sein, dass zuviel Druck auf das Filament aufgebaut wird. Dadurch wird das nötige Drehmoment erhöht und es kann zur Verformung des Materials kommen. Im Druckkopf kann ein verformtes Material die Heizleistung nicht effizient aufnehmen. Der vom Feeder aufzubringende Druck nimmt zu.
+		
 		\subsection{Unsauber aufgerolltes Filament}
-		Manchmal kommt es vor, dass das Filament nicht sauber auf der Rolle aufgewickelt ist. Dadurch wird es schwerer für den Feeder, das Filament von der Rolle abzurollen. Im schlimmsten Fall kann es passieren, dass sich das Filament verknotet und der Druck abgebrochen werden muss.
+		Manchmal kommt es vor, dass das Filament nicht sauber auf der Rolle aufgewickelt ist. Dadurch wird es schwerer für den Feeder, das Filament von der Rolle abzurollen. Im schlimmsten Fall kann es passieren, dass sich das Filament verknotet und es zum Grinding (Abschnitt \ref{chapter:fehler:grinding})kommt
+		der Druck abgebrochen werden muss.
 		
