@@ -134,8 +134,13 @@
 		%TODO
 		\subsection{Grinding}
 		\label{chapter:fehler:grinding}
-		Das Grinding ist ein Fehler, der im Feeder auftritt. Dabei wird Material aus dem Filamentfaden ausgefräst. 
-		Der Fehler tritt auf, wenn der Feeder nicht genug D
+		Das Grinding ist ein Fehler, der im Feeder auftritt. Es wird durch andere Fehlfunktionen des Druckers ausgelöst und ist somit eigentlich eine Folge dieser Fehler. Das Grinding selbst kann wiederum weitere schwere Fehler auslösen.
+		
+		Die Ursache für das Grinding ist, dass das Material nicht schnell genug fließt, beispielsweise weil zu hohe Reibung im Bowdenzug  (\ref{chapter:fehler:ReibungBowden}) oder Druckkopf vorhanden ist oder weil das Material nicht stark genug erhitzt wird und dadurch zu zähflüssig ist. 
+		
+		Der Feeder versucht jedoch weiterhin, Material zu fördern. Dadurch frisst er sich in immer dieselbe Stelle des nicht mehr fließenden Materials. Dadurch, dass das Material an einer Stelle nun eingefressen ist, kann es dem Feeder auch nicht mehr gelingen, das Material weiterhin zu fördern - selbst, wenn der Materialfluss wieder möglich wäre.
+		
+		Durch das Ausbleiben von neuem Material wird im Druckkopf nun immer dasselbe Material erhitzt. Dieses kann verbrennen und dadurch Rückstände in der Düse hinterlassen (\ref{chapter:fehler:duese}).
 		
 
 		\subsection{Druckergebnisse abhängig von Druckposition}
