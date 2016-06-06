@@ -41,29 +41,40 @@
 	% Wie wäre es ideal gewesen?, fertiges Objekt 
 	% Welche Parameter? --> spezifisch beim organischen Objekt
 	% Verlinkung zu Fehlern
+
+	
+	Im Gegensatz zum technischen Objekt (Kapitel \ref{chapter:techObj}), bei dem die Genauigkeit des Drucks sehr wichtig ist, liegt beim organischen Objekt der Fokus darauf, wie gut der Ultimaker 2 gewölbte Flächen drucken kann.
+	
+	
+	Zu Testzwecken wird das Objekt in zwei verschiedenen Positionen gedruckt. Einmal wird das Männchen liegend auf der Druckplatte positioniert, einmal stehend. Dadurch kann gesehen werden, ob es einen Unterschied macht, wie das Objekt platziert wird. 
+	
+	Das liegende Männchen hat insgesamt mehr Auflagefläche als das stehende Männchen, wodurch es allerdings auch durch mehr Supportstrukturen gestützt werden muss. Dafür muss nicht weit nach oben gedruckt werden und es müssen keine Überhänge gedruckt werden.
+	
+	Das stehende Männchen hat insgesamt weniger Kontakt mit der Druckplatte, benötigt aber dennoch kaum Supportstrukturen, da es mit den unten glatten Füßen auf der Platte steht. Dafür müssen hier für die Arme und den Kopf teilweise relativ starke Überhänge gedruckt werden.
 	
 	\begin{figure}[h!]
 		\begin{minipage}{.5\textwidth}
 			\includegraphics[height=10em]{images/orgObj/oO_liegend}
-%			\subcaption{liegender Druck}
+			%			\subcaption{liegender Druck}
 		\end{minipage}
 		\begin{minipage}{.5\textwidth}
 			\centering
 			\includegraphics[height=10em]{images/orgObj/oO_stehend}
-%			\subcaption{stehender Druck}
+			%			\subcaption{stehender Druck}
 		\end{minipage}
 		\caption{Drucke des organischen Objektes}
 		\label{fig:orgObj:Druck}
 	\end{figure}
+		
 	
-%	\piccaption{Liegender Druck des organischen Objekts  \label{fig:orgObj:oO_liegend}}
-%	\parpic[r]{\includegraphics[width=.3\textwidth]{images/orgObj/oO_liegend}}	
-
-
-
-
-	Das Objekt wird in zwei verschiedenen Positionen gedruckt. Einmal wird das Männchen liegend auf der Druckplatte positioniert, einmal stehend. 
-	Auffällig ist, dass beim liegenden Männchen die Kugel, die den Kopf darstellt, eine starke Kante in der Mitte aufweist. Beim stehenden Männchen gelingt die Kugel besser.
+	Abbildung \ref{fig:orgObj:Druck} zeigt die beiden gedruckten Männchen.
+	
+	Die Überhänge des stehenden Männchens sind gut gelungen, sogar ohne durch extra Supportstrukturen abgestützt zu werden. Die vergleichsweise geringe Auflagefläche stellt kein Problem dar, da die Füße einen guten Halt bieten. Auch die Kugel, die den Kopf des Männchens darstellt, ist gut und rund geworden. 
+	
+	Beim liegenden Männchen dagegen sind viele Supportstrukturen nötig, damit es genügend Auflagefläche auf der Druckplatte besitzt. Diese Strukturen lassen sich nur schwer und nicht rückstandslos vom Objekt lösen. Auffällig ist zudem, dass die Kugel, die den Kopf darstellt, eine starke Kante in der Mitte aufweist. 
+	
+	Allgemein ist das stehende Männchen deutlich besser gelungen als das liegende. 
+	
 	
 %	\piccaption{Druck des stehenden organischen Objekts  \label{fig:orgObj:oO_stehend}}
 %	\parpic[r]{\includegraphics[width=.2\textwidth]{images/orgObj/oO_stehend}}	
@@ -79,7 +90,7 @@
 	%an sich: kann gut runde Objekt drucken
 	%vorsicht bei support strukturen --> möglichst große auflagefläche sollte vorhanden sein
 	%
-	In diesem Kapitel wurden das Design und der Druck eines organischen Objekts, also eines Objekts, die viele runde Flächen besitzt, beschrieben. Anhand des Drucks des Testobjekts mit dem Ultimaker 2 lässt sich sagen, dass der Ultimaker 2 prinzipiell geeignet ist, um organische Objekte zu drucken.
+	In diesem Kapitel werden das Design und der Druck eines organischen Objekts, also eines Objekts, die viele runde Flächen besitzt, beschrieben. Anhand des Drucks des Testobjekts mit dem Ultimaker 2 lässt sich sagen, dass der Ultimaker 2 prinzipiell geeignet ist, um organische Objekte zu drucken.
 	
 	Die runden Flächen des dreidimensionalen Strichmännchens, insbesondere die Kugel, die den Kopf darstellt, gelangen gut. Solange sie nicht zu starke Überhänge aufweisen, kann der Ultimaker runde Flächen überzeugend drucken.
 	
