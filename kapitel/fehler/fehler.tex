@@ -6,6 +6,8 @@
 	Da es viele mögliche Fehlerquellen gibt, gestaltet sich die Fehlersuche oft schwer. Teilweise beeinflussen sich die Fehler auch gegenseitig oder es gibt mehrere Fehlerquellen, die dasselbe Fehlverhalten verursachen können.
 
 	\section{Hardware-Defekte}
+	\label{chapter:fehler:sectionHardware}
+	Der folgende Abschnitt behandelt Fehler, deren Ursache in Fehlern an der Hardware des Druckers zu finden ist. Die hier beschriebenen Fehler sind schwerwiegend. Oftmals muss zur Behebung der Fehlfunktion ein Bauteil ersetzt werden.
 	
 		\subsection{Verschleiß der PTFE-Kopplung}
 		In \ref{chapter:techGr:ultimaker2} wird der Aufbau des Extruders genauer beschrieben. Die Düse ist zwar aus Metall gefertigt, aber das Filament gelangt durch eine \ac{PTFE}-Kopplung in die Düse. Dadurch, dass die Kopplung in der Nähe des Heizblocks sitzt, wird sie beim Drucken ebenfalls erhitzt. Das führt dazu, dass die Kopplung sich relativ schnell verformt und zudem an den Stellen, wo sie die Düse oder das Filament berührt, verbrennt.
@@ -49,13 +51,6 @@
 		
 		Auffällig ist, dass eine Seite der Glasplatte besser aufliegt als die andere. Wird die Glasplatte mit der schlechter aufliegenden Seite auf die Metallplatte gelegt, wird sie durch den mangelnden Kontakt zur Metallplatte stellenweise deutlich schlechter erhitzt. Dadurch haftet das Objekt an diesen Stellen nicht an der Glasplatte.
 		
-		\subsection{Verschmutzte Düse}
-		\label{chapter:fehler:duese}
-		Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 
-		
-		In der Düse können beispielsweise Reste von verbranntem Filament verbleiben. Diese Rückstände behindern den Materialfluss und können dazu führen, dass zu wenig Filament durch die Düse gelangt. Als Gegenmaßnahme kann man mit einer dünnen Nadel in die aufgeheizte Düse stechen.
-		
-		An äußeren Rückständen kann sich das Filament des nächsten Drucks verfangen. Dadurch wird es nicht mehr ordentlich auf der Druckplatte ausgebracht und der Druck misslingt. Im schlimmsten Fall kann sich dadurch ein Bollen aus Filament am Heizblock bilden. \ref{chapter:fehler:BollenHeizblock}
 		
 		\subsection{Bollen an Heizblock}
 		\label{chapter:fehler:BollenHeizblock}
@@ -86,7 +81,13 @@
 		.
 
 	
-	\section{"normale" Fehler während des Druckens}
+	\section{Fehler während des Druckens}
+	\label{chapter:fehler:sectionWaehrendDruck}
+	In diesem Kapitel werden Fehler beschrieben, die häufiger während des Druckens auftreten. Sie sorgen in aller Regel für ein Misslingen des Drucks. Im Gegensatz zu den Fehlern, die in Kapitel \ref{chapter:fehler:sectionHardware} beschrieben wurden, sind die hier beschriebenen Fehler weniger schwerwiegend.
+	
+	Zum Beispiel kann durch ein Verändern der Druckparameter verhindert werden, dass diese Fehler bei einem weiteren Druck erneut auftreten.
+	Zudem ist in der Regel kein kompletter Austausch einzelner Hardwareteile nötig.
+	 
 		\subsection{Mangelnde Haftung des Objekts auf der Druckplatte}
 		\label{chapter:fehler:NichtHaftend}
 		Im Idealfall haftet die unterste Schicht des Filaments fest auf der beheizten Druckplatte, um den höheren Schichten einen guten Halt zu geben. Um das zu erreichen, wird die unterste Schicht meistens langsamer gedruckt als höhere Schichten. 
@@ -107,13 +108,28 @@
 		\subsection{Stringing}	
 		Es kann passieren, dass sich beim Drucken unerwünschte Fäden aus Filament bilden. Diese können entweder zwischen einzelnen Strukturen eines gedruckten Objekte oder zwischen mehreren Objekten auftreten. Dieser Fehler wird als Stringing bezeichnet.
 		
+		
 		\begin{figure}[h!]
 			
-			\includegraphics[height=19em]{images/fehler/stringing/stringingObjekte}
-			\includegraphics[height=19em]{images/fehler/stringing/stringingObjekt}
-			\caption[Beispiel für Stringing zwischen zwei Objekten]{Beispiele für Stringing: Zwischen zwei Objekten (links) und zwischen Strukturen eines Objekts (rechts)}
+			
+			\begin{minipage}[b]{.5\textwidth}
+				
+				\includegraphics[width=\textwidth]{images/fehler/stringing/stringingObjekte}
+				\subcaption{Stringing wischen zwei Objekten}
+				
+			\end{minipage}
+			\begin{minipage}[b]{.5\textwidth}
+				
+				\includegraphics[width=\textwidth]{images/fehler/stringing/stringingCube2}
+				\subcaption{Stringing zwischen Strukturen eines Objekts}
+				
+			\end{minipage}
+			
 			\label{fig:fehler:stringing}
+			\caption{Beispiele für Stringing\emph{}}
 		\end{figure}
+		
+		
 		
 	
 		
@@ -134,8 +150,21 @@
 		%TODO
 		\subsection{Grinding}
 		\label{chapter:fehler:grinding}
-		Das Grinding ist ein Fehler, der im Feeder auftritt. Dabei wird Material aus dem Filamentfaden ausgefräst. 
-		Der Fehler tritt auf, wenn der Feeder nicht genug D
+		Das Grinding ist ein Fehler, der im Feeder auftritt. Es wird durch andere Fehlfunktionen des Druckers ausgelöst und ist somit eigentlich eine Folge dieser Fehler. Das Grinding selbst kann wiederum weitere schwere Fehler auslösen.
+		
+		Die Ursache für das Grinding ist, dass das Material nicht schnell genug fließt, beispielsweise weil zu hohe Reibung im Bowdenzug  (\ref{chapter:fehler:ReibungBowden}) oder Druckkopf vorhanden ist oder weil das Material nicht stark genug erhitzt wird und dadurch zu zähflüssig ist. 
+		
+		Der Feeder versucht jedoch weiterhin, Material zu fördern. Dadurch frisst er sich in immer dieselbe Stelle des nicht mehr fließenden Materials. Dadurch, dass das Material an einer Stelle nun eingefressen ist, kann es dem Feeder auch nicht mehr gelingen, das Material weiterhin zu fördern - selbst, wenn der Materialfluss wieder möglich wäre.
+		
+		Durch das Ausbleiben von neuem Material wird im Druckkopf nun immer dasselbe Material erhitzt. Dieses kann verbrennen und dadurch Rückstände in der Düse hinterlassen (\ref{chapter:fehler:duese}).
+		
+		\subsection{Verschmutzte Düse}
+		\label{chapter:fehler:duese}
+		Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 
+		
+		In der Düse können unter anderem Reste von verbranntem Filament verbleiben, beispielsweise verursacht durch Grinding (\ref{chapter:fehler:grinding}). Diese Rückstände behindern den Materialfluss und können dazu führen, dass zu wenig Filament durch die Düse gelangt. Als Gegenmaßnahme kann man mit einer dünnen Nadel in die aufgeheizte Düse stechen.
+		
+		An äußeren Rückständen kann sich das Filament des nächsten Drucks verfangen. Dadurch wird es nicht mehr ordentlich auf der Druckplatte ausgebracht und der Druck misslingt. Im schlimmsten Fall kann sich dadurch ein Bollen aus Filament am Heizblock bilden. \ref{chapter:fehler:BollenHeizblock}
 		
 
 		\subsection{Druckergebnisse abhängig von Druckposition}
@@ -200,6 +229,9 @@
 		Bei zu hoher Temperatur kann es passieren, dass das Filament zu flüssig wird und das Objekt dadurch unsauber gedruckt wird.
 
 	\section{Weitere Fehler}
+	\label{chapter:fehler:sectionWeitere}
+	In diesem Kapitel werden sonstige Fehler beschrieben, die nicht eindeutig einem der vorigen Kapitel zuzuordnen sind.
+	
 		\subsection{Kalibrierung}
 		Die Position der Druckplatte sollte regelmäßig kalibriert werden. Bei einer schlechten Kalibrierung sind der Abstand zwischen Düse und Druckplatte und die Neigung der Druckplatte nicht optimal eingestellt.  
 		
