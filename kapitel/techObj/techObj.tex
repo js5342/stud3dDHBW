@@ -167,7 +167,14 @@ aufgeführt.
 % bezogen auf Ultimaker
 Wie bereits eingangs erwähnt, wurde für diese Studienarbeit der Ulitmaker 2 verwendet. Deshalb wird in diesem Fazit auch nur betrachtet, inwiefern sich speziell dieser Drucker eignet, um technische Objekte zu erstellen.
 
-\subsection{Ungenaue Maße}
+
+\subsection{Material}
+Als Filament für den Druck wurde \ac{PLA} verwendet. Bei den Drucken fiel auf, dass die Materialeigenschaften, abhängig von der verwendeten Farbe, teilweise deutlich unterschiedlich waren. Am besten gelangen die Drucke mit rotem Filament. Schwarzes Filament dagegen war sehr spröde. Bei durchsichtigem Filament hielten die verschiedenen Linien nicht so stark zusammen wie beispielsweise bei rotem, was insbesondere bei konzentrischen Mustern zu einer Instabilität führte. Dieses Problem wird näher in Kapitel \ref{chapter:fehler:material} genauer beschrieben.
+
+Für das Aufbewahrungssystem wurde deshalb vor allem rotes Filament genutzt. Allgemein sollte man beim Ultimaker 2 also vor dem Druck eines größeren Objekts testen, welche Farbe die besten Eigenschaften aufweist.
+
+
+\subsection{Unzureichende Druckgenauigkeit}
 Beim Druck des technischen Objekts war auffallend, dass die in Solid Edge definierten und in Cura noch korrekt dargestellten Maße der Objekte vom Drucker nicht maß-getreu gefertigt wurden. Dies war besonders auffallend bei einem 1cm x 1cm x 1mm - Quader, den wir zum Testen der aktuellen Höhen-Kalibrierung verwendeten. Die Seitenmaße des Quaders maßen anstatt einem Zentimeter nur ca. 8 Millimeter. Bei einer Linienbreite von 0.4mm sind das etwa 4 Linien, die vom Slicer nicht zum Drucken vorgesehen wurden. 
 
 Dieses Problem wiederholte sich bei schmalen Strukturen: alle Wände, die nicht über 0.8mm maßen - also eine beidseitige Wand - wurden von Cura ohne Benachrichtigung auf Probleme beseitigt. Mittels Repetierhost kann das Fehlen der Wände aufgezeigt werden. In mancher Situation erzeugte Cura auch Wände, die nicht sein sollten und füllte trotz deaktivierter Funktion klar definierte Hohlräume massiv aus.
@@ -176,22 +183,10 @@ Die relativ hohe Ungenauigkeit der Drucke führte teilweise zu Problemen mit den 
 
 Beispielsweise mussten die Deckeln für die Boxen sowie die Serverhülle des Raspberry Pi mit angepassten Maßen erneut gedruckt werden. Manche Objekte mussten zwar nicht erneut gedruckt, aber nachbearbeitet werden, um miteinander kombinierbar zu sein.
 
+Zu dem Zeitpunkt, zu dem das technische Objekt gedruckt wurde, stand nur eine Nozzle der Größe 0.4mm zur Verfügung. Dadurch war die minimale Breite einer Linie festgelegt. Da für das Aufbewahrungssystems  keine Strukturen, die feiner als 0.4mm sind, gedruckt werden mussten, stellte dies in unserem Fall kein Problem dar.
 
-\subsection{Material}
-Als Plastik wurde \ac{PLA} verwendet. Bei den Drucken fiel auf, dass die Materialeigenschaften, abhängig von der verwendeten Farbe, teilweise deutlich unterschiedlich waren. Am besten gelangen die Drucke mit rotem Filament. Schwarzes Filament dagegen war sehr spröde. Bei durchsichtigem Filament hielten die verschiedenen Linien nicht so stark zusammen wie beispielsweise bei rotem, was insbesondere bei konzentrischen Mustern zu einer Instabilität führte.
-
-Für das Aufbewahrungssystem wurde deshalb vor allem rotes Filament genutzt. Allgemein sollte man beim Ultimaker 2 also vor dem Druck eines größeren Objekts testen, welche Farbe die besten Eigenschaften aufweist.\\
-Die Boxen des Aufbewahrungssystems wurden mit Wand- und Bodendicken von 3mm angefertigt, die Bodenplatte des Systems mit einer noch höheren Bodendicke. Dadurch war das System stabil genug, um hochgehalten zu werden. 
+Für das Aufbewahrungssystem war die Genauigkeit des Ultimaker 2 ausreichend, auch wenn einige Objekte erneut mit höheren Toleranzen gedruckt werden mussten. Da technische Objekte im Allgemeinen jedoch mit minimalen Abweichungen angefertigt werden sollten, ist diese Abweichung an sich zu hoch. Sie zeigt, dass der Ultimaker 2 nicht die notwendige Präzision liefern kann, die für technische Objekte in der Regel erforderlich ist.
 
 
-\subsection{Liniendicke} 
-Zu dem Zeitpunkt, zu dem das technische Objekt gedruckt wurde, stand nur eine Nozzle der Größe 0.4mm zur Verfügung. Dadurch ist die minimale Breite einer Linie festgelegt. Für das Aufbewahrungssystems mussten keine Strukturen, die feiner als 0.4mm sind, gedruckt werden. Für dieses Objekt war die Genauigkeit also hoch genug. \\
-Müssen dagegen Objekte mit feineren Strukturen gedruckt werden, kann es sein, dass der Ultimaker 2 nicht die nötige Genauigkeit besitzt.
 
-Eine Abhilfe stellt der Olsson Block dar. Dabei handelt es sich um ein Upgrade des Heizblocks, das für den Ulitmaker 2 erworben werden kann. Dieses Upgrade ermöglicht es, die Druckdüsen relativ einfach auszutauschen. Im Upgrade sind vier verschieden große Düsen enthalten, die zwischen 0.25 und 0.8mm dick sind. 
-Trotz allem bleibt die minimale Dicke einer Linie also auf 0.25mm begrenzt.
 
-% TODO: mögliche Erklärung, warum Höhenunterschied ()?)
-\subsection{Höhe}
-Um zu testen, wie präzise der Ultimaker 2 die gewünschte Höhe von Objekten drucken kann, wurde ein einfaches Testobjekt gedruckt. Dieses Testobjekt war ein Quader, dessen Maße 10x10x1mm waren. Nach dem Druck wurde die tatsächliche Höhe des gedruckten Objekts mit einer Schieblehre gemessen. Das gedruckte Objekt war jedoch nur 0.8mm hoch. \\
-Für das Aufbewahrungssystem war diese Genauigkeit ausreichend. Da technische Objekte jedoch mit minimalen Abweichungen angefertigt werden sollten, ist diese Abweichung an sich zu deutlich. Sie zeigt, dass der Ultimaker 2 nicht die notwendige Präzision liefern kann, die für technische Objekte oft notwendig ist.
