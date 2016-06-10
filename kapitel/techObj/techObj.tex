@@ -165,7 +165,17 @@ aufgeführt.
 
 \section{Fazit: Eignung für technische Objekte}
 % bezogen auf Ultimaker
-Wie bereits eingangs erwähnt, wurde für diese Studienarbeit der Ulitmaker 2 verwendet. Deshalb kann in diesem Fazit auch nur betrachtet werden, inwiefern sich dieser Drucker eignet, um technische Objekte zu erstellen.\\
+Wie bereits eingangs erwähnt, wurde für diese Studienarbeit der Ulitmaker 2 verwendet. Deshalb wird in diesem Fazit auch nur betrachtet, inwiefern sich speziell dieser Drucker eignet, um technische Objekte zu erstellen.
+
+\subsection{Ungenaue Maße}
+Beim Druck des technischen Objekts war auffallend, dass die in Solid Edge definierten und in Cura noch korrekt dargestellten Maße der Objekte vom Drucker nicht maß-getreu gefertigt wurden. Dies war besonders auffallend bei einem 1cm x 1cm x 1mm - Quader, den wir zum Testen der aktuellen Höhen-Kalibrierung verwendeten. Die Seitenmaße des Quaders maßen anstatt einem Zentimeter nur ca. 8 Millimeter. Bei einer Linienbreite von 0.4mm sind das etwa 4 Linien, die vom Slicer nicht zum Drucken vorgesehen wurden. 
+
+Dieses Problem wiederholte sich bei schmalen Strukturen: alle Wände, die nicht über 0.8mm maßen - also eine beidseitige Wand - wurden von Cura ohne Benachrichtigung auf Probleme beseitigt. Mittels Repetierhost kann das Fehlen der Wände aufgezeigt werden. In mancher Situation erzeugte Cura auch Wände, die nicht sein sollten und füllte trotz deaktivierter Funktion klar definierte Hohlräume massiv aus.
+
+Die relativ hohe Ungenauigkeit der Drucke führte teilweise zu Problemen mit den Spaltmaßen. Da oft erhebliche Unterschiede zwischen definierten Maßen und den Maßen des gedruckten Objekts bestanden, konnten Objekte nicht passend zusammengesetzt werden. 
+
+Beispielsweise mussten die Deckeln für die Boxen sowie die Serverhülle des Raspberry Pi mit angepassten Maßen erneut gedruckt werden. Manche Objekte mussten zwar nicht erneut gedruckt, aber nachbearbeitet werden, um miteinander kombinierbar zu sein.
+
 
 \subsection{Material}
 Als Plastik wurde \ac{PLA} verwendet. Bei den Drucken fiel auf, dass die Materialeigenschaften, abhängig von der verwendeten Farbe, teilweise deutlich unterschiedlich waren. Am besten gelangen die Drucke mit rotem Filament. Schwarzes Filament dagegen war sehr spröde. Bei durchsichtigem Filament hielten die verschiedenen Linien nicht so stark zusammen wie beispielsweise bei rotem, was insbesondere bei konzentrischen Mustern zu einer Instabilität führte.

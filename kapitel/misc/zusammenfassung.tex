@@ -9,6 +9,9 @@
 	Zusätzlich zu diesen in Kapiteln \ref{chapter:techObj} und \ref{fig:orgObj:orgObj} beschriebenen Objekten wurden einige kleinere Objekte gedruckt, die in der Regel nicht selbst designt waren. 
 	%TODO: Verweise auf Seiten wie Thingiverse? bzw diese Objekte überhaupt erwähnen?
 	
+	
+	Ein Großteil der Arbeitszeit verlor sich in der Fehlersuche -Vermeidung. Ein großer Teil der Drucke scheiterte an sich ähnelnden Fehlern - zu wenig gefördertes Material oder zu geringe Haftung am Druckbett. Beides lässt auf Hardware-/Mechanik-Probleme des Druckers schließen.
+	
 	\section{Technisches Objekt}
 	Als technisches Objekt wurde ein Aufbewahrungssystem für einen Raspberry Pi, der mit einer Festplatte und einem \ac{USB}-Hub gekoppelt ist, entworfen. Dieses System wurde in Solid Edge mit den korrekten Bemaßungen entworfen. 
 	
@@ -35,25 +38,13 @@
 	\section{TODO}
 	
 	
-	Ein Großteil der Arbeitszeit verlor sich in der Fehlersuche -Vermeidung. Ein großer Teil der Drucke scheiterte an sich ähnelnden Fehlern - zu wenig gefördertes Material oder zu geringe Haftung am Druckbett. Beides lässt auf Hardware-/Mechanik-Probleme des Druckers schließen.
+
 	
 	
 %	vermeintlich Design-Problemen des Druckers. Zum Beispiel litt das Werkzeug an notorischer Unterförderung des Materials. Zu untersuchen wäre hierbei die Begründung des Drucker-Herstellers das Upgrade des Ultimakters 2 zum 2+ durchzuführen. In dem Rahmen wurde der Feeder um ein Getriebe erweitert, das das zum Fördern nötige Drehmoment reduziert.
 	
 	% Der pikierte Unterton sollte noch raus...
 	
-
-	
-	%TODO: teilweise in entsprechendes Kapitel "auslagern"?
-	% Ergebnis Drucke vs. Erwartung
-		Beim Druck des technischen Objekts war auffallend, dass die in Solid Edge definierten und in Cura noch korrekt dargestellten Maße der Objekte vom Drucker nicht maß-getreu gefertigt wurden. Dies war besonders auffallend bei einem 1cm x 1cm x 1mm - Quader, den wir zum Testen der aktuellen Höhen-Kalibrierung verwendeten. Die Seitenmaße des Quaders maßen anstatt einem Zentimeter nur ca. 8 Millimeter. Bei einer Linienbreite von 0.4mm sind das etwa 4 Linien, die vom Slicer nicht zum Drucken vorgesehen wurden. 
-		
-		Dieses Problem wiederholte sich bei schmalen Strukturen: alle Wände, die nicht über 0.8mm maßen - also eine beidseitige Wand - wurden von Cura ohne Benachrichtigung auf Probleme beseitigt. Mittels Repetierhost kann das Fehlen der Wände aufgezeigt werden. In mancher Situation erzeugte Cura auch Wände, die nicht sein sollten und füllte trotz deaktivierter Funktion klar definierte Hohlräume massiv aus.
-		
-		Ein weiterer Unterschied zwischen Definition und Druckergebnis sind Spaltmaße. Wenn Objekte später zusammengesetzt werden sollen oder Objekte eingesetzt werden sollen wie bei der Serverhülle der Raspberry Pi, müssen relativ große Toleranzen zwischen den zu kombinierenden Objekten eingeplant werden. Durch die Ungenauigkeiten beim Druck und die in den Boden gedruckte und dadurch breitere Bodenschicht kann der Fall eintreten, dass die Objekte ohne Nachbearbeitung  nicht kombinierbar sind. 
-		
-		Beim Erzeugen der \ac{STL}-Datei ist auf die korrekten Maße zu achten. Bei zu geringer Auflösung der Facetten können Rundungen oder Bohrungen zu stark diskretisiert werden und als Vielecke mit wenigen Kanten übersetzt werden. Insbesondere ist hierbei auf die Einstellung der Maß-Einheit zu achten. Im \ac{STL}-Format werden keine Dimensionen abgelegt; diese werden von dem öffnenden Programm gewählt. 
-		
 		
 		\section{Fazit zu Additiven Fertigungsverfahren}	
 	% Drucktechnologie im privaten Bereich ausgereift?

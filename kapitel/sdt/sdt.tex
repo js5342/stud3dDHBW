@@ -81,6 +81,10 @@
 			
 			Da das STL-Format eine einfache Objektbeschreibung ist, kann es als universelle Schnittstelle zwischen \ac{CAD}-Designprogrammen und Slicern verwendet werden. Allerdings gehen Zusatzinformationen wie unterschiedlich eingestellte Drucktemperaturen oder Druckfarben verloren. Daher eignet sich das Format nur zur Übergabe von  einfachen Formeigenschaften.			
 			
+			
+			Beim Erzeugen der \ac{STL}-Datei ist auf die korrekten Maße zu achten. Bei zu geringer Auflösung der Facetten können Rundungen oder Bohrungen zu stark diskretisiert werden und als Vielecke mit wenigen Kanten übersetzt werden. Insbesondere ist hierbei auf die Einstellung der Maß-Einheit zu achten. Im \ac{STL}-Format werden keine Dimensionen abgelegt; diese werden von dem öffnenden Programm gewählt. 
+			
+			
 		\subsubsection{G-Code}
 			
 			Aus der Welt der Fräsen kommend ist der G-Code eine Sprache, mit der Maschinen Positionierungs- und Arbeitsanweisungen erhalten können. 
