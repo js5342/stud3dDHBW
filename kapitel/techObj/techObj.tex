@@ -147,12 +147,57 @@ Zuerst wird die Analyse der bestehenden Verwahrung beschrieben. Anschließend fol
 \section{Druck des Objekts}
 % Welche Parameter? --> spezifisch beim technischen Objekt
 % Veränderungen durch Params?
+%Parameter: Konzentrisch, Infill-dichte, Geschwindigkeit
 
-Dadurch, dass das Aufbewahrungssystem aus vielen einzelnen Komponenten zusammengesetzt ist, sind auch viele Drucke notwendig. Dazu kommt, dass einige der Komponenten - beispielsweise die Deckel für die Boxen und die Rahmen - in mehrfacher Ausführung benötigt werden. 
 
-Zusätzlich zu der hohen Anzahl an Komponenten, die gedruckt werden müssen, kommt, dass einige Fehldrucke auftraten. Außerdem ergab sich beim Drucken der Komponenten, dass manche Maße aufgrund der Ungenauigkeit des Druckers zu gering gewählt waren und die Komponenten neu bemaßt und gedruckt werden mussten. Dadurch war insgesamt ein hoher Zeitaufwand mit dem Druck verbunden. 
+Dadurch, dass das Aufbewahrungssystem aus vielen einzelnen Komponenten zusammengesetzt ist, sind auch viele Drucke notwendig. Einige der Komponenten, wie beispielsweise die Deckel für die Boxen und die Rahmen, werden zudem in mehrfacher Ausführung benötigt. 
+Dadurch ist insgesamt ein hoher Zeitaufwand mit dem Druck verbunden. 
 
-An den ersten zwei Schichten ließ sich ein fehlerhafter Druck meist frühzeitig erkennen. Einige der aufgetretenen Fehler sind im Kapitel \ref{chapter:fehler} aufgeführt.
+Zusätzlich zu der hohen Anzahl an Komponenten, die gedruckt werden müssen, kommt, dass einige Fehldrucke auftraten. Außerdem zeigte sich beim Drucken der Komponenten, dass manche Maße aufgrund der Ungenauigkeit des Druckers zu gering gewählt waren und die Komponenten neu bemaßt und gedruckt werden mussten. 
+
+Im Folgenden werden die gedruckten Komponenten kurz dargelegt und gegebenenfalls Besonderheiten beim Druck beschrieben. Auf die Fehler, die beim Druck auftreten, wird an dieser Stelle nicht näher eingegangen.
+Die Fehler werden im Kapitel \ref{chapter:fehler} ausführlicher beschrieben.
+
+\subsection{Deckel}
+Dadurch, dass der Deckel relativ dünn ist, ist es wichtig zu gewährleisten, dass er dennoch stabil ist. Deshalb wird er massiv gedruckt. Aufgrund der geringen Größe dauert der Druck dennoch nicht unakzeptabel lange.
+
+Der Deckel wird mit einem konzentrischen Infill-Pattern gedruckt. Dieses Muster kann vom Drucker schneller gedruckt werden als andere Muster und liefert genügend Stabilität für den Deckel. 
+
+	\begin{figure}[h!]
+		%\begin{minipage}{.49\textwidth}
+		\includegraphics[height=11em]{images/techObj/bilder/Deckel}
+		\caption{Deckel}
+		\label{figure:techObj:druck:deckel}
+		%	\end{minipage}
+	\end{figure}
+
+
+Es ist jedoch auffällig, dass der Druck mit rotem Filament deutlich besser gelingt als mit durchsichtigem. Dieser Effekt wird in Kapitel \ref{chapter:fehler:material} näher erläutert.
+
+
+\subsection{Rahmen}
+
+\subsection{Bodenplatte}
+
+\subsection{Boxen}
+
+\subsection{Das Aufbewahrungssystem}
+
+Bei einigen Objekten werden verschiedene Parameter in Cura ausprobiert, um herauszufinden, welche die besten Ergebnisse liefern.
+
+Manche Objekte, beispielsweise die Pi-Box, wurde zunächst in niedrigerer Qualität gedruckt. Anhand dieses schnelleren Drucks, der aufgrund der geringer gewählten Fülldichte auch weniger Material verbraucht, kann überprüft werden, ob die Bemaßungen richtig gewählt sind oder noch angepasst werden müssen.
+%Deckel
+
+
+
+%Rahmen
+
+%Boxen - Pi, Festplatte, Hub
+
+% Bodenplatte
+
+
+%Fertiges System
 
 % Bild vom fertigen Objekt
 
