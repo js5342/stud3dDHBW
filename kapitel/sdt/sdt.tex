@@ -1,7 +1,8 @@
 \chapter{Technische Grundlagen \& Stand der Technik}
-	Dieses Kapitel umfasst die technischen Grundlagen, die zum Verständnis des Berichts nötig sind sowie den aktuellen Stand der Technik. 
-	Inhaltlich werden die aktuellen Drucktechniken und druckbaren Materialien behandelt. Anschließend folgt ein Vergleich der Stabilität der Druckresultate verschiedener Verfahren. Im Abschnitt \ac{CAD} werden Programme und gängige Dateiformate für den Entwurf eines zu druckenden Objekts vorgestellt. 
-	Anschließend folgt ein Abschnitt über den Ultimaker 2, den Drucker, der in dieser Arbeit verwendet wurde.
+	Dieses Kapitel umfasst die technischen Grundlagen, die zum Verständnis des Berichts nötig sind, sowie den aktuellen Stand der Technik. 
+	Zunächst werden aktuelle Drucktechniken sowie Materialien, die häufig gedruckt werden, behandelt. Anschließend wird die Stabilität der Druckresultate verschiedener Verfahren verglichen. 
+	Im Abschnitt \ac{CAD} werden Programme und gängige Dateiformate für den Entwurf eines zu druckenden Objekts vorgestellt. 
+	Anschließend folgt ein Abschnitt über den Ultimaker 2, den Drucker, der in dieser Arbeit verwendet wird.
 	
 % TODO Einleitung
 
@@ -17,21 +18,21 @@
 \section{\acf{CAD}}
 	
 
-	Der 3D-Druck basiert zum großen Teil auf dem computergestützten Design von Objekten. \ac{CAD}-Tools helfen beim Entwerfen. Anschließend werden die Objektdateien mithilfe von Slicern in 	maschinenlesbaren Code umgewandelt. Die Unterkapitel stellen die verwendeten Programme vor.
+	Der 3D-Druck basiert zum großen Teil auf dem computergestützten Design von Objekten. \ac{CAD}-Tools helfen beim Entwerfen dieser Objekte. Anschließend werden die Objektdateien mithilfe von Slicern in 	maschinenlesbaren Code umgewandelt. Die folgenden Unterkapitel stellen die verwendeten \ac{CAD}-Programme und Dateiformate vor.
 		
 	\subsection{CAD-Programme}
 		
-		Für das Design von 3D-Dateien gibt es vielerlei Programme. Auf kostenloser Basis wurden in dieser Arbeit Solid Edge und blender verwendet. 
+		Für das Design von \ac{3D}-Dateien gibt es viele Programme. Auf kostenloser Basis wurden in dieser Arbeit Solid Edge und Blender verwendet. 
 		
 		\subsubsection{Solid Edge}
 			
 
 			\piccaption{Screenshot des Programms blender\label{fig:sdt:solidEdge}}
-			\parpic{\includegraphics[width=.5\textwidth]{images/SdT/solidEdge}}
+			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/solidEdge}}
 			
-			Solid Edge von Siemens eignet sich für das Entwerfen von technischen Objekten. Hierbei bietet das Programm eine Vielzahl von Funktionen für die Erstellung von 2D- und 3D-Formen. Für einfache Objekte kann eine 2D-Grundform gezeichnet und anschließend zu einem 3D-Objekt extrahiert werden. Zusätzliche Funktionen von Solid Edge unterstützen bei der Stabilitätsanalyse der entwickelten Objekte.
+			Solid Edge von Siemens eignet sich für das Entwerfen von technischen Objekten. Hierbei bietet das Programm eine Vielzahl von Funktionen für die Erstellung von 2D- und 3D-Formen. Für einfache Objekte kann eine 2D-Grundform gezeichnet und anschließend zu einem 3D-Objekt extrudiert werden. Zusätzliche Funktionen von Solid Edge unterstützen bei der Stabilitätsanalyse der entwickelten Objekte.
 			
-			Die Entwicklung der Objekte kann entweder auf sequenzieller Basis oder auf paralleler Basis geschehen. Die sequenzielle Entwicklung erfordert ein hohes Maß an Programmkenntnis, da die einzelnen Schritte der Objekterstellung nur in einem definierten Ablauf stattfinden kann. Der parallele Entwicklungsstack erleichtert die nachträgliche Veränderung von Arbeitsschritten wie zum Beispiel die Maße, die während einer Extraktion angegeben wurden. Zusätzlich können bei paralleler Entwicklung die Renderzeiten bei Maßänderungen deutlich reduziert werden. Das zahlt sich bei umfangreichen Objekten aus.
+			Die Entwicklung der Objekte kann entweder auf sequenzieller Basis oder auf paralleler Basis geschehen. Die sequenzielle Entwicklung erfordert ein hohes Maß an Programmkenntnis, da die einzelnen Schritte der Objekterstellung nur in einem definierten Ablauf stattfinden können. Der parallele Entwicklungsstack erleichtert die nachträgliche Veränderung von Arbeitsschritten wie zum Beispiel die Maße, die während einer Extraktion angegeben werden. Zusätzlich können bei paralleler Entwicklung die Renderzeiten bei Maßänderungen deutlich reduziert werden. Das zahlt sich bei umfangreichen Objekten aus.
 			
 			Für die Arbeit wurde die akademische Lizenz verwendet. Objekte, die mit dieser Lizenz erstellt wurden, können nicht mit einer anderen Lizenz geöffnet werden.
 			\cite{solidEdge}
@@ -40,37 +41,36 @@
 		\label{chapter:sdt:blender}
 			
 			\piccaption{Screenshot des Programms blender\label{fig:sdt:blender}}
-			\parpic{\includegraphics[width=.5\textwidth]{images/SdT/blender}}
+			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/blender}}
 			
-			Blender ist ein Open Source Programm, das eine Vielzahl von Computergrafik-Anwendungen bietet. Diese reichen von der Erstellung von Objekten bis hin zum Filmschnitt.
+			Blender ist ein Open Source Programm, das eine Vielzahl von Computergrafik-\\Anwendungen bietet. Diese reichen von der Erstellung von Objekten bis hin zum Filmschnitt.
 			
-			Die CAD-Funktionen zielen vor allem auf die Animation einzelner Objekte ab. Zum Beispiel kann die Beweglichkeit der Finger mit Regeln definiert werden. Das Objekt-Design unterliegt der Manipulation von Basis-Objekten, die dann anschließend zu einem Objekt vereinigt werden.
+			Die \ac{CAD}-Funktionen zielen vor allem auf die Animation einzelner Objekte ab. Zum Beispiel kann die Beweglichkeit von animierten Fingern mit Regeln definiert werden. Das Objekt-Design unterliegt der Manipulation von Basis-Objekten, die dann anschließend zu einem Objekt vereinigt werden.
 			\cite{Blender}
 		
 		\subsection{Slicing}
 			
 			Das Slicing ist der Prozess zur Umwandlung eines 3D-Objekts in für den Drucker eindeutige Befehle. Da jeder Drucker unterschiedliche Randbedingungen bietet, empfielt der jeweilige Hersteller ein für den Drucker geeignetes Programm zum Slicen.
 			
-			Der 3D-Drucker Ultimaker 2 erhält seine Dateien vom Ultimaker eigenen Programm Cura. Alternativ kann das Programm Repertierhost verwendet werden.
+			Für den 3D-Drucker Ultimaker 2 bietet die Firma Ultimaker das eigene Programm Cura an. Mit Cura können \ac{3D}-Objekte gesliced und in Dateien gespeichert werden, die vom Ultimaker 2 gedruckt werden können. Alternativ kann das Programm Repetierhost verwendet werden.
 			
-		\subsubsection{Cura}
-
-			
+		\subsubsection{Cura}	
 			\piccaption{Screenshot des Programms blender\label{fig:sdt:cura}}
-			\parpic{\includegraphics[width=.5\textwidth]{images/SdT/cura}}
+			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/cura}}
+			Mit Cura kann man aus Objektdateien im \ac{STL}-Format G-code für den Ultimaker erstellen. Das Programm erlaubt die Variation zahlreicher Parameter, die den Druck beeinflussen. Die verwendete Programmversion beeinflusst die Ergebnisse des Slicens deutlich. Viele Druckoptionen sind erst mit neueren Versionen möglich. 
+					
+			Eine wichtige Funktion, die in Cura fehlt, ist eine Einstellmöglichkeit für die Drucktemperatur. Der Befehl ist im G-code vorgesehen, allerdings mit Cura nicht beeinflussbar.
 			
-			Mit Cura kann man aus Objektdateien im \ac{STL}-Format G-code für den Ultimaker erstellen. Das Programm erlaubt die Variation zahlreicher Parameter, die den Druck beeinflussen. Die verwendete Programmversion beeinflusst die Ergebnisse des Slicens deutlich. Viele Druckoptionen sind erst mit neueren Versionen möglich. Eine wichtige fehlende Funktion von Cura ist eine Einstellmöglichkeit der Drucktemperatur. Der Befehl ist im G-code vorgesehen, allerdings nicht beeinflussbar.
-			
-			Die verwendeten Versionen des Programms waren der offizielle Release 15.4.2, der auf der Website \cite{CuraOfficial} heruntergeladen werden kann und die Beta-Version 1.99.0 aus dem Closed-Beta-Verzeichnis \cite{CuraBeta}. Nach den ersten Drucken wechselten wir zur Beta-Version, da dort viele Parameter besser einstellbar waren. Die Slicing-Engine wurde ebenfalls verbessert. Mittlerweile ist der offizielle Versionsstand nach einem Nummerierungswechsel bei 2.1.2 (Stand 11.06.2016).
+			Die für die Studienarbeit verwendeten Versionen des Programms sind der offizielle Release 15.4.2, der auf der Website \cite{CuraOfficial} heruntergeladen werden kann und die Beta-Version 1.99.0 aus dem Closed-Beta-Verzeichnis \cite{CuraBeta}. Nach den ersten Drucken wechselten wir zur Beta-Version, da dort viele Parameter besser einstellbar waren. Die Slicing-Engine wurde ebenfalls verbessert. Mittlerweile ist der offizielle Versionsstand nach einem Nummerierungswechsel bei 2.1.2 (Stand 11.06.2016).
 			
 			
 		\subsubsection{Repetierhost}
 			
 			
 			\piccaption{Screenshot des Programms blender\label{fig:sdt:repetierhost}}
-			\parpic{\includegraphics[width=.5\textwidth]{images/SdT/repetierhost}}
+			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/repetierhost}}
 			
-			Repetierhost ist ein alternatives Programm zur Fernsteuerung von 3D-Druckern. Es visualisiert Druckdateien im \ac{STL}- und im G-code-Format. Zudem enthält es einen Slicer, mit dem man selbigen erzeugen kann. 
+			Repetierhost ist ein alternatives Programm zur Fernsteuerung von 3D-Druckern. Es visualisiert Druckdateien im \ac{STL}- und im G-code-Format. Zudem enthält es einen Slicer, mit dem man G-code erzeugen kann. 
 			
 			Cura liefert mitunter fehlerhaften G-code, in dem Löcher klaffen oder Schichten fehlen. Mithilfe des Repetierhosts können diese Fehler entdeckt werden.
 			\cite{Repetierhost}
@@ -81,17 +81,17 @@
 		
 		\subsubsection{\acf{STL}}
 			
-			Eine \ac{STL}-Datei ist eine Oberflächendefinition für ein 3D-Objekt. Hierfür werden die dreieckigen orientierten Facetten über ihre Eckpunkte in einem kartesischen Koordinatensystem abgespeichert. Die Dimensionierung(z.B. Zentimeter oder Inch) wird nicht mit abgespeichert und muss vom lesenden Programm eingestellt werden.
+			Eine \ac{STL}-Datei ist eine Oberflächendefinition für ein 3D-Objekt. Hierfür werden dreieckig orientierte Facetten über ihre Eckpunkte in einem kartesischen Koordinatensystem abgespeichert. Die Dimensionierung(z.B. Zentimeter oder Inch) wird nicht mit abgespeichert und muss vom lesenden Programm eingestellt werden.
 			
-			Da das STL-Format eine einfache Objektbeschreibung ist, kann es als universelle Schnittstelle zwischen \ac{CAD}-Designprogrammen und Slicern verwendet werden. Allerdings gehen Zusatzinformationen wie unterschiedlich eingestellte Drucktemperaturen oder Druckfarben verloren. Daher eignet sich das Format nur zur Übergabe von  einfachen Formeigenschaften.			
+			Da das STL-Format eine einfache Objektbeschreibung ist, kann es als universelle Schnittstelle zwischen \ac{CAD}-Designprogrammen und Slicern verwendet werden. Allerdings gehen Zusatzinformationen wie Bereiche mit unterschiedlich eingestellte Drucktemperaturen oder Druckfarben verloren. Daher eignet sich das Format nur zur Übergabe von  einfachen Formeigenschaften.			
 			
 			
-			Beim Erzeugen der \ac{STL}-Datei ist auf die korrekten Maße zu achten. Bei zu geringer Auflösung der Facetten können Rundungen oder Bohrungen zu stark diskretisiert werden und als Vielecke mit wenigen Kanten übersetzt werden. Insbesondere ist hierbei auf die Einstellung der Maß-Einheit zu achten. Im \ac{STL}-Format werden keine Dimensionen abgelegt; diese werden von dem öffnenden Programm gewählt. 
+			Beim Erzeugen der \ac{STL}-Datei ist auf die korrekten Maße zu achten. Bei zu geringer Auflösung der Facetten können Rundungen oder Bohrungen zu stark diskretisiert werden und als Vielecke mit wenigen Kanten übersetzt werden. 
 			
 			
 		\subsubsection{G-Code}
 			
-			Aus der Welt der Fräsen kommend ist der G-Code eine Sprache, mit der Maschinen Positionierungs- und Arbeitsanweisungen erhalten können. 
+			 Der G-Code, der aus der Welt der Fräsen kommt, ist eine Sprache, mit der Maschinen Positionierungs- und Arbeitsanweisungen erhalten können. 
 			
 			Derivate dieser Sprache wurden um die Funktionen zur Steuerung eines 3D-Druckers erweitert. Mithilfe der neuen Befehle können zum Beispiel die Drucktemperatur oder die Lüfter angesteuert werden.
 			
@@ -119,7 +119,7 @@
 %	bsueb\\
 %	\picskip{0}
 %	
-%	
+%	\newpage
 	
 \section{Der \ac{3D}-Drucker Ultimaker 2}
 	\label{chapter:techGr:ultimaker2}
@@ -131,20 +131,20 @@
 	% Drucker nach xxx Verfahren
 	
 	Der Ultimaker 2 ist ein \ac{3D}-Drucker von der gleichnamigen Firma. 
-	Das Bauvolumen umfasst 223x223x205mm. Anfang 2016 wurde der Drucker zum Ultimaker 2+ verbessert. Die hierfür nötigen Upgrades umfassen Verbesserungen des Feeders und ein neuer Druckkopf. Der neu hinzugekommene Olson-Block ermöglicht das Wechseln der Düsen ohne die vollständige Demontage des Druckkopfes.
+	Das Bauvolumen umfasst 223x223x205mm. Anfang 2016 wurde der Drucker zum Ultimaker 2+ verbessert. Die hierfür nötigen Upgrades umfassen Verbesserungen des Feeders und einen neuen Druckkopf. Der neu hinzugekommene Olsson-Block ermöglicht das Wechseln der Düsen ohne die vollständige Demontage des Druckkopfes.
 	
-	Die zu druckenden Dateien werden auf einer \ac{SD}-Karte vom Rechner auf den Drucker im G-Code-Format übertragen. Dort wählt man die entsprechende Datei in einem Menü aus und der Druck wird gestartet.
+	Die zu druckenden Dateien im G-Code-Format werden auf einer \ac{SD}-Karte vom Rechner auf den Drucker übertragen. Dort wählt man die entsprechende Datei in einem Menü aus und der Druck wird gestartet.
 	
-	Die X- und Y-Position werden durch Verschieben des Druckkopfes verändert. Die Z-Achse des Druckers wird durch Manipulation der Druckplatte erreicht. Darin unterscheidet sich der Ultimaker 2 vom Ultimaker Original. Das ältere Modell erreichte den Höhenversatz durch Bewegung des 
+	Die X- und Y-Position werden durch Verschieben des Druckkopfes verändert. Die Z-Achse des Druckers wird durch Manipulation der Druckplatte erreicht. Darin unterscheidet sich der Ultimaker 2 vom Ultimaker Original. Das ältere Modell erreichte den Höhenversatz durch Bewegung des %TODO:???
 	
 	Gedruckt wird auf einer Glasplatte, welche auf einem Heizbett fixiert ist.
-	Für die Höhenkalibrierung des Druckbetts ist seine Neigung mit Schrauben an den vorderen Ecken und an der Gewindestange verstellbar. 
+	Die Höhe des Druckbetts kann kalibriert werden, indem seine Neigung mit Schrauben an den vorderen Ecken und seine Höhe an der Gewindestange verstellt wird. 
 	
-	Der Feeder befindet sich an der Rückseite des Druckers. Über einen Bowdenzug wird das Druckmaterial zum Druckkopf geleitet. Der Bowdenzug wird über eine \ac{PTFE}-Kopplung in die beheizte Düse geleitet.
+	Der Feeder befindet sich an der Rückseite des Druckers. Über einen Bowdenzug wird das Druckmaterial von hier aus zum Druckkopf geleitet. Der Bowdenzug wird über eine \ac{PTFE}-Kopplung in die beheizte Düse geleitet.
 	
-	Mit dem Upgrade zum Ultimaker 2+ wurde der Feeder, dessen Motor zuvor direkt das Material schob, um ein Getriebe erweitert. Außerdem wurde der bisher mit der Düse fest verbundene Heizblock durch einen Olsonblock ersetzt, bei dem die Düse austauschbar ist. Dadurch muss zum Ändern der Düsengröße nicht der komplette Druckkopf auseinandergebaut werden.
+	Mit dem Upgrade zum Ultimaker 2+ wurde der Feeder, dessen Motor zuvor direkt das Material schob, um ein Getriebe erweitert. Außerdem wurde der bisher mit der Düse fest verbundene Heizblock durch einen Olsson-Block ersetzt, bei dem die Düse austauschbar ist. Dadurch muss zum Ändern der Düsengröße nicht mehr der komplette Druckkopf auseinandergebaut werden.
 	
 	
-	Unter Quelle \cite{ultimakerWebsite} findet sich die Website des Druckerherstellers und zusätzliche Informationen über den Drucker.
+	Unter Quelle \cite{ultimakerWebsite} finden sich die Website des Druckerherstellers und zusätzliche Informationen über den Drucker.
 	% Aufbau
 	% 

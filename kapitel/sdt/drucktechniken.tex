@@ -1,21 +1,20 @@
 \section{Drucktechniken}
 %TODO Bilder
 \label{drucktechniken}
-	Dreidimensionale Objekte können mit verschiedenen Verfahren gedruckt werden. Viele werden bereits seit Langem eingesetzt. Die Technologie war folglich schon verfügbar. In den letzten Jahre erreichen die Drucker den Endkundenmarkt. Grund dafür sind eine Vielzahl von günstigen Druckern, die au dem Markt erhältlich sind. Im Folgenden sind verschiedene Druckverfahren erläutert.
+	Dreidimensionale Objekte können mit verschiedenen Verfahren gedruckt werden. Viele werden bereits seit Langem eingesetzt. Die Technologie war folglich schon verfügbar, doch erst in den letzten Jahren erreichen die Drucker den Endkundenmarkt. Grund dafür ist eine zunehmende Anzahl von günstigen Druckern, die auf dem Markt erhältlich sind. Im Folgenden werden verschiedene Druckverfahren erläutert.
 	
 	\subsection{Schmelzschichtverfahren}%TODO
-		Das verflüssigte Material wird durch eine Düse, den Extruder, auf eine Druckfläche gepresst. Dort härtet es aus. Durch Bewegen des Druckkopfes über die Druckfläche lässt sich Schicht für Schicht ein Objekt auftragen.
+		Das verflüssigte Material wird durch eine Düse, den Extruder, auf eine Druckfläche gepresst. Dort härtet es aus. Durch Bewegen des Druckkopfes über die Druckfläche lässt sich Schicht für Schicht ein Objekt auftragen. In Abbildung \ref{fig:sdt:schmelzschicht} ist zu sehen, wie ein Extruder eine Schicht Material auf ein Objekt aufträgt.
 		
 		\piccaption{Prinzip des Schmelzschichtverfahrens \cite{gebhardt2004grundlagen}\label{fig:sdt:schmelzschicht}}
-		\parpic{\includegraphics[width=.5\textwidth]{images/SdT/verfahren/extrusion_gebGr}}
- 		\picskip{0}
- 		\vspace*{3em}
+		\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/verfahren/extrusion_gebGr}}
+
 		
 		
-		Das im Verhältnis zu anderen Drucktechniken langsame Verfahren eignet sich für die Erstellung von Modellen für das Testen von Passgenauigkeit.
+		Das im Verhältnis zu anderen Drucktechniken langsame Verfahren eignet sich, um Modelle herzustellen, mit denen die Passgenauigkeit von Prototypen getestet werden kann.
 		Die Auswahl an Materialien ist groß; auch Lebensmitteldrucker wie solche für Schokolade sind möglich. Im Gegensatz zu den meisten anderen Verfahren eignen sich Drucker dieses Verfahrens für den Bürogebrauch. Zudem sind mittlerweile preiswerte Drucker dieses Verfahrens erhältlich.
-		
 		\cite[S.17]{hagl2014_3DKompendium}
+		Auch der Ultimaker 2, der in dieser Studienarbeit verwendet wird, arbeitet nach dem Schmelzschichtverfahren.
 	 
 	
 	\subsection{Stereolithographie}
@@ -23,13 +22,17 @@
 		Das dreidimensionale Äquivalent zum Rasterdruck baut Objekte aus Schichten von Rasterpunkten auf.
 		
 		Manche organischen Verbindungen können mittels \ac{UV}- Licht polymerisiert werden. Dadurch wird aus einem flüssigen Grundstoff ein fester Körper. Dieser Vorgang wird als Photopolymerisation bezeichnet und dient als Grundlage für verschiedene \ac{3D}- Druckverfahren. 
+		
+		In Abbildung \ref{fig:sdt:stereolithografie} ist das Prinzip der Stereolithografie abgebildet. 
 
 		\piccaption{Prinzip der \ac{UV}-Stereolithografie \cite{lachmayer3d}\label{fig:sdt:stereolithografie}}
-		\parpic{\includegraphics[width=.5\textwidth]{images/SdT/verfahren/UVStereolith_lach16}}
- 		\picskip{0}
- 		\vspace*{3em}
+		\parpic{\includegraphics[width=1\textwidth]{images/SdT/verfahren/UVStereolith_lach16}}
+		\picskip{0}
+		 \vspace*{3em}
 		
-		Für jede Schicht kann eine Photomaske erzeugt werden. Der flüssige Grundstoff wird durch die Maske hindurch von einer \ac{UV}- Quelle angestrahlt. Dadurch härtet eine Schicht des Grundmaterials entsprechend der Photomaske aus. Die erste Schicht wird auf eine Bodenplatte gedruckt. Diese wird nach Abschließen jeder Schicht weiter in die Flüssigkeit abgesenkt. Dadurch wird die nächste Schicht auf die darunterliegende gedruckt.
+		Für jede Schicht kann eine Photomaske erzeugt werden. Der flüssige Grundstoff wird durch die Maske hindurch von einer \ac{UV}- Quelle angestrahlt. Dadurch härtet eine Schicht des Grundmaterials entsprechend der Photomaske aus. Die erste Schicht wird auf eine Bodenplatte gedruckt. Diese wird nach Abschließen jeder Schicht weiter in die Flüssigkeit abgesenkt. Dadurch wird die nächste Schicht auf die darunterliegende gedruckt. 
+		
+		Wie in Abbildung \ref{fig:sdt:stereolithografie} zu sehen ist, lässt sich dieser Prozess auch andersherum durchführen, wenn die Belichtung von unten erfolgt.
 		
 		
 		Alternativ zur Photomaske mit gleichmäßiger Quelle kann auch ein \ac{UV}- Laser verwendet werden, der über Spiegel an die auszuhärtenden Rasterpunkte gelenkt wird.
@@ -38,41 +41,54 @@
 		\cite[S.3]{gebhardt2004grundlagen}
 	
 	\subsection{Sintern}
-		 Sintern beschreibt den Prozess des Verdichtens pulverförmiger Ausgangsstoffe zu einem festen Material. Hierzu kann das Material über den Schmelzpunkt erhitzt werden oder durch hohe Drücke dazu verleitet werden, dass sich die Oberflächen der einzelnen Pulverkörner verbinden.
-		 Für den \ac{3D}- Druck relevant sind Verfahren, die ein selektives Verbinden der Körner ermöglichen.
+		 Sintern beschreibt den Prozess des Verdichtens pulverförmiger Ausgangsstoffe zu einem festen Material. Hierzu kann das Material über den Schmelzpunkt erhitzt werden oder durch hohe Drücke erzwungen werden, dass sich die Oberflächen der einzelnen Pulverkörner verbinden.
+		 Für den \ac{3D}- Druck sind insbesondere Verfahren relevant, die ein selektives Verbinden der Körner ermöglichen.
 		 \cite[Bd.20, S.7037]{meyers2006}
 		 
 		 %	\subsubsection{Elektronenstrahlschmelzen}
-		 Ein Verfahren, das dies ermöglicht, ist das Elektronenstrahlschmelzen. Hierbei wird schichtweise das Pulver des Ausgangsmaterials selektiv mit einem Elektronenstrahl geschmolzen. Nach Fertigstellung einer Schicht wird eine weitere Schicht Pulver aufgetragen, die erneut selektiv geschmolzen werden kann. Dadurch können \ac{3D} Objekte erzeugt werden. Momentan sind Objekte aus mehreren Titanlegierungen mit diesem Verfahren möglich. Zudem wird an der Eignung von Stahl, verschiedenen Metallen und deren Legierungen geforscht.
+		 
+  		\piccaption{Funktionsweise des Elektronenstrahlschmelzens \cite{lachmayer3d}\label{fig:sdt:estrahlschmelzen}}
+  		\parpic[r]{\includegraphics[width=.6\textwidth]{images/SdT/verfahren/EStrahl_lach16}}
+  		\vspace*{1em}
+		 Ein Verfahren, das dies ermöglicht, ist das Elektronenstrahlschmelzen. Abbildung \ref{fig:sdt:estrahlschmelzen} zeigt die Funktionsweise des Elektronenstrahlschmelzens.
+		 Dabei wird schichtweise das Pulver des Ausgangsmaterials selektiv mit einem Elektronenstrahl geschmolzen. Nachdem eine Schicht fertig gestellt ist, wird eine weitere Schicht Pulver aufgetragen, die erneut selektiv geschmolzen werden kann. Dadurch können \ac{3D} Objekte erzeugt werden. Momentan sind Objekte aus mehreren Titanlegierungen mit diesem Verfahren möglich. Zudem wird an der Eignung von Stahl, verschiedenen Metallen und deren Legierungen geforscht.
 		 \cite{IFAMElektronenstrahl}
-		 
- 		\piccaption{Funktionsweise des Elektronenstrahlschmelzens \cite{lachmayer3d}\label{fig:sdt:estrahlschmelzen}}
- 		\parpic{\includegraphics[width=.6\textwidth]{images/SdT/verfahren/EStrahl_lach16}}
- 		\picskip{0}
- 		\vspace*{3em}
- 		
-		 
+
+
+
+		\piccaption{Prinzip des selektiven Lasersinterns \cite{lachmayer3d}\label{fig:sdt:laserschmelzen}}
+		\parpic[r]{\includegraphics[width=.7\textwidth]{images/SdT/verfahren/selLaserSintern_lach16}}
+ 
+ 				 
 		 %\subsubsection{Lasersintern}
-		 Alternativ zum Elektronenstrahl kann auch ein Laser zum Verschweißen des Pulvers eingesetzt werden. Mit diesem Verfahren können auch Kunststoffe verarbeitet werden. 	
+		 Alternativ zum Elektronenstrahl kann auch ein Laser eingesetzt werden, um das Pulver zu verschweißen. Mit diesem Verfahren können auch Kunststoffe verarbeitet werden. Das Prinzip des Lasersinterns ist in Abbildung \ref{fig:sdt:laserschmelzen} dargestellt.	
 		\cite{lasersintern}
 		
-		\piccaption{Prinzip des selektiven Lasersinterns \cite{lachmayer3d}\label{fig:sdt:laserschmelzen}}
-		\parpic{\includegraphics[width=.5\textwidth]{images/SdT/verfahren/selLaserSintern_lach16}}
- 		\picskip{0}
- 		\vspace*{3em}
+		\picskip{0}
+		\vspace*{6em}
+
+
 		
 	\subsection{Binder-Verfahren}
-		Im Binderverfahren wird ein Bindemittel in ein pulverförmiges Ausgangsmaterial eingespritzt. Durch selektives Einbringen des Binders können die gewünschten Strukturen erzeugt werden.
+		Beim Binderverfahren wird ein Bindemittel in ein pulverförmiges Ausgangsmaterial eingespritzt. Indem das Bindemittel selektiv eingebracht wird, können die gewünschten Strukturen erzeugt werden.
 		\cite[S.11]{gebhardt2004grundlagen}
 		
 	\subsection{Schicht-Laminat-Verfahren}
 	\label{drucktechniken:schichtLaminatVerfahren}
-		In jeder Schicht wird ein Metallblech mit einem Laser in Form geschnitten. Die fertigen Schichten werden verpresst, verklebt oder versintert. Dadurch entsteht ein geschichtetes Objekt, dessen Eigenschaften sich in Faserrichtung von denen gegen Faserrichtung unterscheiden.\cite[S.33]{hagl2014_3DKompendium}
-		
+	
 		\piccaption{Funktionsweise des Schicht-Laminat-Verfahrens \cite{gebhardt2004grundlagen}\label{fig:sdt:schichtLaminat}}
-		\parpic{\includegraphics[width=.5\textwidth]{images/SdT/verfahren/schichtLam_gebGr}}
+		\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/verfahren/schichtLam_gebGr}}
+		
+		In jeder Schicht wird ein Metallblech mit einem Laser in Form geschnitten. Die \\übereinander liegenden fertigen Schichten werden dann verpresst, verklebt oder versintert.
+		
+		Die Abfolge der Arbeittschritte beim Schicht-Laminat-Verfahren werden in Abbildung \ref{fig:sdt:schichtLaminat} dargestellt.
+		
+		Das geschichtete Objekt, das bei diesem Verfahren entsteht, hat unterschiedliche Eigenschaften, je nachdem, ob es in oder gegen  Faserrichtung betrachtet wird.\cite[S.33]{hagl2014_3DKompendium}
+		
+
  		\picskip{0}
- 		\vspace*{3em}
+ 		\vspace*{6em}
+ 		\newpage
 		
 		
 		
