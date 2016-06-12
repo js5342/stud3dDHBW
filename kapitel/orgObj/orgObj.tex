@@ -5,8 +5,14 @@
 	% explizite Bezug auf Ultimaker 2, andere Drucker liefern andere Ergebnisse
 	% Besonderheiten eines organischen Objekts
 
-	Das Ziel dieser Studienarbeit ist es, zwei unterschiedliche Objekte zu designen und zu drucken. Im vorherigen Kapitel \ref{chapter:techObj} wird die Entwicklung eines technischen Objekts beschrieben. Bei einem technischen Objekt sind die Ansprüche an genaue Bemaßungen hoch, das Objekt selbst sollte so einfach wie möglich gestaltet sein. Dadurch besteht es oft aus einfachen geometrischen Formen. Allgemein liegt der Fokus auf der Funktionalität des Objekts. Um technische Objekte zu designen, wird in der Regel eine \ac{CAD}-Software verwendet. \\
-	In diesem Kapitel wird eine andere Art eines Objekts beschrieben: Das organische Objekt. Im Gegensatz zu einem technischen Objekt steht hier nicht die reine Funktionalität im Vordergrund. Organische Objekte sind Objekte, die in der Natur vorkommen und nicht künstlich vom Menschen gefertigt wurden, beispielsweise Lebewesen oder Pflanzen. In der Regel besitzen diese Objekte kaum Ecken, Kanten oder gerade Flächen. \\
+	Das Ziel dieser Studienarbeit ist es, zwei unterschiedliche Objekte zu designen und zu drucken.
+	Im vorherigen Kapitel \ref{chapter:techObj} ist die Entwicklung eines technischen Objekts beschrieben. Bei einem technischen Objekt sind die Ansprüche an genaue Bemaßungen hoch, das Objekt selbst sollte so einfach wie möglich gestaltet sein.
+	Dadurch besteht es oft aus einfachen geometrischen Formen.
+	Allgemein liegt der Fokus auf der Funktionalität des Objekts.
+	Um technische Objekte zu designen, wird in der Regel eine \ac{CAD}-Software verwendet. \\
+	In diesem Kapitel wird eine andere Art eines Objekts beschrieben: Das organische Objekt.
+	Im Gegensatz zu einem technischen Objekt steht hier nicht die reine Funktionalität im Vordergrund.
+	Organische Objekte sind Objekte, die in der Natur vorkommen und nicht künstlich vom Menschen gefertigt wurden, beispielsweise Lebewesen oder Pflanzen. In der Regel besitzen diese Objekte kaum Ecken, Kanten oder gerade Flächen. \\
 	Im Folgenden werden das Design und der Druck eines solchen Objekts beschrieben, im Anschluss folgt ein Fazit über die generelle Eignung des Ultimaker 2 für den Druck organischer Objekte.
 	Wie bereits im vorigen Kapitel bezieht sich diese Arbeit häufig auf den Ultimaker 2, der im Kapitel \ref{chapter:techGr:ultimaker2} vorgestellt wird. In der Arbeit mit einem anderen Drucker können sich Vorgehensweise und Ergebnis deutlich unterscheiden.
 	
@@ -16,7 +22,8 @@
 	\label{chapter:orgObj:konzept}
 % --> "Strichmännchen"
 	Wie zu Beginn des Kapitels beschrieben, soll das organische Objekt runde, gewölbte Flächen aufweisen. Für diese Studienarbeit wurde ein dreidimensionales Strichmännchen als Objekt gewählt. Dieses kann unter Verwendung mehrerer Zylinder und Kugeln modelliert werden und enthält somit einige gewölbte Flächen. 
-	Der Kopf des Strichmännchens wird als Kugel modelliert, der restliche Körper besteht aus sieben Zylindern. Einer davon dient als Körper und je ein Zylinder wird verwendet, um ein Bein zu modellieren. Die Arme werden mit je zwei Zylinder modelliert. Dadurch kann ein Ellbogengelenk simuliert werden und abwechslungsreiche Armhaltungen werden möglich.  
+	Der Kopf des Strichmännchens wird als Kugel modelliert, der restliche Körper besteht aus sieben Zylindern. Einer davon dient als Körper und je ein Zylinder wird verwendet, um ein Bein zu modellieren. Die Arme werden mit je zwei Zylinder modelliert. 
+	Dadurch erhält man ein Ellbogengelenk, wodurch verschiedene Armhaltungen möglich sind.  
 	
 	
 	
@@ -26,17 +33,16 @@
 	
 	\piccaption{Design des organischen Objekts  \label{fig:orgObj:orgObj}}
 	\parpic[r]{\includegraphics[width=.3\textwidth]{images/orgObj/orgObj}}
+	Das im vorigen Abschnitt beschriebene dreidimensionale Strichmännchen wurde mithilfe der Software Blender \\(Kapitel \ref{chapter:sdt:blender}) modelliert, indem verschiedene geometrische Grundkörper zusammengesetzt werden. 
 	
-	
-	Das im vorigen Abschnitt beschriebene dreidimensionale Strichmännchen wurde mithilfe der Software Blender (Kapitel \ref{chapter:sdt:blender}) modelliert. Es wird modelliert, indem verschiedene geometrische Grundkörper zusammengesetzt werden.
-	
-	Wie im vorigen Abschnitt \ref{chapter:orgObj:konzept} beschrieben, ist das Männchen aus sieben Zylindern und einer Kugel zusammengesetzt. 
-	
-	Sowohl Zylinder als auch Kugeln sind in Blender bereits als Körper vorhanden. Die Bemaßung der Objekte kann jeweils angepasst werden. Diese Körper werden in den Viewport gezogen und verschoben, bis sie sich an der gewünschten Position befinden. Beim Verschieben ist es möglich, den Körper nur entlang einer Gerade (eindimensional) oder in einer Ebene (zweidimensional) zu verschieben.
-	
-	Wenn sich alle Körper an der gewünschten Position befinden, markiert man sie und fügt sie zu einer Gruppe - dem Strichmännchen - zusammen. Diese Gruppe kann dann als \ac{STL}-Datei gespeichert werden. 
+	Sowohl Zylinder als auch Kugeln sind in Blender bereits als Körper vorhanden. Durch Skalierung und Verformung kann die Form verändert und durch Translation an eine \\
+	gewünschte Position gebracht werden.
+	Beim Verschieben ist es möglich, den Körper nur entlang einer Gerade (eindimensional) oder in einer Ebene (zweidimensional) zu verschieben.
 	
 	\picskip{0}
+	Wenn sich alle Körper an der gewünschten Position befinden, markiert man sie und fügt sie zu einer Gruppe - dem Strichmännchen - zusammen. Diese Gruppe kann dann als \ac{STL}-Datei gespeichert werden. 
+	Ohne die Vereinigung zu einem einzigen Objekt exportiert Blender nur den aktuell als aktiv markierten Körper. 
+	
 	\vspace*{3em}
 
 
