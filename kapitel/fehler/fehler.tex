@@ -5,8 +5,7 @@
 	%Fehlersuche zt schwer/Fehler hängen zusammen
 	Dieses Kapitel gibt einen Überblick über Fehler, die beim Drucken mit dem Ultimaker 2 auftreten sind.
 	Zudem werden die Fehlerursachen und mögliche Gegenmaßnahmen erläutert. 
-	Da es viele mögliche Fehlerquellen gibt, gestaltet sich die Fehlersuche oft schwer. Teilweise beeinflussen sich die Fehler auch gegenseitig oder es gibt mehrere Fehlerquellen, die dasselbe Fehlverhalten verursachen.
-	
+	Da es viele mögliche Fehlerquellen gibt, gestaltet sich die Fehlersuche oft schwer. Teilweise beeinflussen sich die Fehler auch gegenseitig oder es gibt mehrere Fehlerquellen, die dasselbe Fehlverhalten verursachen.	
 	Eine Auflistung verschiedener möglicher Fehler und Lösungen für die verursachenden Probleme findet sich im Troubleshootingguide. \cite{troubleshooting}
 
 	\section{Hardware-Defekte}
@@ -47,6 +46,8 @@
 		
 		Die Höhe des Widerstands hängt dabei unter anderem davon ab, an welcher Position das Objekt gedruckt wird. Je nachdem, wo sich der Druckkopf befindet, wird der Bowdenzug unterschiedlich stark gekrümmt. Dadurch herrscht an manchen Positionen eine größere Reibung im Bowdenzug, die das Filament überwinden muss. Beschädigungen auf der Innenseite des Bowdenzuges durch scharfkantiges Filament verstärken den Prozess.
 		
+		
+		\newpage
 		\subsection{Gebogene Heizplatte}
 		\label{chapter:fehler:gebogeneHeizplatte}
 		
@@ -78,10 +79,8 @@
 		\end{figure}
 		
 				
-		Dadurch, dass eine dicke Schicht aus Kunststoff den Heizblock umgibt, wird bei folgenden Drucken Energie verschwendet, um diese Schicht zu erwärmen. Dadurch kann das Filament an sich nicht mehr genug erhitzt werden, um gut damit drucken zu können.
-		
-		Es ist nahezu unmöglich, die komplette Schicht wieder zu entfernen. Trotz allem bleiben Rückstände am Heizblock zurück, die spätere Drucke beeinträchtigen können.
-		
+		Dadurch, dass eine dicke Schicht aus Kunststoff den Heizblock umgibt, wird bei folgenden Drucken Energie verschwendet, um diese Schicht zu erwärmen. Dadurch kann das Filament an sich nicht mehr genug erhitzt werden, um gut damit drucken zu können.		
+		Es ist nahezu unmöglich, die komplette Schicht wieder zu entfernen. Trotz allem bleiben Rückstände am Heizblock zurück, die spätere Drucke beeinträchtigen können.		
 		Abbildung \ref{fig:fehler:olsson} zeigt ein weiteres Problem nach dem Verkleben: Das Austauschen  des Heizblockes war nur schwer möglich, da das Filament auch in die Spalte zwischen Heizblock, Temperatursensor und der Heizkapsel geflossen ist. Die Entfernung war nur nach Erhitzen des Heizblockes möglich.
 		
 
@@ -181,8 +180,7 @@
 		\newpage
 		\subsection{Verschmutzte Düse}
 		\label{chapter:fehler:duese}
-		Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 
-		
+		Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 		
 		In der Düse können unter anderem Reste von verbranntem Filament verbleiben, beispielsweise verursacht durch Grinding (Kap. \ref{chapter:fehler:grinding}). Diese Rückstände behindern den Materialfluss durch die Düse. Als Gegenmaßnahme kann man mit einer dünnen Nadel die aufgeheizte Düse von innen haftendem Material befreien.
 		
 		An Rückständen an der Außenwand der Düse kann das Filament der nächsten Drucke haften. Der im Normalfall senkrecht aus der Düse austretende Materialfluss kann umgelenkt werden und beispielsweise den Heizblock umfließen (vgl. Kapitel \ref{chapter:fehler:BollenHeizblock}).
@@ -198,10 +196,9 @@
 		Dass an manchen Positionen zu wenig Filament gefördert wird  kann daran liegen, dass der Widerstand im Bowdenzug variiert, je nachdem, wie stark der Bowdenzug gekrümmt ist (vgl Kap. \ref{chapter:fehler:zuWenigMaterial} und \ref{chapter:fehler:ReibungBowden}).
 		
 	
-		
+		\newpage
 		\subsection{Keine Haftung zwischen den Schichten}
-		Ein weiterer möglicher Fehler ist, dass das gedruckte Filament sich nicht mit dem Filament der tieferen Schicht verbindet. 
-		
+		Ein weiterer möglicher Fehler ist, dass das gedruckte Filament sich nicht mit dem Filament der tieferen Schicht verbindet. 		
 		Für diesen Fehler sind verschiedene Ursachen denkbar. Entweder ist die Höhe zwischen den Schichten zu groß gewählt, beispielsweise aufgrund schlechter Kalibrierung. Dadurch ist die obere Schicht zu weit von der unteren entfernt und das Filament kann nicht auf den tieferen Schichten haften.
 		Eine andere Ursache kann sein, dass die Temperatur zu niedrig eingestellt ist. Dadurch schmilzt das Filament nicht stark genug und kann sich schlechter mit den unteren Schichten verbinden.
 		Zudem kann dieser Fehler auftreten, wenn zu wenig Material fließt, wie in Kapitel \ref{chapter:fehler:zuWenigMaterial} beschrieben.
@@ -214,8 +211,7 @@
 	
 		\subsection{Ungeeignete Supportstrukturen}
 		Bei Objekten, die starke Überhänge haben oder keine glatte Standfläche bieten, mit der sie auf der Druckplatte platziert werden können, sind Supportstrukturen nötig. Diese stützen starke Überhänge ab beziehungsweise sorgen dafür, dass das Objekt genügend Auflagefläche auf der Druckplatte hat.
-		Die Supportstruktur sollte nicht zu stark mit dem Objekt verbunden sein und sich nach dem Druck möglichst einfach und ohne Rückstände vom Objekt lösen lassen.
-		
+		Die Supportstruktur sollte nicht zu stark mit dem Objekt verbunden sein und sich nach dem Druck möglichst einfach und ohne Rückstände vom Objekt lösen lassen.		
 		Starke Überhänge können beispielsweise mithilfe von Säulen oder dünnen Wänden abgestützt werden.		
 		Supportstrukturen, die für eine größere Auflagefläche des Objekts sorgen sollen, sind beispielsweise Raft oder Brim. In Abb. \ref{fig:fehler:support} sind ungeeignete Supportstrukturen dargestellt. Der Support am linken Objekt bildete starke Säulen aus, die so dicht an der eigentlichen Wand platziert waren, dass sie mit einer Zange nur schwer durchtrennbar waren. Beim rechten Bild sorgte die runde Unterseite des Objekts für eine vollständige Abstützung der Fläche, welche stark mit dem Objekt verwachsen war.
 		

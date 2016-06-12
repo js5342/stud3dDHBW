@@ -19,11 +19,14 @@
 	
 
 	Der 3D-Druck basiert zum großen Teil auf dem computergestützten Design von Objekten. \ac{CAD}-Tools helfen beim Entwerfen dieser Objekte. Anschließend werden die Objektdateien mithilfe von Slicern in 	maschinenlesbaren Code umgewandelt. Die folgenden Unterkapitel stellen die verwendeten \ac{CAD}-Programme und Dateiformate vor.
+	
+
 		
-	\subsection{CAD-Programme}
+	\subsection{\ac{CAD}-Programme}
 		
 		Für das Design von \ac{3D}-Dateien gibt es viele Programme. Auf kostenloser Basis wurden in dieser Arbeit Solid Edge und Blender verwendet. 
-		
+	
+	\newpage	
 		\subsubsection{Solid Edge}
 			
 
@@ -32,8 +35,7 @@
 			
 			Solid Edge von Siemens eignet sich für das Entwerfen von technischen Objekten. Hierbei bietet das Programm eine Vielzahl von Funktionen für die Erstellung von 2D- und 3D-Formen. Für einfache Objekte kann eine 2D-Grundform gezeichnet und anschließend zu einem 3D-Objekt extrudiert werden. Zusätzliche Funktionen von Solid Edge unterstützen bei der Stabilitätsanalyse der entwickelten Objekte.
 			
-			Die Entwicklung der Objekte kann entweder auf sequenzieller Basis oder auf paralleler Basis geschehen. Die sequenzielle Entwicklung erfordert ein hohes Maß an Programmkenntnis, da die einzelnen Schritte der Objekterstellung nur in einem definierten Ablauf stattfinden können. Der parallele Entwicklungsstack erleichtert die nachträgliche Veränderung von Arbeitsschritten wie zum Beispiel die Maße, die während einer Extraktion angegeben werden. Zusätzlich können bei paralleler Entwicklung die Renderzeiten bei Maßänderungen deutlich reduziert werden. Das zahlt sich bei umfangreichen Objekten aus.
-			
+			Die Entwicklung der Objekte kann entweder auf sequenzieller Basis oder auf paralleler Basis geschehen. Die sequenzielle Entwicklung erfordert ein hohes Maß an Programmkenntnis, da die einzelnen Schritte der Objekterstellung nur in einem definierten Ablauf stattfinden können. Der parallele Entwicklungsstack erleichtert die nachträgliche Veränderung von Arbeitsschritten wie zum Beispiel die Maße, die während einer Extraktion angegeben werden. Zusätzlich können bei paralleler Entwicklung die Renderzeiten bei Maßänderungen deutlich reduziert werden. Das zahlt sich bei umfangreichen Objekten aus.		
 			Für die Arbeit wurde die akademische Lizenz verwendet. Objekte, die mit dieser Lizenz erstellt wurden, können nicht mit einer anderen Lizenz geöffnet werden.
 			\cite{solidEdge}
 			
@@ -43,8 +45,7 @@
 			\piccaption{Screenshot des Programms Blender\label{fig:sdt:blender}}
 			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/blender}}
 			
-			Blender ist ein Open Source Programm, das eine Vielzahl von Computergrafik-\\Anwendungen bietet. Diese reichen von der Erstellung von Objekten bis hin zum Filmschnitt.
-			
+			Blender ist ein Open Source Programm, das eine Vielzahl von Computergrafik-\\Anwendungen bietet. Diese reichen von der Erstellung von Objekten bis hin zum Filmschnitt.			
 			Die \ac{CAD}-Funktionen zielen vor allem auf die Animation einzelner Objekte ab. Zum Beispiel kann die Beweglichkeit von animierten Fingern mit Regeln definiert werden. Das Objekt-Design unterliegt der Manipulation von Basis-Objekten, die dann anschließend zu einem Objekt vereinigt werden.
 			\cite{Blender}
 		
@@ -53,8 +54,7 @@
 			Das Slicing ist der Prozess zur Umwandlung eines 3D-Objekts in für den Drucker eindeutige Befehle. Da jeder Drucker unterschiedliche Randbedingungen bietet, empfielt der jeweilige Hersteller ein für den Drucker geeignetes Programm zum Slicen.
 			
 			Für den 3D-Drucker Ultimaker 2 bietet die Firma Ultimaker das eigene Programm Cura an. Mit Cura können \ac{3D}-Objekte gesliced und in Dateien gespeichert werden, die vom Ultimaker 2 gedruckt werden können. Alternativ kann das Programm Repetierhost verwendet werden.
-			
-			\newpage
+		
 		\subsubsection{Cura}	
 			\piccaption{Screenshot des Programms Cura\label{fig:sdt:cura}}
 			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/cura}}
@@ -64,7 +64,7 @@
 			
 			Die für die Studienarbeit verwendeten Versionen des Programms sind der offizielle Release 15.4.2, der auf der Website \cite{CuraOfficial} heruntergeladen werden kann und die Beta-Version 1.99.0 aus dem Closed-Beta-Verzeichnis \cite{CuraBeta}. Nach den ersten Drucken wechselten wir zur Beta-Version, da dort viele Parameter besser einstellbar waren. Die Slicing-Engine wurde ebenfalls verbessert. Mittlerweile ist der offizielle Versionsstand nach einem Nummerierungswechsel bei 2.1.2 (Stand 11.06.2016).
 			
-			
+			\newpage
 		\subsubsection{Repetierhost}
 			
 			

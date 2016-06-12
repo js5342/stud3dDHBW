@@ -95,7 +95,9 @@
 	%	\renewcommand{\headrulewidth}{0.1pt}
 	%	\renewcommand{\footrulewidth}{0.1pt}
 	\fancyhead[L]{
-		Studienarbeit
+		\footnotesize
+		Studienarbeit von \\Hanna Huber \& Jörn Seybold\\
+		%Entwurf und Druck eines technischen und\\ eines organischen Objekts mit dem Ultimaker 2
 	}
 	\fancyhead[R]{
 		\includegraphics[height=1cm]{images/dhbw}
@@ -133,6 +135,7 @@
 	\include{kapitel/xx_abstract}
 	
 	
+	\include{kapitel/selbststaendigkeit}
 	\singlespace
 	
 	\pagenumbering{arabic}
@@ -157,7 +160,11 @@
 		\acro{UV}{Ultraviolett} 
 		\acro{zb}{zum BSP}	
 	\end{acronym}
-
+	
+	\newpage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+	\listoffigures
 	
 	\newpage{}
 	\begingroup
