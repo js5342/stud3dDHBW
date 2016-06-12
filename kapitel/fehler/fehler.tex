@@ -3,71 +3,75 @@
 	%TODO Unterkap. umbennen
 	%TODO Strukturierung
 	%Fehlersuche zt schwer/Fehler hängen zusammen
-	Dieses Kapitel gibt einen Überblick über Fehler, die beim Drucken mit dem Ultimaker 2 auftreten können. Zudem werden die Fehlerursachen und mögliche Gegenmaßnahmen erläutert. 
-	Da es viele mögliche Fehlerquellen gibt, gestaltet sich die Fehlersuche oft schwer. Teilweise beeinflussen sich die Fehler auch gegenseitig oder es gibt mehrere Fehlerquellen, die dasselbe Fehlverhalten verursachen können.
+	Dieses Kapitel gibt einen Überblick über Fehler, die beim Drucken mit dem Ultimaker 2 auftreten sind.
+	Zudem werden die Fehlerursachen und mögliche Gegenmaßnahmen erläutert. 
+	Da es viele mögliche Fehlerquellen gibt, gestaltet sich die Fehlersuche oft schwer. Teilweise beeinflussen sich die Fehler auch gegenseitig oder es gibt mehrere Fehlerquellen, die dasselbe Fehlverhalten verursachen.
 	
 	Eine Auflistung verschiedener möglicher Fehler und Lösungen für die verursachenden Probleme findet sich im Troubleshootingguide. \cite{troubleshooting}
 
 	\section{Hardware-Defekte}
 	\label{chapter:fehler:sectionHardware}
-	Der folgende Abschnitt behandelt Fehler, deren Ursache in Fehlern an der Hardware des Druckers zu finden ist. Die hier beschriebenen Fehler sind schwerwiegend. Oftmals muss zur Behebung der Fehlfunktion ein Bauteil ersetzt werden.
-	
-		\subsection{Verschleiß der PTFE-Kopplung}
-		In \ref{chapter:techGr:ultimaker2} wird der Aufbau des Extruders genauer beschrieben. Die Düse ist zwar aus Metall gefertigt, aber das Filament gelangt durch eine \ac{PTFE}-Kopplung in die Düse. Dadurch, dass die Kopplung in der Nähe des Heizblocks sitzt, wird sie beim Drucken ebenfalls erhitzt. Das führt dazu, dass die Kopplung sich relativ schnell verformt und zudem an den Stellen, wo sie die Düse oder das Filament berührt, verbrennt.
+	Der folgende Abschnitt behandelt Fehler, deren Ursache in Fehlern an der Hardware des Druckers zu finden ist. Die hier beschriebenen Fehler sind schwerwiegend. Oftmals musste zur Behebung der Fehlfunktion ein Bauteil ersetzt werden.
+		
+		\subsection{Verschleiß der \acf{PTFE}-Kopplung}
 		
 		\piccaption{Ausgebaute PTFE-Kopplung  \label{fig:fehler:PTFE}}
-		\parpic{\includegraphics[width=.5\textwidth]{images/fehler/PTFE/PTFE}}
-		\picskip{0}
-		\vspace*{3em}
+		\parpic{\includegraphics[height=10em]{images/fehler/PTFE/PTFE}}
+		In \ref{chapter:techGr:ultimaker2} wird der Aufbau des Extruders genauer beschrieben. Die Düse ist zwar aus Metall gefertigt, aber das Filament gelangt durch eine \ac{PTFE}-Kopplung in die Düse. Dadurch, dass die Kopplung in der Nähe des Heizblocks sitzt, wird sie beim Drucken ebenfalls erhitzt. Das Material der Kopplung erweicht bei den Drucktemperaturen stark. Eine Verformung ist leicht möglich. 
 		
+		Eine Verformung führt dazu, dass das Filament nicht mehr ungehindert durch die Kopplung in die Düse gelangen kann. Die erhöhte Reibung kann zur Filament-Unterförderung führen, wodurch der  Druck scheitern kann.
+		Deshalb sollte die \ac{PTFE}-Kopplung regelmäßig begutachtet und bei Defekten ausgetauscht werden.
 		
-		Die Verformung führt dazu, dass das Filament nicht mehr ungehindert durch die Kopplung in die Düse gelangen kann. Wegen dem erhöhten Widerstand wird teilweise zu wenig Filament gefördert und der Druck misslingt. 
-		
-		Deshalb sollte die \ac{PTFE}-Kopplung regelmäßig ausgetauscht werden.
-		
-		\picskip{0}
+	
 		
 		
 		\subsection{Fehlfunktion des Temperatursensors}
 	
-		Im Heizblock ist ein Temperatursensor verbaut, sodass der Heizblock auf die gewünschte Temperatur aufgeheizt werden kann. 
-		Dieser Temperatursensor kann kaputt gehen. 
-		
-		Diese Fehlfunktion wird durch eine Fehlermeldung im Display des Ultimaker 2 angezeigt. 
-		
 		\piccaption{Fehlermeldung des Temperatursensors  \label{fig:fehler:tempsens}}
-		\parpic{\includegraphics[width=.5\textwidth]{images/fehler/tempsens/meldung}}
-		\picskip{0}
-		\vspace*{3em}
-
+		\parpic{\includegraphics[width=.3\textwidth]{images/fehler/tempsens/meldung}}
+		
+		Im Heizblock ist ein Temperatursensor verbaut, sodass der Heizblock auf die eingestellte Drucktemperatur geregelt werden kann. Wenn der Sensor defekt ist, wird eine Fehlermeldung auf dem Displays des Ultimakers angezeigt.
+		
 		Tritt die Fehlermeldung einmalig auf, kann es sein, dass sie versehentlich gesendet wurde. In diesem Fall hilft es, den Drucker aus- und wieder einzuschalten und den Druck neu zu starten. Wenn die Meldung oft hintereinander auftritt, muss jedoch der Temperatursensor ausgetauscht werden.
-		
-		Den Temperatursensor auszutauschen ist relativ aufwändig. Einerseits muss der gesamte Druckkopf auseinander gebaut werden, um an den Heizblock zu gelangen. Die Kapsel mit dem Temperatursensor muss vorsichtig aus dem Heizblock gezogen werden. Zudem muss die Abdeckung der Platine an der Unterseite des Ultimaker entfernt werden, um das Kabel des alten Temperatursensors entfernen zu können und das Kabel des neuen Sensors anzuschließen.
+%		\picskip{0}
+%		\vspace*{3em}
 
 		
+		
+		Den Temperatursensor auszutauschen ist relativ aufwändig. Einerseits muss der gesamte Druckkopf demontiert werden, um an den Heizblock zu gelangen. Die Kapsel mit dem Temperatursensor muss vorsichtig aus dem Heizblock gezogen werden. Da der Sensor direkt mit dem Steuergerät am Boden des Ultimakers verbunden ist, müssen der defekte Sensor und der Ersatz durch die Kabelführungen bis zur Unterseite geführt werden. Dort ist der Anschluss auszutauschen.		
 		
 		\subsection{Reibung in Bowdenzug}
 		\label{chapter:fehler:ReibungBowden}
 		Der Bowdenzug, über den das Filament vom Feeder zum Druckkopf befördert wird, besitzt eine gewisse Reibung. Wenn diese Reibung zu stark ist, kann es passieren, dass das Filament vom Feeder nicht gut gefördert werden kann, da dieser zu viel Kraft aufbringen muss. Dadurch gelangt zu wenig Filament zum Druckkopf.
 		
-		Die Höhe des Widerstands hängt dabei unter anderem davon ab, an welcher Position das Objekt gedruckt wird. Je nachdem, wo sich der Druckkopf befindet, wird der Bowdenzug unterschiedlich stark gekrümmt. Dadurch herrscht an manchen Positionen eine größere Reibung im Bowdenzug, die das Filament überwinden muss.
+		Die Höhe des Widerstands hängt dabei unter anderem davon ab, an welcher Position das Objekt gedruckt wird. Je nachdem, wo sich der Druckkopf befindet, wird der Bowdenzug unterschiedlich stark gekrümmt. Dadurch herrscht an manchen Positionen eine größere Reibung im Bowdenzug, die das Filament überwinden muss. Beschädigungen auf der Innenseite des Bowdenzuges durch scharfkantiges Material verstärken den Prozess.
 		
 		\subsection{Gebogene Heizplatte}
 		\label{chapter:fehler:gebogeneHeizplatte}
 		
-		Die Glasplatte, auf der die Objekt gedruckt werden, liegt auf einer metallenen Platte auf, über die sie erhitzt wird. Die Glasplatte ist jedoch nicht perfekt gerade gefertigt, sondern ist stellenweise relativ stark durchgebogen. Dadurch liegt sie nicht gleichmäßig auf der Metallplatte auf. 
+		Die Glasplatte, auf der die Objekt gedruckt werden, liegt auf der metallenen Heizplatte auf. Die Glasplatte sorgt für eine ebene Druckfläche. Jedoch ist die Glasplatte herstellungsbedingt nicht perfekt eben und die Heizplatte ist hängt mittig durch. Beides führt dazu, dass die Glasplatte nicht flächig auf der Heizplatte aufliegen kann. 
 		
 		Auffällig ist, dass eine Seite der Glasplatte besser aufliegt als die andere. Wird die Glasplatte mit der schlechter aufliegenden Seite auf die Metallplatte gelegt, wird sie durch den mangelnden Kontakt zur Metallplatte stellenweise deutlich schlechter erhitzt. Dadurch haftet das Objekt an diesen Stellen nicht an der Glasplatte.
 		
 		
 		\subsection{Heizblock von Material verklebt}
 		\label{chapter:fehler:BollenHeizblock}
-		Wenn die Düse außen verschmutzt ist (\ref{chapter:fehler:duese}) kann es in extremen Fällen passieren, dass sich eine dicke Schicht aus Filament um den Heizblock bildet. Dies passiert, wenn das Filament nicht auf der Druckplatte, sondern an Verschmutzungen außen an der Düse haften bleibt. Dadurch wickelt sich das Filament immer weiter in die Düse und kann sogar in den Raum oberhalb der Düse gelangen. 
+		Wenn die Düse außen verschmutzt oder beschädigt ist (\ref{chapter:fehler:duese}), kann es in extremen Fällen dazu führen, dass sich eine dicke Schicht aus Filament um den Heizblock bildet. 
+		Das Filament hat hierbei eine größere Adhäsion an der Düse als am Druck.
+		Als Folge fließt das Filament um Heizblock und Düse und kann sogar in den Raum oberhalb der Düse gelangen. Abbildung \ref{fig:fehler:heizblock} zeigt den eingetretenen Fall.
 		
 		\begin{figure}[h!]
+			\begin{minipage}{.45\textwidth}
+				\flushleft
+				\includegraphics[height=10em]{images/fehler/heizblock/Duese}
+			\end{minipage}
+			\begin{minipage}{.45\textwidth}
+				\flushright
+				\includegraphics[height=10em]{images/fehler/heizblock/oberhalb}
+			\end{minipage}
 			
-			\includegraphics[height=8em]{images/fehler/heizblock/Duese}
-			\includegraphics[height=8em]{images/fehler/heizblock/oberhalb}
+			
+			
 			\caption[Filament um Heizblock]{Filament um Heizblock}
 			\label{fig:fehler:heizblock}
 		\end{figure}
@@ -77,16 +81,25 @@
 		
 		Es ist nahezu unmöglich, die komplette Schicht wieder zu entfernen. Trotz allem bleiben Rückstände am Heizblock zurück, die spätere Drucke beeinträchtigen können.
 		
+		Abbildung \ref{fig:fehler:olsson} zeigt ein weiteres Problem nach dem Verkleben: Das Austauschen  des Heizblockes war nur schwer möglich, da das Filament auch in die Spalte zwischen Heizblock,Temperatursensor und der Heizkapsel geflossen ist. Die Entfernung war nur nach Erhitzen des Heizblockes möglich.
+		
 
 		
 		\begin{figure}[h!]
-			
-			\includegraphics[height=8em]{images/fehler/olsson/ausgebaut}
-			\includegraphics[height=8em]{images/fehler/olsson/kartusche}
+			\begin{minipage}{.6\textwidth}
+				\centering
+				\includegraphics[height=8em]{images/fehler/olsson/ausgebaut}
+			\end{minipage}
+			\begin{minipage}{.3\textwidth}
+				\flushright
+				\includegraphics[height=8em]{images/fehler/olsson/kartusche}
+			\end{minipage}
+
+
 			\caption[Ausgebauter Olsson-Block]{Ausgebauter Olsson-Block}
 			\label{fig:fehler:olsson}
 		\end{figure}
-		.
+		
 
 	
 	\section{Fehler während des Druckens}
@@ -100,23 +113,16 @@
 		\label{chapter:fehler:NichtHaftend}
 		Im Idealfall haftet die unterste Schicht des Filaments fest auf der beheizten Druckplatte, um den höheren Schichten einen guten Halt zu geben. Um das zu erreichen, wird die unterste Schicht meistens langsamer gedruckt als höhere Schichten. 
 		
-		Manchmal haftet die untere Schicht jedoch nicht richtig auf der Druckplatte. Das kann einerseits dazu führen, dass der Druck komplett misslingt, da der Druckkopf die nicht haftenden Fäden hinter sich herzieht. 
-		
 		\piccaption{Beispiel für mangelnde Haftung: Das Objekt links in der Mitte wurde hinter dem Druckkopf hergezogen  \label{fig:fehler:keineHaftung}}
-		\parpic{\includegraphics[width=.5\textwidth]{images/fehler/keineHaftung/keineHaftung}}
-	
-	%	\vspace*{3em}
-			
+		\parpic{\includegraphics[width=.35\textwidth]{images/fehler/keineHaftung/keineHaftung}}
 		
+		Manchmal haftet die untere Schicht jedoch nicht richtig auf der Druckplatte. Das kann einerseits dazu führen, dass der Druck komplett misslingt, da der Druckkopf die nicht haftenden Fäden hinter sich herzieht. 
+		%
 		Andererseits kann es passieren, dass das Objekt zwar gedruckt wird, sich die Schichten aber mit zunehmender Höhe gegeneinander verschieben. Da die untere Schicht nicht fest auf der Druckplatte haftet, kann es passieren, dass das Objekt vom Druckkopf leicht verschoben wird. Dadurch sitzen die Schichten nicht exakt aufeinander und sind gegeneinander verschoben.
-		
-		\picskip{0}
-		\vspace*{3em}
-		
 		Dieser Fehler tritt wegen mangelnder Haftung der untersten Filamentschicht auf der Druckplatte auf. 
 		
 		Als Gegenmaßnahme kann die gläserne Druckplatte mit einer dünnen Schicht Klebstoff bestrichen werden. Dadurch haftet die erste Filamentschicht wieder besser. 
-		Zudem bietet Ultimaker inzwischen eine neue Druckplatte an, die speziell beschichtet ist und dadurch eine bessere Haftung ermöglichen soll. 
+		Zudem bietet Ultimaker mittlerweile eine Druckplatte an, die speziell beschichtet ist und dadurch eine bessere Haftung ermöglichen soll. 
 	
 		\subsection{Stringing}	
 		Es kann passieren, dass sich beim Drucken unerwünschte Fäden aus Filament bilden. Diese können entweder zwischen einzelnen Strukturen eines gedruckten Objekte oder zwischen mehreren Objekten auftreten. Dieser Fehler wird als Stringing bezeichnet.
@@ -125,65 +131,63 @@
 		\begin{figure}[h!]
 			
 			
-			\begin{minipage}[b]{.5\textwidth}
-				
-				\includegraphics[width=\textwidth]{images/fehler/stringing/stringingObjekte}
-				\subcaption{Stringing wischen zwei Objekten}
-				
+			\begin{minipage}[b]{.55\textwidth}
+				\flushleft
+				\includegraphics[height=10em]{images/fehler/stringing/stringingObjekte}
+				%\subcaption{Stringing zwischen zwei Objekten}
 			\end{minipage}
-			\begin{minipage}[b]{.5\textwidth}
-				
-				\includegraphics[width=\textwidth]{images/fehler/stringing/stringingCube2}
-				\subcaption{Stringing zwischen Strukturen eines Objekts}
-				
+			\begin{minipage}[b]{.45\textwidth}
+				\flushright
+				\includegraphics[height=10em]{images/fehler/stringing/stringingCube2}
+				%\subcaption{Stringing an einem Objekt}
 			\end{minipage}
 			
 			\label{fig:fehler:stringing}
-			\caption{Beispiele für Stringing\emph{}}
+			\caption{Beispiele für Stringing}
 		\end{figure}
 		
 		
 		
 	
 		
-		Die Ursache für das Stringing ist in der Regel, dass die Retraction zu gering eingestellt ist. Wenn der Druckkopf längere Strecken zurücklegen muss, auf denen kein Filament gedruckt werden soll, wird das Filament zurückgezogen. Dieser Vorgang nennt sich Retraction und soll das Stringing verhindern. 
-		
-		Wird das Filament allerdings nicht stark genug zurückgezogen oder ist die Retraction sogar komplett abgeschaltet, bildet das Filament, das noch an der Düse hängt, einen Faden und wird vom Druckkopf mitgezogen. 
+		Die Ursache für das Stringing ist in der Regel, dass die Retraction zu gering eingestellt ist. Wenn der Druckkopf längere Strecken zurücklegen muss, auf denen kein Filament gedruckt werden soll, wird das Filament zurückgezogen. Dieser Vorgang nennt sich Retraction und soll das Stringing verhindern. 		
+		Wird das Filament allerdings nicht stark genug zurückgezogen oder ist die Retraction sogar komplett abgeschaltet, bildet das Filament, das noch in der Düse ist, einen Faden und wird vom Druckkopf mitgezogen. 
 	
 	
 		\subsection{Zu wenig Material}
 		\label{chapter:fehler:zuWenigMaterial}
-		Ein Grund, warum der Druck von Objekten misslingen kann, ist, dass zu wenig Filament fließt. Dadurch, dass zu wenig Filament zur Verfügung steht, werden die gedruckten Linien zu dünn oder können gar nicht gedruckt werden. Wenn dieser Fehler auftritt, muss der Druck in aller Regel abgebrochen werden; denn selbst wenn in höheren Schichten wieder genug Material fließt, kann dieses auf den fehlenden Linien nicht gut haften.
+		Ein Grund, warum der Druck von Objekten misslingen kann, ist ein zu geringer Filament-Fluss. Dadurch, dass zu wenig Filament zur Verfügung steht, werden die gedruckten Linien zu dünn oder können gar nicht gedruckt werden. Wenn dieser Fehler auftritt, muss der Druck in aller Regel abgebrochen werden; denn selbst wenn in höheren Schichten wieder genug Material fließt, kann dieses auf fehlenden Linien nicht haften.
 		
-		Es kann verschiedene Gründe dafür geben, dass zu wenig Material fließt. Einerseits kann eine Fehlfunktion des Feeders vorliegen (\ref{chapter:fehler:feeder}) oder die Reibung im Bowdenzug (\ref{chapter:fehler:ReibungBowden}) ist zu hoch. 
-		Möglicherweise ist die Reibung auch wegen einer Verformung der \ac{PTFE}-Kopplung erhöht (\ref{fig:fehler:PTFE}) oder in der Düse befinden sich noch Verschmutzungen, beispielsweise verbrannte Materialreste von früheren Drucken (\ref{chapter:fehler:duese}).
+		Es kann verschiedene Gründe dafür geben, dass zu wenig Material fließt. Einerseits kann eine Fehlfunktion des Feeders vorliegen (Kap. \ref{chapter:fehler:feeder}) oder die Reibung im Bowdenzug (Kap. \ref{chapter:fehler:ReibungBowden}) ist zu hoch. 
+		Möglicherweise ist die Reibung auch wegen einer Verformung der \ac{PTFE}-Kopplung erhöht (Abb. \ref{fig:fehler:PTFE}) oder in der Düse befinden sich noch Verschmutzungen, beispielsweise verbrannte Materialreste von früheren Drucken (Kap. \ref{chapter:fehler:duese}).
 		
-		Eventuell tritt der Fehler auch wegen schlecht gewählten Parametern (\ref{chapter:fehler:param}) auf. Dabei kann es sein, dass die Temperatur zu gering gewählt wurde, wodurch das Material nicht flüssig genug für den Druck ist. Ein weiterer Grund kann sein, dass die Druckgeschwindigkeit zu hoch eingestellt wurde und der Drucker nicht in der Lage ist, das Filament schnell genug zu fördern.
-		.
-		%TODO
+		Eventuell tritt der Fehler auch wegen schlecht gewählten Parametern (Kap. \ref{chapter:fehler:param}) auf. Dabei kann es sein, dass die Temperatur zu gering gewählt wurde, wodurch das Material nicht flüssig genug für den Druck ist. Ein weiterer Grund kann sein, dass die Druckgeschwindigkeit zu hoch eingestellt wurde und der Drucker nicht in der Lage ist, das Filament schnell genug zu fördern.
+		
 		\subsection{Grinding}
 		\label{chapter:fehler:grinding}
 		Das Grinding ist ein Fehler, der im Feeder auftritt. Es wird durch andere Fehlfunktionen des Druckers ausgelöst und ist somit eigentlich eine Folge dieser Fehler. Das Grinding selbst kann wiederum weitere schwere Fehler auslösen.
 		
-		Die Ursache für das Grinding ist, dass das Material nicht schnell genug fließt, beispielsweise weil zu hohe Reibung im Bowdenzug  (\ref{chapter:fehler:ReibungBowden}) oder Druckkopf vorhanden ist oder weil das Material nicht stark genug erhitzt wird und dadurch zu zähflüssig ist. 
+		Die Ursache für das Grinding ist, dass das Filament nicht so schnell förderbar ist, wie es nötig wäre. Der Feeder arbeitet einem zu hohen Gegendruck entgegen, zum Beispiel weil eine zu hohe Reibung im Bowdenzug  (\ref{chapter:fehler:ReibungBowden}) oder Druckkopf vorhanden ist oder weil das Material nicht stark genug erhitzt wird und dadurch zu zähflüssig aus der Düse austritt. 
 		
-		Der Feeder versucht jedoch weiterhin, Material zu fördern. Dadurch frisst er sich in immer dieselbe Stelle des nicht mehr fließenden Materials. Dadurch, dass das Material an einer Stelle nun eingefressen ist, kann es dem Feeder auch nicht mehr gelingen, das Material weiterhin zu fördern - selbst, wenn der Materialfluss wieder möglich wäre.
+		Der Feeder fördert jedoch weiterhin mit der eingestellten Geschwindigkeit. Dadurch frisst er sich in eine einzelne Stelle des nicht mehr fließenden Materials. 
+		Als Folge kann der Feeder das Material überhaupt nicht mehr fördern, da er nicht mehr den nötigen Anpressdruck an das Material hat.
 		
-		Durch das Ausbleiben von neuem Material wird im Druckkopf nun immer dasselbe Material erhitzt. Dieses kann verbrennen und dadurch Rückstände in der Düse hinterlassen (\ref{chapter:fehler:duese}).
+		Durch das Ausbleiben von neuem Material wird im Druckkopf eine gleichbleibende Filamentmenge erhitzt. Dieses kann unter Umständen verbrennen und dadurch Rückstände in der Düse hinterlassen (\ref{chapter:fehler:duese}).
 		
 		\subsection{Verschmutzte Düse}
 		\label{chapter:fehler:duese}
 		Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 
 		
-		In der Düse können unter anderem Reste von verbranntem Filament verbleiben, beispielsweise verursacht durch Grinding (\ref{chapter:fehler:grinding}). Diese Rückstände behindern den Materialfluss und können dazu führen, dass zu wenig Filament durch die Düse gelangt. Als Gegenmaßnahme kann man mit einer dünnen Nadel in die aufgeheizte Düse stechen.
+		In der Düse können unter anderem Reste von verbranntem Filament verbleiben, beispielsweise verursacht durch Grinding (\ref{chapter:fehler:grinding}). Diese Rückstände behindern den Materialfluss durch die Düse. Als Gegenmaßnahme kann man mit einer dünnen Nadel die aufgeheizte Düse von innen haftendem Material befreien.
 		
-		An äußeren Rückständen kann sich das Filament des nächsten Drucks verfangen. Dadurch wird es nicht mehr ordentlich auf der Druckplatte ausgebracht und der Druck misslingt. Im schlimmsten Fall kann sich dadurch ein Bollen aus Filament am Heizblock bilden. \ref{chapter:fehler:BollenHeizblock}
+		An Rückständen an der Außenwand der Düse kann das Filament der nächsten Drucke haften. Der im Normalfall senkrecht aus der Düse austretende Materialfluss kann umgelenkt werden und beispielsweise den Heizblock umfließen(vg. Kapitel \ref{chapter:fehler:BollenHeizblock}).
+		 
 		
 
 		\subsection{Druckergebnisse abhängig von Druckposition}
-		Abhängig von der Position auf der Druckplatte, an der dasselbe Objekt zum Drucken platziert wird, ergeben sich teilweise stark unterschiedliche Ergebnisse. An manchen Positionen gelingt der Druck gut, während an anderen Fehler auftreten. Je nach Position haftet das Objekt unterschiedlich stark an der Druckplatte. Auch die Menge an Filament, die gefördert werden kann, hängt von der Position ab.
+		Abhängig von der Position auf der Druckplatte, an der dasselbe Objekt zum Drucken platziert wird, ergeben sich unterschiedliche Ergebnisse. An manchen Positionen gelingt der Druck gut, während an anderen Fehler auftreten. Je nach Position haftet das Objekt unterschiedlich stark an der Druckplatte. Auch die Menge an Filament, die gefördert werden kann, hängt von der Position ab.
 		
-		Die unterschiedlich starke Haftung kann mehrere Ursachen haben: Da die Glasplatte nicht perfekt auf der Heizplatte aufliegt \ref{chapter:fehler:gebogeneHeizplatte}, kann es sein, dass verschiedene Positionen unterschiedlich gut erhitzt werden. An manchen Positionen haftet das Objekt somit schlechter, da diese nicht so gut beheizt werden.
+		Die unterschiedlich starke Haftung kann mehrere Ursachen haben: Da die Glasplatte nicht perfekt auf der Heizplatte aufliegt \ref{chapter:fehler:gebogeneHeizplatte}, kann es sein, dass verschiedene Positionen unterschiedlich gut erhitzt werden. An manchen Positionen haftet das Objekt somit schlechter.
 		Eine weitere Ursache kann sein, dass der Klebstoff, der die Haftung des Filaments auf der Druckplatte verbessern soll \ref{chapter:fehler:NichtHaftend}, nicht gleichmäßig aufgetragen wurde.
 		
 		Dass an manchen Positionen zu wenig Filament gefördert wird \ref{chapter:fehler:zuWenigMaterial} kann daran liegen, dass der Widerstand im Bowdenzug variiert, je nachdem, wie stark der Bowdenzug gekrümmt ist \ref{chapter:fehler:ReibungBowden}.
@@ -191,11 +195,11 @@
 	
 		
 		\subsection{keine Haftung der Linien auf anderen Linien}
-		Ein weiterer Fehler, der auftreten kann, ist, dass das gedruckte Filament sich nicht mit dem Filament der tieferen Schicht verbindet. 
+		Ein weiterer möglicher Fehler ist, dass das gedruckte Filament sich nicht mit dem Filament der tieferen Schicht verbindet. 
 		
-		Für diesen Fehler sind verschiedene Ursachen denkbar. Entweder ist die Höhe zwischen den Schichten zu groß gewählt, beispielsweise aufgrund schlechter Kalibrierung. Dadurch ist die obere Schicht zu weit von der unteren entfernt und das Filament kann nicht auf den tieferen Schichten haften bleiben.
-		Eine andere Ursache kann sein, dass die Temperatur zu niedrig eingestellt ist. Dadurch schmilzt das Filament nicht so stark und kann sich schlechter mit den unteren Schichten verbinden.
-		Zudem kann dieser Fehler auftreten, wenn zu wenig Material fließt \ref{chapter:fehler:zuWenigMaterial}.
+		Für diesen Fehler sind verschiedene Ursachen denkbar. Entweder ist die Höhe zwischen den Schichten zu groß gewählt, beispielsweise aufgrund schlechter Kalibrierung. Dadurch ist die obere Schicht zu weit von der unteren entfernt und das Filament kann nicht auf den tieferen Schichten haften.
+		Eine andere Ursache kann sein, dass die Temperatur zu niedrig eingestellt ist. Dadurch schmilzt das Filament nicht stark genug und kann sich schlechter mit den unteren Schichten verbinden.
+		Zudem kann dieser Fehler auftreten, wenn zu wenig Material fließt, wie in Kapitel \ref{chapter:fehler:zuWenigMaterial} beschrieben.
 	
 
 	\section{Ungeeignete oder falsche Parameter in Cura gewählt}
@@ -209,30 +213,33 @@
 		
 		Starke Überhänge können beispielsweise mithilfe von Säulen oder dünnen Wänden abgestützt werden. Allerdings lassen sich diese wie bei dem in \ref{fig:fehler:support} gezeigten Objekt teilweise nur schwer vom Objekt trennen. In diesen Fällen muss das Objekt nachbearbeitet werden.
 		
-		Supportstrukturen, die für eine größere Auflagefläche des Objekts sorgen sollen, sind beispielsweise Raft oder Brim. In  \ref{fig:fehler:support} ist eine ungeeignete Supportstruktur dargestellt. Dadurch, dass das Objekt eine abgerundete Unterseite besitzt, wird es komplett von einer Supportstruktur unterstützt. Diese lässt sich jedoch kaum noch vom Objekt trennen.
-		
+		Supportstrukturen, die für eine größere Auflagefläche des Objekts sorgen sollen, sind beispielsweise Raft oder Brim. In  \ref{fig:fehler:support} sind ungeeignete Supportstrukturen dargestellt. Der Support am linken Objekt bildete starke Säulen aus, die so dicht an der eigentlichen Wand platziert waren, dass sie mit einer Zange nur schwer durchtrennbar war. Beim rechten Bild sorgte die runde Unterseite für eine vollständige Abstützung der Fläche, welche stark mit dem Objekt verwachsen war.
 		
 		\begin{figure}[h!]
+			\begin{minipage}{.45\textwidth}
+				\flushleft
+				\includegraphics[height=10em]{images/fehler/support/ueberhang}
+			\end{minipage}
+			\begin{minipage}{.45\textwidth}
+				\flushright
+				\includegraphics[height=10em]{images/fehler/support/auflage}
+			\end{minipage}
 			
-			\includegraphics[height=8em]{images/fehler/support/ueberhang}
-			\includegraphics[height=8em]{images/fehler/support/auflage}
+
 			\caption[Beispiel für Stringing zwischen zwei Objekten]{Beispiele für ungeeignete Supportstrukturen}
 			\label{fig:fehler:support}
 		\end{figure}
 		
 		
 		\subsection{Geschwindigkeit}
-		Eine ungeschickt gewählte Geschwindigkeit kann Fehler beim Drucken verursachen. 
-		
+		Eine schlecht gewählte Geschwindigkeit kann Fehler beim Drucken verursachen. 		
 		Wenn die Geschwindigkeit zu hoch eingestellt ist, kann es passieren, dass der Feeder nicht genügend Material fördern kann (\ref{chapter:fehler:zuWenigMaterial}). Zudem kann es sein, dass das Material nicht genügend Zeit hat, sich mit den unteren Schichten zu verbinden. Dadurch kann die Stabilität des Objekts leiden. 
 		Insbesondere bei kreisförmigen Strecken kann der Druck zudem unsauber werden.
 		
-	%TODO	Bei einer zu niedrigen Geschwindigkeit 
 		
 		
 		\subsection{Wanddicke}
-		Allgemein kann der Drucker lediglich Wände drucken, die mindestens so breit sind wie die Größe der Düse. Aber auch schmale Wände, deren Breite kein Vielfaches der Düsengröße ist, können zu Problemen führen. 
-		
+		Allgemein kann der Drucker lediglich Wände drucken, die mindestens so breit sind wie die Größe der Düse. Aber auch druckbare dünne Wände, deren Breite nicht deutlich größer des Düsendurchmessers isr, können zu Problemen führen.
 			
 		\subsection{Temperatur}
 		Die Höhe der Temperatur hängt unter anderem vom Material des Filaments ab. Idealerweise ist die Temperatur so gewählt, dass das Filament gut fließen kann, ohne dabei zu verbrennen.
@@ -243,10 +250,10 @@
 
 	\section{Weitere Fehler}
 	\label{chapter:fehler:sectionWeitere}
-	In diesem Kapitel werden sonstige Fehler beschrieben, die nicht eindeutig einem der vorigen Kapitel zuzuordnen sind.
+	In diesem Kapitel werden sonstige Fehler beschrieben, die neben den vorigen Kapiteln aufzuzählen sind.
 	
 		\subsection{Kalibrierung}
-		Die Position der Druckplatte sollte regelmäßig kalibriert werden. Bei einer schlechten Kalibrierung sind der Abstand zwischen Düse und Druckplatte und die Neigung der Druckplatte nicht optimal eingestellt.  
+		Die Druckplatte sollte regelmäßig kalibriert werden. Bei einer schlechten Kalibrierung sind der Abstand zwischen Düse und Druckplatte und die Neigung der Druckplatte nicht optimal eingestellt.  
 		
 		Dies kann zu schlechter Haftung des Materials auf der Druckplatte führen. Außerdem leidet die Genauigkeit der Drucke unter der mangelnden Kalibrierung, da beispielsweise Linien oder Kreise nicht gerade beziehungsweise kreisförmig verlaufen.
 		
@@ -284,7 +291,7 @@
 	
 		\subsection{Elektrische Spannung am Feeder}
 		\label{chapter:fehler:feeder}
-		Die Spannung, mit der der Feeder-Motor angesteuert wird, kann im Menü des Ultimaker 2 eingestellt werden. Das Drehmoment des Schrittmotors kann dadurch variiert werden. Je nach Einstellung kann das Drehmoment zu gering sein. Die Förderleistung nimmt dadurch ab und kann zu Unterförderung führen.
+		Die elektrische Spannung, mit der der Feeder-Motor angesteuert wird, kann im Menü des Ultimaker 2 eingestellt werden. Das Drehmoment des Schrittmotors kann dadurch variiert werden. Je nach Einstellung kann das Drehmoment zu gering sein. Die Förderleistung nimmt dadurch ab und kann zu Unterförderung führen.
 		% Volt
 		
 		%TODO
