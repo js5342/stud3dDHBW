@@ -1,27 +1,27 @@
-	% TODO: Label auf technisches Objekt
+%	% TODO: Label auf technisches Objekt
 	
 	\chapter{Entwicklung eines organischen Objekts} 
 	\label{chapter:orgObj}
-	%TODO Einleitung: Idee
+%	%TODO Einleitung: Idee
 	% explizite Bezug auf Ultimaker 2, andere Drucker liefern andere Ergebnisse
 	% Besonderheiten eines organischen Objekts
 
 	Das Ziel dieser Studienarbeit ist es, zwei unterschiedliche Objekte zu designen und zu drucken. Im vorherigen Kapitel \ref{chapter:techObj} wird die Entwicklung eines technischen Objekts beschrieben. Bei einem technischen Objekt sind die Ansprüche an genaue Bemaßungen hoch, das Objekt selbst sollte so einfach wie möglich gestaltet sein. Dadurch besteht es oft aus einfachen geometrischen Formen. Allgemein liegt der Fokus auf der Funktionalität des Objekts. Um technische Objekte zu designen, wird in der Regel eine \ac{CAD}-Software verwendet. \\
-	In diesem Kapitel wird eine andere Art eines Objekts beschrieben: Das organische Objekt. Im Gegensatz zu einem technischen Objekt steht hier nicht die reine Funktionalität im Vordergrund. Organische Objekte sind Objekte, die in der Natur vorkommen und nicht künstlich vom Menschen gefertigt wurden, beispielsweise Lebewesen oder Pflanzen. In der Regel besitzen diese Objekte kaum Ecken, Kanten oder gerade Flächen. \\
-	Im Folgenden werden das Design und der Druck eines solchen Objekts beschrieben, im Anschluss folgt ein Fazit über die generelle Eignung des Ultimaker 2 für den Druck organischer Objekte.
-	Wie bereits im vorigen Kapitel bezieht sich diese Arbeit häufig auf den Ultimaker 2, der im Kapitel \ref{chapter:techGr:ultimaker2} vorgestellt wird. In der Arbeit mit einem anderen Drucker können sich Vorgehensweise und Ergebnis deutlich unterscheiden.
+	In diesem Kapitel wird eine andere Art eines Objekts beschrieben: Das organische Objekt. Im Gegensatz zu einem technischen Objekt steht hier nicht die reine Funktionalität im Vordergrund. Organische Objekte sind Objekte, die in der Natur vorkommen und nicht künstlich vom Menschen gefertigt wurden, beispielsweise Lebewesen oder Pflanzen. In der Regel besitzen diese Objekte kaum Ecken, Kanten oder gerade Flächen. 
 	
+	Im Folgenden werden das Design und der Druck eines solchen Objekts beschrieben, im Anschluss folgt ein Fazit über die generelle Eignung des Ultimaker 2 für den Druck organischer Objekte.
+	Wie bereits im vorigen Kapitel bezieht sich diese Arbeit auf den Ultimaker 2, der im Kapitel \ref{chapter:techGr:ultimaker2} vorgestellt wird. In der Arbeit mit einem anderen Drucker können sich Vorgehensweise und Ergebnis deutlich unterscheiden.
 	
 
 	\section{Konzept}
 	\label{chapter:orgObj:konzept}
 % --> "Strichmännchen"
-	Wie zu Beginn des Kapitels beschrieben, soll das organische Objekt runde, gewölbte Flächen aufweisen. Für diese Studienarbeit wurde ein dreidimensionales Strichmännchen als Objekt gewählt. Dieses kann unter Verwendung mehrerer Zylinder und Kugeln modelliert werden und enthält somit einige gewölbte Flächen. 
-	Der Kopf des Strichmännchens wird als Kugel modelliert, der restliche Körper besteht aus sieben Zylindern. Einer davon dient als Körper und je ein Zylinder wird verwendet, um ein Bein zu modellieren. Die Arme werden mit je zwei Zylinder modelliert. Dadurch kann ein Ellbogengelenk simuliert werden und abwechslungsreiche Armhaltungen werden möglich.  
+	Wie zu Beginn des Kapitels beschrieben, soll das organische Objekt runde, gewölbte Flächen besitzen. Für diese Studienarbeit wurde ein dreidimensionales Strichmännchen als Objekt gewählt. Dieses kann unter Verwendung mehrerer Zylinder und Kugeln modelliert werden und enthält somit einige gewölbte Flächen. 
+	Der Kopf des Strichmännchens wird als Kugel modelliert, der restliche Körper besteht aus sieben Zylindern. Einer davon dient als Körper und je ein Zylinder wird verwendet, um ein Bein zu modellieren. Die Arme werden mit je zwei Zylindern modelliert. Dadurch kann ein Ellbogengelenk simuliert werden und abwechslungsreiche Armhaltungen werden ermöglicht.  
 	
 	
 	
-	%TODO ist eigenes Kapitel Entwurf nötig?
+%	%TODO ist eigenes Kapitel Entwurf nötig?
 	\section{Entwurf}
 	% Arbeit mit Blender
 	
@@ -29,19 +29,17 @@
 	\parpic[r]{\includegraphics[width=.3\textwidth]{images/orgObj/orgObj}}
 	
 	
-	Das im vorigen Abschnitt beschriebene dreidimensionale Strichmännchen wurde mithilfe der Software Blender (Kapitel \ref{chapter:sdt:blender}) modelliert. Es wird modelliert, indem verschiedene geometrische Grundkörper zusammengesetzt werden.
+	Das im vorigen Abschnitt beschriebene dreidimensionale Strichmännchen wird mithilfe der Software Blender (Kapitel \ref{chapter:sdt:blender}) modelliert. Es wird modelliert, indem verschiedene geometrische Grundkörper zusammengesetzt werden.
 	
-	Wie im vorigen Abschnitt \ref{chapter:orgObj:konzept} beschrieben, ist das Männchen aus sieben Zylindern und einer Kugel zusammengesetzt. 
+	Wie im vorigen Abschnitt \ref{chapter:orgObj:konzept} beschrieben, wird das Männchen aus sieben Zylindern und einer Kugel zusammengesetzt. Abbildung \ref{fig:orgObj:orgObj} zeigt einen Screenshot des modellierten Männchens in Blender.
 	
-	Sowohl Zylinder als auch Kugeln sind in Blender bereits als Körper vorhanden. Die Bemaßung der Objekte kann jeweils angepasst werden. Diese Körper werden in den Viewport gezogen und verschoben, bis sie sich an der gewünschten Position befinden. Beim Verschieben ist es möglich, den Körper nur entlang einer Gerade (eindimensional) oder in einer Ebene (zweidimensional) zu verschieben.
+	Sowohl Zylinder als auch Kugeln werden in Blender als Grundkörper zur Verfügung gestellt. Die Bemaßung der Objekte kann jeweils angepasst werden. Diese Körper werden in den Viewport gezogen und verschoben, bis sie sich an der gewünschten Position befinden. Beim Verschieben ist es möglich, den Körper nur entlang einer Gerade (eindimensional) oder in einer Ebene (zweidimensional) zu verschieben.
 	
-	Wenn sich alle Körper an der gewünschten Position befinden, markiert man sie und fügt sie zu einer Gruppe - dem Strichmännchen - zusammen. Diese Gruppe kann dann als \ac{STL}-Datei gespeichert werden. 
-	
-	\picskip{0}
-	\vspace*{3em}
+	Wenn sich alle Grundkörper an der gewünschten Position befinden, markiert man sie und fügt sie zu einer Gruppe zusammen. Diese Gruppe kann dann als \ac{STL}-Datei gespeichert werden. 
 
 
-	\newpage
+
+%	\newpage
 	
 	\section{Druck des Objekts}
 	% Wie wäre es ideal gewesen?, fertiges Objekt 
@@ -52,30 +50,34 @@
 	Im Gegensatz zum technischen Objekt (Kapitel \ref{chapter:techObj}), bei dem die Genauigkeit des Drucks sehr wichtig ist, liegt beim organischen Objekt der Fokus darauf, wie gut der Ultimaker 2 gewölbte Flächen drucken kann.
 	
 	
-	Zu Testzwecken wird das Objekt in zwei verschiedenen Positionen gedruckt. Einmal wird das Männchen liegend auf der Druckplatte positioniert, einmal stehend. Dadurch kann gesehen werden, ob es einen Unterschied macht, wie das Objekt platziert wird. 
+	Zu Testzwecken wird das Objekt in zwei verschiedenen Positionen gedruckt. Einmal wird das Männchen liegend auf der Druckplatte positioniert, einmal stehend. Dadurch kann untersucht werden, ob es einen Unterschied macht, wie das Objekt platziert wird. 
 	
-	Das liegende Männchen hat insgesamt mehr Auflagefläche als das stehende Männchen, wodurch es allerdings auch durch mehr Supportstrukturen gestützt werden muss. Dafür muss nicht weit nach oben gedruckt werden und es müssen keine Überhänge gedruckt werden.
+	Das liegende Männchen hat insgesamt mehr Auflagefläche als das stehende Männchen, wodurch es allerdings auch durch mehr Supportstrukturen gestützt werden muss. Dafür muss nicht weit nach oben gedruckt werden und es müssen keine Überhänge gedruckt werden.\\
 	
-	Das stehende Männchen hat insgesamt weniger Kontakt mit der Druckplatte, benötigt aber dennoch kaum Supportstrukturen, da es mit den unten glatten Füßen auf der Platte steht. Dafür müssen hier für die Arme und den Kopf teilweise relativ starke Überhänge gedruckt werden.
+	Das stehende Männchen hat insgesamt weniger Kontakt mit der Druckplatte, benötigt aber dennoch kaum Supportstrukturen, da es mit den unten glatten Beinen auf der Platte steht. Dafür müssen hier für die Arme und den Kopf teilweise relativ starke Überhänge gedruckt werden.
 	
 	\begin{figure}[h!]
 		\begin{minipage}{.5\textwidth}
 			\includegraphics[height=10em]{images/orgObj/oO_liegend}
+			\subcaption{Liegende Positionierung}
+			\label{fig:orgObj:Druck:liegend}
 			%			\subcaption{liegender Druck}
 		\end{minipage}
 		\begin{minipage}{.5\textwidth}
 			\centering
 			\includegraphics[height=10em]{images/orgObj/oO_stehend}
+			\subcaption{Stehende Positionierung}
+			\label{fig:orgObj:Druck:stehend}
 			%			\subcaption{stehender Druck}
 		\end{minipage}
-		\caption{Drucke des organischen Objektes}
+		\caption{Druck des organischen Objekts in verschiedenen Positionierungen}
 		\label{fig:orgObj:Druck}
 	\end{figure}
 		
 	
-	Abbildung \ref{fig:orgObj:Druck} zeigt die beiden gedruckten Männchen.
+	Abbildung \ref{fig:orgObj:Druck} zeigt die beiden mit verschiedenen Positionierungen gedruckten Männchen.
 	
-	Die Überhänge des stehenden Männchens sind gut gelungen, sogar ohne durch extra Supportstrukturen abgestützt zu werden. Die vergleichsweise geringe Auflagefläche stellt kein Problem dar, da die Füße einen guten Halt bieten. Auch die Kugel, die den Kopf des Männchens darstellt, ist gut und rund geworden. 
+	Die Überhänge des stehenden Männchens sind gut gelungen, sogar ohne durch Supportstrukturen abgestützt zu werden. Die vergleichsweise geringe Auflagefläche auf der Druckplatte stellt kein Problem dar, da die Füße einen guten Halt bieten. Auch die Kugel, die den Kopf des Männchens darstellt, ist gut und rund geworden. 
 	
 	Beim liegenden Männchen dagegen sind viele Supportstrukturen nötig, damit es genügend Auflagefläche auf der Druckplatte besitzt. Diese Strukturen lassen sich nur schwer und nicht rückstandslos vom Objekt lösen. Auffällig ist zudem, dass die Kugel, die den Kopf darstellt, eine starke Kante in der Mitte aufweist. 
 	
@@ -96,11 +98,11 @@
 	%an sich: kann gut runde Objekt drucken
 	%vorsicht bei support strukturen --> möglichst große auflagefläche sollte vorhanden sein
 	%
-	In diesem Kapitel werden das Design und der Druck eines organischen Objekts, also eines Objekts, die viele runde Flächen besitzt, beschrieben. Anhand des Drucks des Testobjekts mit dem Ultimaker 2 lässt sich sagen, dass der Ultimaker 2 prinzipiell geeignet ist, um organische Objekte zu drucken.
+	In diesem Kapitel werden das Design und der Druck eines organischen Objekts, also eines Objekts, die viele runde Flächen besitzt, beschrieben. Anhand des Drucks eines dreidimensionalen Strichmännchens mit dem Ultimaker 2 lässt sich sagen, dass der Ultimaker 2 prinzipiell geeignet ist, um organische Objekte zu drucken.
 	
-	Die runden Flächen des dreidimensionalen Strichmännchens, insbesondere die Kugel, die den Kopf darstellt, gelangen gut. Solange sie nicht zu starke Überhänge aufweisen, kann der Ultimaker runde Flächen überzeugend drucken.
+	Die runden Flächen des dreidimensionalen Strichmännchens, insbesondere die Kugel, die den Kopf darstellt, sind gut gelungen. Solange sie nicht zu starke Überhänge aufweisen, kann der Ultimaker runde Flächen überzeugend drucken.
 	
-	Allerdings sollte das zu druckende Objekt genügend gerade Flächen besitzen, mit denen es auf der Druckplatte platziert werden kann. Ein Objekt mit einer abgerundeten Fläche auf der Druckplatte zu platzieren und mit Supportstrukturen abzustützen ist nicht empfehlenswert. Wie sich bei dem liegend gedruckten Männchen gezeigt hat, lassen sich diese Supportstrukturen kaum vom Objekt trennen.
+	Allerdings sollte das zu druckende Objekt genügend gerade Flächen besitzen, mit denen es auf der Druckplatte platziert werden kann. Ein Objekt mit einer abgerundeten Fläche auf der Druckplatte zu platzieren und mit Supportstrukturen abzustützen ist nicht empfehlenswert. Wie sich bei dem liegend gedruckten Männchen gezeigt hat, lassen sich diese Supportstrukturen kaum rückstandslos vom Objekt trennen.
 	
 	 
 	
