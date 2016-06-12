@@ -1,8 +1,8 @@
 \chapter{Technische Grundlagen \& Stand der Technik}
 	Dieses Kapitel umfasst die technischen Grundlagen, die zum Verständnis des Berichts nötig sind, sowie den aktuellen Stand der Technik. 
-	Zunächst werden aktuelle Drucktechniken sowie Materialien, die häufig gedruckt werden, behandelt. Anschließend wird die Stabilität der Druckresultate verschiedener Verfahren verglichen. 
+	Zunächst werden aktuelle Drucktechniken sowie häufig verwendete Druckmaterialien behandelt. Anschließend wird die Stabilität der Druckresultate verschiedener Verfahren verglichen. 
 	Im Abschnitt \ac{CAD} werden Programme und gängige Dateiformate für den Entwurf eines zu druckenden Objekts vorgestellt. 
-	Anschließend folgt ein Abschnitt über den Ultimaker 2, den Drucker, der in dieser Arbeit verwendet wird.
+	Anschließend folgt ein Abschnitt über den Drucker Ultimaker 2, der in dieser Arbeit verwendet wird.
 	
 % TODO Einleitung
 
@@ -27,7 +27,7 @@
 		\subsubsection{Solid Edge}
 			
 
-			\piccaption{Screenshot des Programms blender\label{fig:sdt:solidEdge}}
+			\piccaption{Screenshot des Programms Solid Edge\label{fig:sdt:solidEdge}}
 			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/solidEdge}}
 			
 			Solid Edge von Siemens eignet sich für das Entwerfen von technischen Objekten. Hierbei bietet das Programm eine Vielzahl von Funktionen für die Erstellung von 2D- und 3D-Formen. Für einfache Objekte kann eine 2D-Grundform gezeichnet und anschließend zu einem 3D-Objekt extrudiert werden. Zusätzliche Funktionen von Solid Edge unterstützen bei der Stabilitätsanalyse der entwickelten Objekte.
@@ -40,7 +40,7 @@
 		\subsubsection{Blender}
 		\label{chapter:sdt:blender}
 			
-			\piccaption{Screenshot des Programms blender\label{fig:sdt:blender}}
+			\piccaption{Screenshot des Programms Blender\label{fig:sdt:blender}}
 			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/blender}}
 			
 			Blender ist ein Open Source Programm, das eine Vielzahl von Computergrafik-\\Anwendungen bietet. Diese reichen von der Erstellung von Objekten bis hin zum Filmschnitt.
@@ -54,8 +54,9 @@
 			
 			Für den 3D-Drucker Ultimaker 2 bietet die Firma Ultimaker das eigene Programm Cura an. Mit Cura können \ac{3D}-Objekte gesliced und in Dateien gespeichert werden, die vom Ultimaker 2 gedruckt werden können. Alternativ kann das Programm Repetierhost verwendet werden.
 			
+			\newpage
 		\subsubsection{Cura}	
-			\piccaption{Screenshot des Programms blender\label{fig:sdt:cura}}
+			\piccaption{Screenshot des Programms Cura\label{fig:sdt:cura}}
 			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/cura}}
 			Mit Cura kann man aus Objektdateien im \ac{STL}-Format G-code für den Ultimaker erstellen. Das Programm erlaubt die Variation zahlreicher Parameter, die den Druck beeinflussen. Die verwendete Programmversion beeinflusst die Ergebnisse des Slicens deutlich. Viele Druckoptionen sind erst mit neueren Versionen möglich. 
 					
@@ -67,7 +68,7 @@
 		\subsubsection{Repetierhost}
 			
 			
-			\piccaption{Screenshot des Programms blender\label{fig:sdt:repetierhost}}
+			\piccaption{Screenshot des Programms Repetierhost\label{fig:sdt:repetierhost}}
 			\parpic[r]{\includegraphics[width=.5\textwidth]{images/SdT/repetierhost}}
 			
 			Repetierhost ist ein alternatives Programm zur Fernsteuerung von 3D-Druckern. Es visualisiert Druckdateien im \ac{STL}- und im G-code-Format. Zudem enthält es einen Slicer, mit dem man G-code erzeugen kann. 
@@ -119,7 +120,7 @@
 %	bsueb\\
 %	\picskip{0}
 %	
-%	\newpage
+	\newpage
 	
 \section{Der \ac{3D}-Drucker Ultimaker 2}
 	\label{chapter:techGr:ultimaker2}
@@ -131,11 +132,10 @@
 	% Drucker nach xxx Verfahren
 	
 	Der Ultimaker 2 ist ein \ac{3D}-Drucker von der gleichnamigen Firma. 
-	Das Bauvolumen umfasst 223x223x205mm. Anfang 2016 wurde der Drucker zum Ultimaker 2+ verbessert. Die hierfür nötigen Upgrades umfassen Verbesserungen des Feeders und einen neuen Druckkopf. Der neu hinzugekommene Olsson-Block ermöglicht das Wechseln der Düsen ohne die vollständige Demontage des Druckkopfes.
-	
+	Das Bauvolumen umfasst 223x223x205mm. Anfang 2016 wurde der Drucker zum Ultimaker 2+ verbessert. Die hierfür nötigen Upgrades umfassen Verbesserungen des Feeders und einen neuen Druckkopf. Der neu hinzugekommene Olsson-Block ermöglicht das Wechseln der Düsen ohne die vollständige Demontage des Druckkopfes.	
 	Die zu druckenden Dateien im G-Code-Format werden auf einer \ac{SD}-Karte vom Rechner auf den Drucker übertragen. Dort wählt man die entsprechende Datei in einem Menü aus und der Druck wird gestartet.
 	
-	Die X- und Y-Position werden durch Verschieben des Druckkopfes verändert. Die Z-Achse des Druckers wird durch Manipulation der Druckplatte erreicht. Darin unterscheidet sich der Ultimaker 2 vom Ultimaker Original. Das ältere Modell erreichte den Höhenversatz durch Bewegung des %TODO:???
+	Die X- und Y-Position werden durch Verschieben des Druckkopfes verändert. Die Z-Achse des Druckers wird durch Manipulation der Druckplatte erreicht. Darin unterscheidet sich der Ultimaker 2 vom Ultimaker Original. Das ältere Modell erreichte den Höhenversatz durch Bewegung des Druckkopfes.
 	
 	Gedruckt wird auf einer Glasplatte, welche auf einem Heizbett fixiert ist.
 	Die Höhe des Druckbetts kann kalibriert werden, indem seine Neigung mit Schrauben an den vorderen Ecken und seine Höhe an der Gewindestange verstellt wird. 
