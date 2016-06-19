@@ -1,6 +1,75 @@
 <div class="auto-indent">
+	<h2> Entwurf und Druck eines technischen Objekts </h2>
+	
+	
+	Bei der Produktion eines technischen Objekts ist es wichtig, dass diese MaÃŸe mit mÃ¶glichst
+	geringen Toleranzen eingehalten werden. Wird mehrfach dasselbe Objekt mit denselben
+	Werkzeugen und Prozessen hergestellt, sollten die Ergebnisse vergleichbar sein.	
+	Ein Anspruch an das zu entwerfende Objekt ist eine einfache Umsetzung beim Drucken.
+	Schwer Realisierbares wie unebene AuflageflÃ¤chen sollen vermieden werden. 
+	<br/>
+	Exemplarisch wird hier als technisches Objekt ein Aufbewahrungssystem fÃ¼r einen Raspberry Pi-Server entworfen.
+	Dieser ist Ã¼ber einen USB-Hub mit einer Festplatte verbunden. 
+	Die drei Objekte sollen in stapelbare Boxen untergebracht werden.
 
-
-
+	
+	<h3> Ist-Analyse</h3>
+	Zu Beginn der Entwicklung wurde das
+	System durch zu einem KÃ¤fig verschraubte
+	Lochbleche zusammengehalten, die Festplatte
+	und Hub umfassten, wie in Abbildung
+	3.1 zu sehen ist. Insbesondere der Pi war
+	im alten System nur unzureichend fixiert,
+	da er nur auf den KÃ¤fig aufgesetzt wurde.
+	Eine Hauptanforderung an das neue System
+	soll deshalb das sichere Lagern aller
+	Komponenten sein.
+	
+	Für die Umsetzung sind die Maße der zu verstauenden Objekte zu nehmen.
+	<img class="text-image" src="res/techObj/vorher.jpg">
+	
+	
+	<h3> Konzept: Modulare Boxen</h3>
+	Als Ersatz fur den oben beschriebenen Käfig aus Lochblechen soll ein modulares Stapelsystem
+	dienen. Auf einer massiven Grundplatte werden Boxen gestapelt. Jede Box
+	beinhaltet eine Komponente (Raspberry Pi, USB-Hub oder Festplatte). Die Außenma-
+	ße der Boxen sind in Breite und Laäge immer gleich. Diese Grundfläche wird durch die
+	größte zu befestigende Komponente, hier also die Festplatte, bestimmt. Der Innenraum
+	einer Box ist an die jeweilige Komponente angepasst. Abhängig von der Komponente
+	werden verschiedene Aussparungen in den Seitenwänden der Boxen angebracht, durch
+	die Kabel geführt werden können. Im Aufbewahrungssystem werden die Boxen auf der
+	Grundplatte gestapelt.
+	Um das Aufbewahrungssystem zusammenzuhalten, werden Rahmen zwischen die Boxen
+	gelegt, die die Boxen zwischen Gewindestangen fixieren. Die Gewindestangen sind an
+	der Unterseite der Grundplatte festgeschraubt. Dadurch ist das Stapelsystem im Ganzen
+	stabilisiert und kann problemlos transportiert werden.
+	
+	
+	<h3> Entwurf</h3>
+	
+	Das Konzept soll für die vorhandenen Komponenten, also für Raspberry Pi, USB-Hub
+	und Festplatte, umgesetzt werden. Die zu druckenden Objekte werden mit dem CADSystem
+	Solid Edge designt.
+	
+	Die Außenmaße der Boxen richten sich nach dem größten zu verpackenden Objekt, der Festplatte.
+	Die Innenmaße werden den einzelnen Kompenenten angepasst und Aussparungen für die Kabel freigeschnitten.
+	Anschließend kommen noch der Rahmen, der Deckel und die Bodenplatte.
+	In Bodenplatte und Rahmen werden Bohrungen für M4-Gewindestangen designt und 
+	zusätzlich in die Bodenplatte Hohlräume für M4-Muttern.
+		<img class="text-image" src="res/techObj/entwurf/FPBox.JPG">
+		<img class="text-image" src="res/techObj/entwurf/HubBox.JPG">
+		<img class="text-image" src="res/techObj/entwurf/PiBox.JPG">
+		<img class="text-image" src="res/techObj/entwurf/rahmen.JPG">
+		<img class="text-image" src="res/techObj/entwurf/bodenplatte.JPG">
+	
+	<h3> Druck des Objekts</h3>
+	
+	Nachdem das Design abgeschlossen ist, werden die Einzelkomponenten in STL-Dateien exportiert und 
+	mithilfe von Cura zu GCode umgewandelt. Diese können dem Drucker per SD-Karte übergeben werden.
+	
+	Folgend ein Bild vom Ergebnis der Entwicklung.
+	
+	<img class="text-image" src="res/techObj/gesamt.jpg">
+	
 
 </div>
