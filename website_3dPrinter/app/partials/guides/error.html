@@ -75,7 +75,7 @@
       Dieser Fehler tritt durch eine falsche Messung des Temperatursensors am Druckkopf auf.
       Erfahrungsgemäß tritt der Fehler nur beim Aufwärmen oder Abkühlen des Druckkopfes auf.
 	  
-	  <img class="text-image" src="res/fehler/tempsens.jpg" width="25%">
+	  <img class="text-image" src="res/fehler/tempsens.jpg" style="width:25%">
 	  
       Falls der Fehler beim Aufwärmen auftritt:
       <ul>
@@ -103,7 +103,7 @@
 	<h4 id="error-printer-ptfe">Verschleiß der PTFE-Kopplung</h4>
 	<div>
 	Die PTFE-Kopplung in der Düse des Ultimakers wird bei jedem Druck erhitzt. Das Material der Kopplung erweicht dabei und eine Verformung ist leicht möglich.
-	<img class="text-image" src="res/fehler/ptfe.jpg" width="25%">
+	<img class="text-image" src="res/fehler/ptfe.jpg" style="width:25%">
 	Dadurch kann das Filament nicht mehr ungehindert durch die Kopplung in die Düse gelangen und die erhöhte Reibung kann zur Filament-Unterförderung führen. 
 	Deshalb sollte die PTFE-Kopplung regelmäßig begutachtet und bei Defekten ausgetauscht werden.
 	</div>
@@ -128,14 +128,14 @@
 	<div>
 	Wenn die Düse außen verschmutzt oder beschädigt ist, kann es in extremen Fällen dazu kommen, dass sich eine dicke Schicht aus Filament um den Heizblock bildet.
 	Als Folge fließt das Filament um Heizblock und Düse und kann sogar in den Raum oberhalb der Düse gelangen. 
-	<img class="text-image" src="res/fehler/verklebt.jpg" width="50%">
+	<img class="text-image" src="res/fehler/verklebt.jpg" style="width:50%">
 
 	Dadurch, dass eine dicke Schicht aus Kunststoff den Heizblock umgibt, wird bei folgenden Drucken Energie verschwendet, um diese Schicht zu erwärmen. 
 	Dadurch kann das Filament an sich nicht mehr genug erhitzt werden, um gut damit drucken zu können. Es ist nahezu unmöglich, die komplette Schicht wieder zu entfernen. 
 
 	Das Austauschen des Heizblockes ist nur schwer möglich, da das Filament auch in die Spalte zwischen Heizblock, Temperatursensor und der Heizkapsel geflossen ist. 
 	Die Entfernung war nur nach Erhitzen des Heizblockes möglich.
-	<img class="text-image" src="res/fehler/heizblock.jpg" width="50%">
+	<img class="text-image" src="res/fehler/heizblock.jpg" style="width:50%">
 	</div>
   </div>
 
@@ -225,7 +225,48 @@
       </ul>
     </div>
 
-    <h4 id="error-other">Sonstige Fehler</h4>
+    <h3 id="error-other">Sonstige Fehler</h3>
+	<h4 id="error-object-kalibrierung">Falsche Kalibrierung</h4>
+    <div>
+     Die Druckplatte sollte regelmäßig kalibriert werden. 
+	 Bei einer schlechten Kalibrierung sind der Abstand zwischen Düse und Druckplatte sowie die Neigung der Druckplatte nicht optimal eingestellt. 
+	 Dies kann zu schlechter Haftung des Materials auf der Druckplatte führen. 
+	 Außerdem leidet die Genauigkeit der Drucke, da beispielsweise Linien oder Kreise nicht gerade beziehungsweise kreisförmig verlaufen.
+	Im Menü des Ultimaker 2 kann eine Funktion zur Kalibrierung aufgerufen werden. An drei verschiedenen Stellen kann die Höhe bzw. Neigung der Druckplatte eingestellt werden. 
+	Um gute Ergebnisse zu erzielen, sollten Messhöhen (Metallplättchen, deren Höhe exakt bekannt ist) verwendet werden. 
+    </div>
+	
+	<h4 id="error-object-rough">Unterschiedliche Filamenteigenschaften</h4>
+    <div>
+     Je nachdem, welche Art von Plastik als Filament verwendet wird, weist es verschiedene Eigenschaften auf. 
+	 Die geeigneten Drucktemperaturen für PLA und ABS sind unterschiedlich.
+	Aber auch bei unterschiedlichen Filamentrollen von PLA gibt es Unterschiede.
+	Eine Rolle spielt dabei die Lagerung der Filamentrollen. 
+	Wenn das Filament längere Zeit an der Luft gelagert wird, wird es zunehmend spröde und bekommt somit schlechtere Druckeigenschaften.
+	Auch die Farbe des Filaments hat Auswirkungen auf die Eigenschaften des PLA. Das liegt daran, dass die beigemischten Farbstoffe die Materialeigenschaften zusätzlich beeinflussen.
+    </div>
+	
+	
+	<h4 id="error-object-rough">Elektrische Spannung am Feeder</h4>
+    <div>
+      Die elektrische Spannung, mit der der Feeder-Motor angesteuert wird, kann im Menü des Ultimaker 2 eingestellt werden. 
+	  Das Drehmoment des Schrittmotors kann dadurch variiert werden. Je nach Einstellung kann das Drehmoment zu gering sein. 
+	  Die Förderleistung nimmt dadurch ab und kann zu Unterförderung kommen.
+    </div>
+	
+	<h4 id="error-object-rough">Anpressdruck im Feeder</h4>
+    <div>
+      Mit einer Schraube kann der Anpressdruck im Feeder angepasst werden. 
+	  Der Druck sollte so gewählt werden, dass der Feeder das Filament gut fördern kann, ohne zu sehr in das Plastik einzudrücken.
+	Wenn der Druck zu gering gewählt ist, kann der Feeder das Filament nicht fördern. 
+	Ist der Druck zu hoch eingestellt, kann es sein, dass zuviel Druck auf das Filament aufgebaut wird. 
+    </div>
+	
+	<h4 id="error-object-rough">Unsauber aufgerolltes Filament</h4>
+    <div>
+      Manchmal kommt es vor, dass das Filament nicht sauber auf der Rolle aufgewickelt ist. Dadurch wird es schwerer für den Feeder, das Filament von der Rolle abzurollen. 
+	  Im schlimmsten Fall kann es passieren, dass sich das Filament verknotet und es zum Grinding kommt und der Druck abgebrochen werden muss.
+    </div>
     <div>
       Für Fehler die hier nicht beschrieben sind, siehe <a href="http://support.3dverkstan.se/article/23-a-visual-ultimaker-troubleshooting-guide">hier</a>.
     </div>
