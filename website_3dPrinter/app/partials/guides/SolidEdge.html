@@ -1,6 +1,44 @@
 <div class="auto-indent">
+	<h2> Solid Edge </h2>
+	
+	Solid Edge ist ein CAD-Programm. Für Studenten und andere an der Ausbildung Beteiligte 
+	ist eine kostenlose akademische Lizenz erältlich. 
+	Folgend wird die grundlegende Bedienung vorgestellt.
+	
+	<h3> Parallel oder Sequenziell?</h3>
+	
+	Die programminterne Verarbeitung wurde vor wenigen Jahren überarbeitet. Vorher wurde der gesamte Verlauf des Designs
+	gespeichert. Vorteil waren eindeutige Abhängigkeiten zwischen Bauteilmaßen. Da bei Änderungen allerdings der gesamte 
+	Stack neu berechnet werden musste, wurde das Programm mit steigender Objektgröße immer unperformanter. 
+	Daher wurde die parallele Verarbeitung eingeführt. Hier muss das Design weniger strikten Schritten folgen und die Entwicklungen 
+	können schneller angepasst werden.
+	
+	<h3>Schritt 0: Neues Bauteil anlegen</h3>
+	Ein Bauteil wird mit *.par bezeichnet. Mehrere Bauteile können später zu einer Assembly zusammengefasst werden.
+	
+	
+	<h3>Schritt 1: Grundfläche </h3>
+	Im ersten Schritt wird in eine Raumebene eine 2D-Grundfläche eingezeichnet. Mit dem Würfel unten rechts kann die Raumansicht schnell verändert werden.
+	Die Bemaßungen der gezeichneten Fläche können direkt eingegeben werden. Auch auf bestehenden Flächen von Objekten können neue Flächen eingezeichnet werden.
+	<img class="text-image" src="res/solidedge/grund.jpg">
 
-
-
-
-</div>
+	<h3>Schritt 2: Extrusion</h3>
+	
+	Als nächstes wird die Fläche zu einem Volumen extrahiert. Dies kann mit dem Button oben geschehen.
+	Alternativ wird bei Auswählen einer Fläche ein senkrechter Pfeil zum Extrahieren eingeblendet.
+	Eine negative Extrusion erzeugt eine Bohrung.
+	
+	<img class="text-image" src="res/solidedge/grund.jpg">
+	
+	<h3>Schritt 3: Assembly</h3>
+	Aus verschiedenen Bauteilen lässt sich nun ein Gesamtobjekt erstellen.
+	Hierfür wird eine neue *.asm-Datei angelegt und die gewünschten Bauteile aus der Teilebibliothek rechts im Fenster hinzugefügt.
+	Durch Verschieben und die Option Komponentenmontage lassen sich die einzelnen Kompenenten zu einem Objekt kombinieren.
+	<img class="text-image" src="res/solidedge/assembly.jpg">
+	
+	<h3>Schritt 4:Als STL speichern</h3>
+	Über das "Speichern unter"- Menue lässt sich das entworfene Objekt als übersetzt speichern. Zielformat für Cura ist STL. Hierbei muss im Speichern-Dialog über Optionen 
+	die Einheit auf Milimeter geändert werden, da sonst die Dateien in Cura als zu klein interpretiert werden.
+	<img class="text-image" src="res/solidedge/stlSpeichern.jpg">
+	
+	</div>
