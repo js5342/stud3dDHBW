@@ -1,6 +1,43 @@
 <div class="auto-indent">
+	<h2>Entwurf eines organischen Objekt</h2>
+	
+	Ein organisches Objekt besitzt runde, gewölbte Flächen. 
+	Als Beispiel für ein solches Objekt wird hier der Entwurf und Druck ein dreidimensionales Strichmännchen beschrieben. 
+	Das Strichmännchen wird dabei aus mehreren geometrischen Grundformen zusammengesetzt.
+	
+	<h3>Entwurf mit Blender</h3>
+	Für den Entwurf wird die Software Blender verwendet.
+	<img class="text-image" src="res/orgObj/entwurf.PNG" style="width:25%">
+	Der Kopf des Strichmännchens wird als Kugel modelliert, der restliche Körper besteht aus sieben Zylindern. 
+	Einer davon dient als Körper und je ein Zylinder wird verwendet, um ein Bein zu modellieren. Die Arme werden mit je zwei Zylindern modelliert. 
+	Dadurch erhält man ein Ellbogengelenk, wodurch verschiedene Armhaltungen möglich sind.
 
+	Nachdem alle Grundkörper an die gewünschte Position gebracht wurden, werden sie alle markiert und zu einer Gruppe zusammengefügt. 
+	Diese Gruppe wird dann als STL-Datei gespeichert werden. 
+	
+	<h3>Druck des Objekts</h3>
+	Zu Testzwecken wird das Objekt in zwei verschiedenen Positionen gedruckt. Einmal wird das Männchen liegend auf der Druckplatte positioniert, einmal stehend. 
+	<br/>
+	<br/>
+	Das liegende Männchen hat insgesamt mehr Auflagefläche als das stehende Männchen. 
+	Durch die gewölbte Auflgabefläche muss es allerdings auch durch mehr Supportstrukturen gestützt werden. Dafür müssen keine Überhänge gedruckt werden.
+	<br/>
+	<br/>
+	Das stehende Männchen hat insgesamt weniger Kontakt mit der Druckplatte, benötigt aber dennoch kaum Supportstrukturen, da es mit den unten glatten Beinen auf der Platte steht. 
+	Dafür müssen hier für die Arme und den Kopf teilweise relativ starke Überhänge gedruckt werden.
 
+	<h3>Resultat der Drucke </h3>
+	Die Überhänge beim stehenden Männchen sind gut gelungen, sogar ohne durch Supportstrukturen abgestützt zu werden. 
+	Die vergleichsweise geringe Auflagefläche auf der Druckplatte stellt kein Problem dar, da die glatte Fläche der Beine einen guten Halt bietet. 
+	Auch die Kugel, die den Kopf des Männchens darstellt, ist gut gelungen.
 
+	<img class="text-image" src="res/orgObj/liegend.jpg" style="width:25%">
+	Beim liegenden Männchen dagegen sind viele Supportstrukturen nötig, damit es genügend Auflagefläche auf der Druckplatte besitzt. 
+	Diese Strukturen lassen sich nur schwer und nicht rückstandslos vom Objekt lösen. 
+	Auffällig ist zudem, dass die Kugel, die den Kopf darstellt, eine starke Kante in der Mitte aufweist.
 
+	<img class="text-image" src="res/orgObj/stehend.jpg" style="width:25%">
+	Allgemein ist das stehende Männchen deutlich besser gelungen als das liegende. Man sollte also darauf achten, Objekte zu drucken, die genügend gerade Auflageflächen bieten. 
+	Ein Objekt mit einer abgerundeten Fläche auf der Druckplatte zu platzieren und mit Supportstrukturen abzustützen ist nicht empfehlenswert. 
+	Runde Objekte können mit dem Ultimaker 2 gut gedruckt werden.
 </div>
