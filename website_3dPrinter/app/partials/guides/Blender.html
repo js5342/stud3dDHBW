@@ -1,6 +1,53 @@
 <div class="auto-indent">
+	<h2>Blender</h2>
+	Blender ist ein Open Source Programm, das eine Vielzahl von Computergrafik-Anwendungen bietet. 
+	Diese reichen von der Erstellung von Objekten bis hin zum Filmschnitt. 
+	Die CAD-Funktionen zielen vor allem auf die Animation einzelner Objekte ab. 
+	Zum Beispiel kann die Beweglichkeit von animierten Fingern mit Regeln definiert werden. 
+	Das Objekt-Design erfolgt, indem Grundkörper manipuliert und anschließend zu einem Objekt vereinigt werden. 
+	<img class="text-image" src="res/blender/cylinder_all.PNG" style="width:100%">
+	
+	<h3>Geometrische Grundkörper</h3>
+	In Blender existieren bereits einige geometrische Grundkörper wie beispielsweise Würfel, Kugeln oder Zylinder. 
+		<img class="text-image" src="res/blender/primitives.PNG" style="width:25%">
+	Diese können über den Reiter "create" ausgewählt werden und werden dann im Fenster "User Persp" hinzugefügt. 
 
+	<img class="text-image" src="res/blender/cylinder.PNG" style="width:25%">
+	Beim Einfügen öffnet sich ein Menü, in dem die Maße und Position des jeweiligen Körpers eingestellt werden können.
 
+	<h3>Operationen</h3>
+	<h4>Verformen</h4>
+	<img class="text-image" src="res/blender/modes.PNG" style="width:100%">
+	Durch das Wechseln vom "Object Mode" in den "Edit Mode" kann ein Objekt bearbeitet werden.
+	Im Reiter "Tools" können verschiedene Operationen ausgewählt werden. 
+	<img class="text-image" src="res/blender/editMode.PNG" style="width:25%">
+	Mit "Translate" kann das Objekt verschoben werden, "Rotate" ermöglicht es, das Objekt zu drehen, "Scale" erlaubt es, die Maße des Objekts anzupassen und mit "Shrink/Fatten" kann das Objekt als Ganzes geschrumpt oder vergrößert werden.
+	
+	<h4>Zerschneiden/Form des Objekts verändern</h4>
+	Im Bereich "Mesh Tools" des Reiters "Tools" können weitere Operationen ausgewählt werden. Zum Beispiel können Regionen extrudiert werden. Mit dem "Knife" können neue Topologien erschaffen werden.
+	
+	<h4>Verschieben</h4>
+	Zum Verschieben ist es nicht unbedingt nötig, vom "Object Mode" in den "Edit Mode" zu wechseln.
+	<ul>
+        <li>In allen drei Raumrichtung</a></li>
+		Wenn ein Objekt mit der Maus angeklickt wird, kann es mit der Maus in allen drei Raumrichtungen auf einmal verschoben werden. 
+		Diese Art, ein Objekt zu verschieben, ist wenig intuitiv und es ist oft schwer, das Objekt an die gewünschte Position zu bewegen.
+		<li>In einer Ebene</a></li>
+		Wenn die Shift-Taste gedrückt ist, während mit der Maus eine der Achsen des Koordinatensystems angeklickt wird, lässt sich das Objekt innerhalb einer Ebene bewegen.
+		Entlang der Raumrichtung der ausgewählten Achse lässt sich das Objekt nicht verschieben.
+		<img class="text-image" src="res/blender/cyl_axes.PNG" style="width:25%">
+        <li>Entlang einer Geraden</a></li>
+		Indem einer der Pfeile, die die Achsen des Koordinatensystems repräsentieren, mit der Maus angeklickt wird, lässt sich das Objekt entlang dieser Gerade bewegen.
+      </ul>
+	
 
+	<h3>Körper zu einer Gruppe vereinigen</h3>
+	Wenn alle Körper an der richtigen Stelle platziert sind und die richtige Form haben, können sie zu einer Gruppe zusammengefasst werden. 
+	Danach ist es nicht mehr möglich, die Körper einzeln zu bearbeiten. 
+	Im "Object Mode" markiert man alle Körper, die zu der Gruppe gehören sollen. Im Reiter "Relations" wird dann "New Group" ausgewählt.
+	
+	<h3>STL Export</h3>
+	Um eine Gruppe zu exportieren, wählt man im Blender Menü "File" -> "Export" -> "STL" aus. 
+	Die so erzeugte STL-Datei kann dann in Cura geöffnet werden.
 
 </div>
