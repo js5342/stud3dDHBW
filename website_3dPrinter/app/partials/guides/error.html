@@ -53,6 +53,9 @@
     <div>
       Dieser Fehler tritt durch eine falsche Messung des Temperatursensors am Druckkopf auf.
       Erfahrungsgemäß tritt der Fehler nur beim Aufwärmen oder Abkühlen des Druckkopfes auf.
+	  
+	  <img class="text-image" src="res/fehler/tempsens.jpg" width="25%">
+	  
       Falls der Fehler beim Aufwärmen auftritt:
       <ul>
         <li>Drucker mit dem Schalter an der Rückseite abschalten</li>
@@ -60,6 +63,11 @@
         <li>Den Drucker wieder anschalten und den Druck erneut starten</li>
       </ul>
       Falls der Fehler beim Abkühlen nach dem Druckvorgang auftritt, kann der Fehler ignoriert und der Drucker ausgeschaltet werden.
+	  
+	  Wenn die Meldung oft hintereinander auftritt, kann es sein, dass der Temperatursensor tatsächlich kaputt ist und ausgetauscht werden muss. 
+	  Der Austausch ist relativ aufwändig. Zunächst muss der gesamte Druckkopf demontiert werden, um an den Heizblock zu gelangen. 
+	  Die Kapsel mit dem Temperatursensor muss vorsichtig aus dem Heizblock gezogen werden. Da der Sensor direkt mit dem Steuergerät am Boden des Ultimakers verbunden ist, 
+	  müssen der defekte Sensor und der Ersatz durch die Kabelführungen bis zur Unterseite geführt werden. Dort muss der neue Sensor angeschlossen werden.
     </div>
 
     <h4 id="error-printer-grinding">Filament steckt fest/Filament grinding</h4>
@@ -70,6 +78,44 @@
       Danach das Filament per Zange kurz vor der gegrindeten Stelle abknipsen und Filament und Drucker von kleinen Plastiksplittern befreien. Das unversehrte Filament kann dann wieder in den Drucker eingeführt werden.
       Siehe <a href="#/guide/druckparameter#parameter-retraction"> Retraction</a>
     </div>
+	
+	<h4 id="error-printer-ptfe">Verschleiß der PTFE-Kopplung</h4>
+	<div>
+	Die PTFE-Kopplung in der Düse des Ultimakers wird bei jedem Druck erhitzt. Das Material der Kopplung erweicht dabei und eine Verformung ist leicht möglich.
+	<img class="text-image" src="res/fehler/ptfe.jpg" width="25%">
+	Dadurch kann das Filament nicht mehr ungehindert durch die Kopplung in die Düse gelangen und die erhöhte Reibung kann zur Filament-Unterförderung führen. 
+	Deshalb sollte die PTFE-Kopplung regelmäßig begutachtet und bei Defekten ausgetauscht werden.
+	</div>
+	
+	<h4 id="error-printer-reibungBowden">Reibung im Bowdenzug</h4>
+	<div>
+	Wenn die Reibung im Bowdenzug zu stark ist, kann es passieren, dass das Filament vom Feeder nicht gut gefördert werden kann, da dieser zu viel Kraft aufbringen muss. 
+	Dadurch gelangt zu wenig Filament zum Druckkopf.
+	Die Höhe des Widerstands hängt unter anderem davon ab, an welcher Position auf der Glasplatte das Objekt gedruckt wird. 
+	Dadurch kann es sein, dass ein Objekt an manchen Positionen besser gelingt.
+	</div>
+	
+	<h4 id="error-printer-heizplattes">Gebogene Heizplatte</h4>
+	<div>
+	Die Glasplatte, auf der die Objekte gedruckt werden, ist herstellungsbedingt nicht perfekt gerade und liegt dadurch nicht perfekt auf der metallenen Heizplatte auf. 
+	Auffällig ist, dass eine Seite der Glasplatte besser aufliegt als die andere. 
+	Wird die Glasplatte mit der schlechter aufliegenden Seite auf die Metallplatte gelegt, wird sie durch den mangelnden Kontakt zur Metallplatte stellenweise deutlich schlechter erhitzt. 
+	Dadurch haftet das Objekt an diesen Stellen nicht an der Glasplatte.
+	</div>
+	
+	<h4 id="error-printer-heizblock">Heizblock von Material verklebt und Austausch des Heizblocks</h4>
+	<div>
+	Wenn die Düse außen verschmutzt oder beschädigt ist, kann es in extremen Fällen dazu kommen, dass sich eine dicke Schicht aus Filament um den Heizblock bildet.
+	Als Folge fließt das Filament um Heizblock und Düse und kann sogar in den Raum oberhalb der Düse gelangen. 
+	<img class="text-image" src="res/fehler/verklebt.jpg" width="50%">
+
+	Dadurch, dass eine dicke Schicht aus Kunststoff den Heizblock umgibt, wird bei folgenden Drucken Energie verschwendet, um diese Schicht zu erwärmen. 
+	Dadurch kann das Filament an sich nicht mehr genug erhitzt werden, um gut damit drucken zu können. Es ist nahezu unmöglich, die komplette Schicht wieder zu entfernen. 
+
+	Das Austauschen des Heizblockes ist nur schwer möglich, da das Filament auch in die Spalte zwischen Heizblock, Temperatursensor und der Heizkapsel geflossen ist. 
+	Die Entfernung war nur nach Erhitzen des Heizblockes möglich.
+	<img class="text-image" src="res/fehler/heizblock.jpg" width="50%">
+	</div>
   </div>
 
   <h3 id="error-object">Fehler am gedruckten Objekt</h3>
@@ -103,8 +149,33 @@
         <li>Veringern der <a href="#/guide/druckparameter#parameter-schichtdicke">Schichtdicke</a></li>
       </ul>
     </div>
+	
+	<h4 id="error-object-haftung">Mangelnde Haftung des Objektes auf der Druckplatte </h4>
+    <div>
+     Manchmal haftet die untere Schicht nicht richtig auf der Druckplatte. 
+	 Das kann einerseits dazu führen, dass der Druck komplett misslingt, da der Druckkopf die nicht haftenden Fäden hinter sich herzieht. 
+	 Andererseits kann es sein, dass das Objekt zwar gedruckt wird, sich die Schichten aber mit zunehmender Höhe gegeneinander verschieben. 
+	 Dieser Fehler tritt wegen mangelnder Haftung der untersten Filamentschicht auf der Druckplatte auf.
+	 Als Gegenmanahme kann die gläserne Druckplatte mit einer dünnen Schicht Klebstoff bestrichen werden. Dadurch haftet die erste Filamentschicht wieder besser. 
+	 Zudem bietet Ultimaker mittlerweile eine Druckplatte an, die speziell beschichtet ist und dadurch eine bessere Haftung ermöglichen soll.
+    </div>
+	
+	<h4 id="error-object-unterfoerderung">Filament-Unterförderung </h4>
+    <div>
+    Ein Grund, warum der Druck von Objekten misslingen kann, ist ein zu geringer Filamentfluss. 
+	Dadurch, dass zu wenig Filament zur Verfügung steht, werden die gedruckten Linien zu düunn oder können gar nicht gedruckt werden. 
+	Es kann verschiedene Gründe dafür geben, dass zu wenig Material fließt. Einerseits kann eine Fehlfunktion des Feeders vorliegen, oder die Reibung im Bowdenzug ist zu hoch. 
+	Möglicherweise ist die Reibung auch wegen einer Verformung der PTFE-Kopplung erhöht oder in der Düse befinden sich noch Verschmutzungen.
+	Eventuell tritt der Fehler auch wegen schlecht gewählten Druckparametern auf, z.B. zu geringe Temperatur oder zu hohe Druckgeschwindigkeit.
+    </div>
+	
+	<h4 id="error-object-duese">Verschmutzte Düse </h4>
+    <div>
+   Sowohl innerhalb als auch außerhalb der Düse können Filamentrückstände von früheren Drucken verbleiben. 
+   Diese Rückstände behindern den Materialfluss durch die Düse. Als Gegenmaßnahme kann man mit einer dünnen Nadel die aufgeheizte Düse von innen haftendem Material befreien.
+    </div>
 
-    <h4 id="error-object-combing">Dünne Fäden zwischen Teilen des Objektes</h4>
+    <h4 id="error-object-combing">Dünne Fäden zwischen Teilen des Objektes (Stringing)</h4>
     <div>
       Verschiedene Teile des Objektes sind durch dünne unregelmäßige Fäden verbunden
       <h5>Behebung</h5>
